@@ -1,0 +1,7 @@
+@mixin background-img($name, $att){
+    background-image: url(../../img/#{$name}.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: $att;
+}
+
