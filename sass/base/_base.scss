@@ -15,3 +15,30 @@ html{
     font-family:cursive;
 }
 
+img{
+    width: 100%;
+    height: auto;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+footer{
+    h2 {
+		font-size: 6rem;
+	}
+    h3{
+        font-size: 1.6rem;
+    }
+    label{
+        font-size: 1.8rem;
+    }
+}
+
+form{
+    button, input, textarea{
+        outline: none;
+    }
+}
