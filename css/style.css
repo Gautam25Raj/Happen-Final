@@ -17,6 +17,7 @@ html {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: scroll;
+  background-size: contain;
   height: 100vh; }
 
 .section__header-2 {
@@ -24,6 +25,7 @@ html {
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+  background-size: contain;
   height: 100vh;
   background-color: #aaaaaa;
   position: relative; }
@@ -111,4 +113,32 @@ html {
       border: 2px solid #fff; }
 
 .section__online__offline {
+  background-image: url(../../img/online__offline-1.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
   height: 100vh; }
+
+.online__offline {
+  display: flex;
+  height: 100vh;
+  flex-grow: 1;
+  cursor: pointer;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem; }
+
+.online {
+  transition: background-color 0.5s;
+  background-color: rgba(0, 0, 0, 0.8); }
+  .online:hover {
+    background-color: rgba(0, 0, 0, 0.4); }
+
+.offline {
+  transition: background-color 0.5s;
+  background-color: rgba(0, 0, 0, 0.8); }
+  .offline:hover {
+    background-color: rgba(0, 0, 0, 0.4); }

@@ -1,3 +1,37 @@
-.section__online__offline{
-    height: 100vh;
+.section__online__offline {
+  @include background-img-2(online__offline-1, fixed);
+  display: flex;
+  height: 100vh;
+}
+
+.online__offline {
+  display: flex;
+  height: 100vh;
+  flex-grow: 1;
+  cursor: pointer;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+}
+
+.hidden {
+}
+
+.online {
+  transition: background-color 0.5s;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.offline {
+  transition: background-color 0.5s;
+  background-color: rgba(0, 0, 0, 0.8);
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
 }
