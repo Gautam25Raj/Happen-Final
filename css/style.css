@@ -189,11 +189,16 @@ a {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     grid-template-areas: "nav form" "contact form" "copy copy";
-    padding: 55px;
+    padding: 35px;
   }
 
   .inquire-form {
     display: flex;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1600px) {
+  .inquire-form {
+    margin: 0px 20px;
   }
 }
 

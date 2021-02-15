@@ -136,9 +136,16 @@
         "nav form"
         "contact form"
         "copy copy";
-        padding: 55px;
+        padding: 35px;
     }
     .inquire-form{
         display: flex;
+    }
+
+    @media(max-width:1600px){
+        .inquire-form{
+            margin: 0px 20px;
+
+        }
     }
 }
