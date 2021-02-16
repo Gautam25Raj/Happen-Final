@@ -162,7 +162,8 @@ h2 {
   grid-template-columns: 1fr 20% 20% 20%;
   grid-template-rows: auto;
   grid-gap: 2rem 3rem;
-  grid-template-areas: "services service-1 service-2 service-3" "services service-4 service-5 service-6";
+  grid-template-areas: "services service-1 service-2 service-3"
+ "services service-4 service-5 service-6";
   border-radius: 100px;
   padding: 4rem; }
   .service__container__cell {
@@ -217,3 +218,193 @@ h2 {
   background-color: rgba(245, 135, 122, 0.6); }
   .offline:hover {
     background-color: rgba(245, 135, 122, 0.1); }
+  padding: 0;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.footer h3 {
+  font-size: 4.3rem;
+}
+.footer h4 {
+  font-size: 1.5rem;
+}
+
+.form button, .form input, .form textarea {
+  outline: none;
+}
+.form input {
+  width: 100%;
+  height: 45px;
+}
+.form textarea {
+  width: 100%;
+  height: 150px;
+}
+
+.icon-s {
+  max-width: 30px;
+}
+
+.icon-m {
+  max-width: 50px;
+}
+
+.icon-l {
+  max-width: 100px;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 90%;
+  grid-template-rows: auto;
+  grid-template-areas: "nav" "contact" "copy";
+  justify-content: center;
+}
+
+.nav-links {
+  grid-area: nav;
+}
+.nav-links__social-media {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 0px;
+  position: relative;
+}
+.nav-links__social-media a {
+  margin: 0px 10px;
+}
+.nav-links__social-media::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 10px 0px;
+}
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.menu__links a {
+  font-size: 1.8rem;
+  margin: 2.5px 0px;
+}
+.menu__location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-style: normal;
+}
+.menu::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+
+.contact {
+  grid-area: contact;
+  margin: 20px 0px;
+}
+.contact__call {
+  display: flex;
+  flex-direction: row;
+}
+.contact__email {
+  display: flex;
+  flex-direction: row;
+}
+
+.form .form__bttn {
+  width: 100px;
+  padding: 15px 20px;
+  background-color: white;
+  border: black solid 1px;
+}
+
+.inquire-form {
+  grid-area: form;
+  display: none;
+  flex-direction: column;
+  margin: 0px 100px;
+}
+.inquire-form label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.inquire-form label img {
+  margin-right: 10px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 600px;
+  margin: 8px 0px;
+}
+.form-group__row {
+  width: 47%;
+  position: inherit;
+}
+.form-group:nth-child(5) label {
+  top: 10px;
+  transform: translateY(0);
+}
+
+.copyright {
+  grid-area: copy;
+  padding: 15px 0px;
+}
+.copyright__header {
+  text-align: center;
+  font-size: 1.8rem !important;
+}
+
+@media (min-width: 1000px) {
+  .footer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "nav form" "contact form" "copy copy";
+    padding: 35px;
+  }
+
+  .inquire-form {
+    display: flex;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1600px) {
+  .inquire-form {
+    margin: 0px 20px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
