@@ -1,37 +1,37 @@
 .section__online__offline {
-  @include background-img-2(online__offline-1, fixed);
+  @include background-img-2(online__offline-3, fixed);
   display: flex;
-  height: 100vh;
+  height: 130vh;
+  clip-path: polygon(0 0, 100% 22%, 100% 100%, 0 100%);
 }
 
 .online__offline {
   display: flex;
-  height: 100vh;
+  height: 130vh;
   flex-grow: 1;
   cursor: pointer;
-  color: white;
+  color: #fff;
+  letter-spacing: 4px;
+  font-weight: 900;
   justify-content: center;
   align-items: center;
   font-size: 5rem;
 }
 
-.hidden {
-}
-
 .online {
   transition: background-color 0.5s;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba($color-5, 0.6);
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba($color-5, 0.1);
   }
 }
 
 .offline {
   transition: background-color 0.5s;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba($color-5, 0.6);
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba($color-5, 0.1);
   }
 }

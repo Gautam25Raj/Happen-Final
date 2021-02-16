@@ -1,4 +1,5 @@
-.section__header-1{
-    @include background-img(header-1 , scroll);
-    height: 100vh;
+.section__header-1 {
+  @include background-img(header-1, scroll);
+  height: 100vh;
+  display: none;
 }

@@ -8,75 +8,174 @@
     <title>Happen</title>
   </head>
   <body>
+    <!-- HEADER SECTION -->
     <header>
-      <section class="section__header-1">
-        <div class="access">
-          <button class="access__btn">Skip To Navigation</button>
+      <!-- HEADER SECTION 1 ( Mouse Move Section Header )-->
+      <section role="presentation" class="section__header-1">
+        <div role="navigation" class="access">
+          <button role="button" class="access__btn">Skip To Navigation</button>
 
-          <button class="access__btn">Skip To Main Content</button>
+          <button role="button" class="access__btn">Skip To Main Content</button>
         </div>
-
-        <div class="bg"></div>
       </section>
 
-      <section class="section__header-2">
-        <div class="head__container">
-          <div class="aside__main">
-            <aside class="aside__main__quote aside__main__quote--1">
+      <!-- HEADER SECTION 2 ( Main Header )-->
+      <section role="presentation" class="section__header-2">
+        <div role="presentation" class="head__container">
+          <div role="" class="aside__main">
+            <aside role="text" class="aside__main__quote aside__main__quote--1">
               Life is an event.
             </aside>
 
-            <aside class="aside__main__quote aside__main__quote--2">
+            <aside role="text" class="aside__main__quote aside__main__quote--2">
               Make it memorable.
             </aside>
           </div>
 
-          <nav class="head__nav">
-            <div class="head__nav--element left">
-              <a href="" class="head__nav--element--link">Home</a>
+          <nav role="navigation list" class="head__nav">
+            <div role="listitem presentation" class="head__nav--element left">
+              <a role="link" href="" class="head__nav--element--link">Home</a>
             </div>
-            <div class="head__nav--element left">
-              <a href="#" class="head__nav--element--link">Our Services </a>
+            <div role="listitem presentation" class="head__nav--element left">
+              <a role="link" href="#" class="head__nav--element--link">Our Services </a>
             </div>
-            <div class="head__nav--element left">
-              <a href="#" class="head__nav--element--link">Teams </a>
+            <div role="listitem presentation" class="head__nav--element left">
+              <a role="link" href="#" class="head__nav--element--link">Teams </a>
             </div>
-            <img src="" alt="" />
-            <div class="head__nav--element right">
-              <a href="#" class="head__nav--element--link">Contact </a>
+            <img src="" alt="Happen Logo" />
+            <div role="listitem presentation" class="head__nav--element right">
+              <a role="link" href="#" class="head__nav--element--link">Contact </a>
             </div>
-            <div class="head__nav--element right">
-              <a href="#" class="head__nav--element--link">Gallery</a>
+            <div role="listitem presentation" class="head__nav--element right">
+              <a role="link" href="#" class="head__nav--element--link">Gallery</a>
             </div>
-            <div class="head__nav--element right">
-              <a href="#" class="head__nav--element--link">Packages</a>
+            <div role="listitem presentation" class="head__nav--element right">
+              <a role="link" href="#" class="head__nav--element--link">Packages</a>
             </div>
           </nav>
+
+          <video
+            class="header__video"
+            poster="video/header_preview.png"
+            autoplay
+            muted
+          >
+            <source src="video/Happen-2.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <!-- OUR SERVICES SECTION -->
+      <section role="row" class="section__services">
+        <h2 role="heading rowheader" class="service__heading">
+          OUR SERVICES
+        </h2>
+
+        <div role="grid" class="service__container">
+          <div role="gridcell" class="service__container__cell service__container__cell--1">
+            <div role="row">
+              <h3 role="rowheader">
+                SERVICES
+              </h3>
+
+              <p role="rowgroup">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum ducimus veniam molestiae tempore non veritatis est pariatur quam possimus esse voluptates odio adipisci, illo sint, enim odit nam. Libero, vitae.
+              </p>
+            </div>
+          </div>
+
+          <div role="gridcell" class="service__container__cell service__container__cell--2">
+            <div role="row">
+              <div role="presentation">
+                <i role="img"></i>
+              </div>
+
+              <h3 role="rowheader">
+                PHOTOS & VIDEOS
+              </h3>
+            </div>
+          </div>
+
+          <div role="gridcell" class="service__container__cell service__container__cell--3">
+            <div role="row">
+              <div role="presentation">
+                <i role="img"></i>
+              </div>
+
+              <h3 role="rowheader">
+                LIVE MUSIC & dj
+              </h3>
+            </div>
+          </div>
+
+          <div role="gridcell" class="service__container__cell service__container__cell--4">
+            <div role="row">
+              <div role="presentation">
+                <i role="img"></i>
+              </div>
+
+              <h3 role="rowheader">
+                BRIDAL MAKEUP
+              </h3>
+            </div>
+          </div>
+
+          <div role="gridcell" class="service__container__cell service__container__cell--5">
+            <div role="row">
+              <div role="presentation">
+                <i role="img"></i>
+              </div>
+
+              <h3 role="rowheader">
+                VENUES
+              </h3>
+            </div>
+          </div>
+
+          <div role="gridcell" class="service__container__cell service__container__cell--6">
+            <div role="row">
+              <div role="presentation">
+                <i role="img"></i>
+              </div>
+
+              <h3 role="rowheader">
+                DECORATIONS
+              </h3>
+            </div>
+          </div>
+
+          <div role="gridcell" class="service__container__cell service__container__cell--7">
+            <div role="row">
+              <div role="presentation">
+                <i role="img"></i>
+              </div>
+
+              <h3 role="rowheader">
+                CHOREOGRAPHERS
+              </h3>
+            </div>
+          </div>
+
         </div>
       </section>
 
+      <!-- ONLINE OFFLINE SECTION -->
       <section class="section__online__offline">
-        <article class="online__offline online">
-          <div role="button" tabindex="0" class="online__btn">
-            ONLINE
-          </div>
-          
-          <div role="navigation" class="hidden online__btn--link">
-            
-          </div>
-        </article>
+        <div role="separator" class="online__offline online">
+          <div role="button" tabindex="0" class="online__btn">ONLINE</div>
 
-        <article class="online__offline offline">
-          <div role="button" tabindex="0" class="offline__btn">
-            OFFLINE
-          </div>
+          <div role="navigation" class="hidden online__btn--link"></div>
+        </div>
 
-          <div role="navigation" class="hidden offline__btn--link">
+        <div role="separator" class="online__offline offline">
+          <div role="button" tabindex="0" class="offline__btn">OFFLINE</div>
 
-          </div>
-        </article>
+          <div role="navigation" class="hidden offline__btn--link"></div>
+        </div>
       </section>
-    </header>
+    </main>
     <script src="./js/index.js"></script>
   </body>
 </html>
