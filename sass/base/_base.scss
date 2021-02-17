@@ -1,63 +1,63 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 *::after,
-*::before{
-    margin: 0;
-    padding: 0;
+*::before {
+  margin: 0;
+  padding: 0;
 }
 
-html{
-    font-size: 62.5%;
-    font-family:cursive;
-    padding: 3rem;
-    background-color: $color-1;
-    @include background-img-2(background-3, fixed);;
+html {
+  font-size: 62.5%;
+  font-family: cursive;
+  padding: 3rem;
+  background-color: $color-1;
+  @include background-img-2(background-3, fixed);
 }
 
-img{
+img {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+.footer {
+  h3 {
+    font-size: 4.3rem;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+}
+
+.form {
+  button,
+  input,
+  textarea {
+    outline: none;
+  }
+  input {
     width: 100%;
-    height: auto;
+    height: 45px;
+  }
+  textarea {
+    width: 100%;
+    height: 150px;
+  }
 }
 
-a{
-    color: black;
-    text-decoration: none;
+.icon-s {
+  max-width: 30px;
 }
-.footer{
-    h3{
-        font-size: 4.3rem;
-    }
-    h4{
-        font-size: 1.5rem;
-    }
+.icon-m {
+  max-width: 50px;
 }
-
-.form{
-    button, input, textarea{
-        outline: none;
-    }
-    input{
-        width: 100%;
-        height: 45px;
-    }
-    textarea{
-        width: 100%;
-        height: 150px;
-    }
+.icon-l {
+  max-width: 100px;
 }
-
-.icon-s{
-    max-width: 30px;
-}
-.icon-m{
-    max-width: 50px;
-}
-.icon-l{
-    max-width: 100px;
-}
-
-
