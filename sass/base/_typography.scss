@@ -1,17 +1,20 @@
-h2 {
+h2{
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
   display: inline-block;
-  width: 100%;
-  font-size: 4rem;
-  font-family: sans-serif;
-  text-align: center;
-  margin: 2rem 0 6rem 0;
-  background-color: red;
-  background-image: linear-gradient(to right, $color-1, red);
-  background-size: 100%;
-  background-repeat: repeat;
+  background-image: linear-gradient(to right, $color-4, $color-8);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
-  letter-spacing: 0.2rem;
+  background-clip: text;
+  color: transparent;
+  letter-spacing: .2rem;
+  transition: all .2s;
+  font-size: 4rem;
+  text-align: center;
+  width: 100%;
+
+  &:hover {
+      transform: skewY(1deg) skewX(10deg) scale(1.1);
+      text-shadow: .2rem 1rem 2rem rgba(black, .3);
+  }
 }

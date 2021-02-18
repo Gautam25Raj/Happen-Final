@@ -11,23 +11,26 @@
 @import "components/cursor";
 @import "components/animation";
 @import "components/extends";
-
-@import "pages/home";
-@import "pages/gallery";
-@import "pages/contact";
-@import "pages/cPackages";
+@import "components/bgVideo";
 
 @import "layout/mouseMove";
 @import "layout/navigation";
 @import "layout/sidebar";
 @import "layout/header";
+@import "layout/aboutUs";
 @import "layout/services";
 @import "layout/teams";
+@import "layout/testimonial";
 @import "layout/online-offline";
 @import "layout/gallery";
 @import "layout/packages";
 @import "layout/location";
 @import "layout/forms";
 @import "layout/footer";
+
+@import "pages/home";
+@import "pages/gallery";
+@import "pages/contact";
+@import "pages/cPackages";
 
 @import "themes/theme";
