@@ -1,8 +1,8 @@
 .section__online__offline {
   @include background-img-2(online__offline-3, fixed);
   display: flex;
-  height: 130vh;
-  clip-path: polygon(0 0, 100% 22%, 100% 100%, 0 100%);
+  height: 120vh;
+  clip-path: polygon(0 0, 100% 23%, 100% 100%, 0 100%);
 }
 
 .online__offline {

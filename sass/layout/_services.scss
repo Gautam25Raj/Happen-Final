@@ -5,13 +5,17 @@
       rgba($color-1, 0),
       rgba($color-7, 0)
     ),
-    url(../../img/service.jpg);
+    url(../../img/service2.jpg);
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: scroll;
-  height: 130vh;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 78%);
+  background-attachment: fixed;
+  height: 137vh;
+  clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+}
+
+.service__heading{
+  margin-top: 10rem;
 }
 
 .service__container {
@@ -24,7 +28,16 @@
     "services service-1 service-2 service-3"
     "services service-4 service-5 service-6";
   border-radius: 100px;
-  padding: 4rem;
+  margin: 4rem;
+
+  
+  &:hover > div{
+    opacity: 0.3;
+  }
+
+  & > div:hover{
+    opacity: 1;
+  }
 
   &__cell {
     background-color: rgba(253, 207, 215, 0.9);

@@ -15,7 +15,6 @@ html {
   font-family: cursive;
   padding: 3rem;
   background-color: $color-1;
-  @include background-img-2(background-3, fixed);
 }
 
 img {
