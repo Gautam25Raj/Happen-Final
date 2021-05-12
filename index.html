@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Happen</title>
   </head>
@@ -48,54 +54,55 @@
         </div>
       </div>
     </section>
+
     <!-- CONTACT US START -->
     <article class="contact-us">
+      <div class="contact-us-1">
+        <!-- HEADER CONTAINER START -->
+        <div class="contact_container">
+          <p class="contact_container-p">say hi to the team</p>
 
-      <!-- HEADER CONTAINER START -->
-      <div class="contact__container">
-        <p class="contact__container--p">say hi to the team</p>
+          <h2 class="contact_container-heading">
+            We'd love to <br />
+            hear from you
+          </h2>
 
-        <h2 class="contact__container--heading">
-          We'd love to <br />
-          hear from you
-        </h2>
-
-        <p class="contact__container--p">
-          feel free to contact us and we will get back to you as soon as we can.
-        </p>
-      </div>
-      <!-- HEADER CONTAINER END -->
-
-      <!-- CONTACT FORM  START-->
-      <form>
-
-        <!-- FORM INPUT START-->
-        <section>
-          <p class="form-control">
-            <label for="name">
-              <span>Name</span>
-            </label>
-            <input type="text" id="name" name="username" required />
+          <p class="contact_container-p">
+            feel free to contact us and we will get back to you as soon as we
+            can.
           </p>
+        </div>
+        <!-- HEADER CONTAINER END -->
 
-          <p class="form-control">
-            <label for="mail">
-              <span>Email</span>
-            </label>
-            <input type="email" id="mail" name="username" required />
-          </p>
+        <!-- CONTACT FORM  START-->
+        <form>
+          <!-- FORM INPUT START-->
+          <section>
+            <p class="form-control">
+              <label for="name">
+                <span>Name</span>
+              </label>
+              <input type="text" id="name" name="username" required />
+            </p>
 
-          <p class="form-control">
-            <label for="number">
-              <span>Mobile No.</span>
-            </label>
-            <input type="number" id="number" name="username" required />
-          </p>
-        </section>
-        <!-- FORM INPUT END -->
+            <p class="form-control">
+              <label for="mail">
+                <span>Email</span>
+              </label>
+              <input type="email" id="mail" name="username" required />
+            </p>
 
-        <!-- FORM ERROR START-->
-        <!-- <section>
+            <p class="form-control">
+              <label for="number">
+                <span>Mobile No.</span>
+              </label>
+              <input type="number" id="number" name="username" required />
+            </p>
+          </section>
+          <!-- FORM INPUT END -->
+
+          <!-- FORM ERROR START-->
+          <!-- <section>
           <div class="ui success message">
             <div class="header">Form Completed</div>
             <p>
@@ -111,19 +118,62 @@
             </p>
           </div>
         </section> -->
-        <!-- FORM ERROR END-->
+          <!-- FORM ERROR END-->
 
-        <!-- FORM BUTTON START-->
-        <section>
+          <!-- FORM BUTTON START-->
+          <section>
+            <p>
+              <button type="submit" class="btn form-btn">send</button>
+            </p>
+          </section>
+          <!-- FORM BUTTON END-->
+        </form>
+        <!-- CONTACT FORM END -->
+      </div>
+
+      <!-- CONTACT LOCATION START -->
+      <section class="contact-us-2">
+        <!-- LOCATION START -->
+        <div class="location">
+          <strong>opening hours</strong>
           <p>
-            <button type="submit" class="btn form-btn">send</button>
+            Monday - Saturday <br />
+            11am - 6pm <br />
+            weekend <br />
+            closed
           </p>
-        </section>
-        <!-- FORM BUTTON END-->
+        </div>
+        <!-- LOCATION END -->
 
-      </form>
-      <!-- CONTACT FORM END -->
+        <!-- ADDRESS START -->
+        <div class="location">
+          <strong>address</strong>
+          <address>
+            S.P Verma Road, c/o Ashra, <br />
+            opposite of Kedar Bhawan, <br />
+            Sukirti complex, Patna, Bihar <br />
+            800001
+          </address>
+        </div>
+        <!-- ADDRESS START -->
 
+        <!-- CONTACT START -->
+        <div class="location">
+          <strong>contact</strong>
+          <ul>
+            <li>
+              <a href="mailto:ashrapappu@gmail.com">ashrapappu@gmail.com</a>
+            </li>
+            <li>
+              <a href="https://api.whatsapp.com/send?phone=9334276667"
+                >9334276667</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- CONATCT END -->
+      </section>
+      <!-- CONTACT LOCATION END -->
     </article>
   </body>
 </html>
