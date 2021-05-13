@@ -26,6 +26,8 @@ li {
   display: flex;
   justify-content: space-between;
   position: relative; }
+  .contact-us-1 {
+    width: 60%; }
   .contact-us-2 {
     background: url(/svg/ContactTri.svg) no-repeat left;
     background-size: cover;
@@ -35,11 +37,39 @@ li {
     justify-content: center;
     align-items: flex-start; }
 
+.contact_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  margin-top: 7.2rem; }
+
+.contact_head {
+  display: flex;
+  flex-direction: column;
+  z-index: 1; }
+  .contact_head-p {
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.02em; }
+    .contact_head-p-1 {
+      transform: translateY(-1rem); }
+    .contact_head-p-2 {
+      align-self: flex-end;
+      transform: translateY(3rem); }
+  .contact_head-heading {
+    font-size: 6rem;
+    word-spacing: 0.4rem; }
+
 .location {
   width: 60%;
   font-size: 1.45rem;
   padding-left: 12%;
-  line-height: 2rem; }
+  line-height: 2rem;
+  letter-spacing: 0.02em; }
   .location .location-info {
     margin-top: 1.6rem;
     font-style: normal; }
@@ -51,6 +81,8 @@ li {
 
 .dec {
   position: absolute; }
+  .dec.circle {
+    width: 22vw; }
   .dec.half-circle {
     right: 0;
     width: 18vw; }
