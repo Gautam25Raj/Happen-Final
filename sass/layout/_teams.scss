@@ -1,0 +1,78 @@
+.section-our-teams {
+  background-image: url(/images/teamWaves.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% 40%;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+
+  h3 {
+    font-size: 4rem;
+    align-self: flex-start;
+  }
+}
+
+.cards {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  height: 40rem;
+  position: relative;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.6rem;
+  border-radius: 2rem;
+  overflow: hidden;
+
+  &-bg {
+    height: 25%;
+    width: 100%;
+    background-color: aqua;
+  }
+
+  &-team-photo {
+    height: 10vw;
+    width: 10vw;
+    position: absolute;
+    top: 6%;
+    border-radius: 50%;
+    background-color: grey;
+  }
+
+  .card-detail {
+    position: absolute;
+    top: 50%;
+    text-align: center;
+
+    h4 {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &-follow {
+    position: absolute;
+    bottom: 18%;
+  }
+
+  &-social {
+    position: absolute;
+    height: 15%;
+    width: 100%;
+    bottom: 0;
+    background-color: rgb(221, 221, 221);
+  }
+}

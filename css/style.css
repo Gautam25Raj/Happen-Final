@@ -24,7 +24,7 @@ li {
   text-align: center;
   margin: 0 auto; }
   .heading-header {
-    font-size: 4.3rem;
+    font-size: 5rem;
     letter-spacing: 0.4rem; }
 
 .paragraph {
@@ -217,3 +217,64 @@ li {
   margin-top: -100px; }
   .ques-2 p {
     border-left: black solid; }
+
+.section-our-teams {
+  background-image: url(/images/teamWaves.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% 40%; }
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto; }
+  .cards-container h3 {
+    font-size: 4rem;
+    align-self: flex-start; }
+
+.cards {
+  display: flex;
+  width: 100%;
+  justify-content: space-between; }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  height: 40rem;
+  position: relative;
+  background-color: #000;
+  color: #fff;
+  font-size: 1.6rem;
+  border-radius: 2rem;
+  overflow: hidden; }
+  .card-bg {
+    height: 25%;
+    width: 100%;
+    background-color: aqua; }
+  .card-team-photo {
+    height: 10vw;
+    width: 10vw;
+    position: absolute;
+    top: 6%;
+    border-radius: 50%;
+    background-color: grey; }
+  .card .card-detail {
+    position: absolute;
+    top: 50%;
+    text-align: center; }
+    .card .card-detail h4 {
+      margin-bottom: 1rem; }
+  .card-follow {
+    position: absolute;
+    bottom: 18%; }
+  .card-social {
+    position: absolute;
+    height: 15%;
+    width: 100%;
+    bottom: 0;
+    background-color: #dddddd; }
