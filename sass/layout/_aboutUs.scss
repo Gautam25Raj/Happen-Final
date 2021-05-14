@@ -3,13 +3,15 @@
     width: 60%;
     text-align: center;
     margin: 0 auto;
+    margin-bottom: 10rem;
+
     h2 {
       font-size: 4.3rem;
       letter-spacing: 0.3rem;
       margin-bottom: 20px;
     }
-    margin-bottom: 100px;
   }
+
   p {
     font-size: 1.35rem;
     letter-spacing: 0.2rem;
@@ -33,7 +35,7 @@
       color: rgba(197, 24, 24, 0.7);
     }
   }
-  &:nth-child(3){
+  &:nth-child(3) {
     margin-top: -80px;
   }
   &__ques-ans {
@@ -45,7 +47,7 @@
       min-width: 250px;
       text-align: center;
     }
-    p{
+    p {
       padding: 30px 50px;
     }
   }
@@ -83,16 +85,16 @@
   }
 }
 
-.ques-1{
+.ques-1 {
   flex-direction: row-reverse;
-  p{
+  p {
     border-right: black solid;
   }
 }
 
-.ques-2{
+.ques-2 {
   margin-top: -100px;
-  p{
+  p {
     border-left: black solid;
   }
 }
