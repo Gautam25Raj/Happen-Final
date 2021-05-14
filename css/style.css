@@ -27,6 +27,7 @@ li {
   justify-content: space-between;
   position: relative; }
   .contact-us-1 {
+    position: relative;
     width: 60%; }
   .contact-us-2 {
     background: url(/svg/ContactTri.svg) no-repeat left;
@@ -37,40 +38,43 @@ li {
     justify-content: center;
     align-items: flex-start; }
 
-.contact_container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  margin-top: 7.2rem; }
+.contact {
+  width: 70%; }
+  .contact_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: 7.2rem; }
 
 .contact_head {
   display: flex;
   flex-direction: column;
-  z-index: 1; }
+  z-index: 1;
+  letter-spacing: 0.02em; }
   .contact_head-p {
     font-size: 1.3rem;
     font-weight: 700;
     line-height: 18px;
-    letter-spacing: 0.02em; }
+    word-spacing: 0.2rem; }
     .contact_head-p-1 {
       transform: translateY(-1rem); }
     .contact_head-p-2 {
       align-self: flex-end;
-      transform: translateY(3rem); }
+      transform: translateY(2rem); }
   .contact_head-heading {
-    font-size: 6rem;
+    font-size: 4vw;
     word-spacing: 0.4rem; }
 
 .form {
   margin-top: 8rem; }
   .form-control {
-    width: 35%;
+    width: 100%;
+    max-width: 280px;
     margin: 0 auto;
     position: relative;
-    transform: translateX(4rem); }
+    transform: translateX(5.5rem); }
     .form-control:not(:last-child) {
       margin-bottom: 4rem; }
     .form-control label {
@@ -81,12 +85,11 @@ li {
     .form-control input {
       display: block;
       width: 100%;
-      min-width: 30rem;
       padding: 0.6rem 0;
       font-size: 1.6rem;
       background-color: transparent;
       border: 0;
-      border-bottom: 1px solid #000; }
+      border-bottom: 3px solid #000; }
     .form-control .form-btn {
       width: 100%;
       margin-top: 6rem;
@@ -104,14 +107,26 @@ li {
   .location .location-info {
     margin-top: 1.6rem;
     font-style: normal; }
-
-.location:not(:last-child) {
-  border-bottom: 2px solid pink;
-  margin-bottom: 4rem;
-  padding-bottom: 4rem; }
+  .location:not(:last-child) {
+    border-bottom: 2px solid pink;
+    margin-bottom: 4rem;
+    padding-bottom: 4rem; }
 
 .dec {
   position: absolute; }
+  .dec.line {
+    height: 100%; }
+    .dec.line-1 {
+      left: 16.5%; }
+    .dec.line-2 {
+      left: 75%; }
+    .dec.line-3 {
+      left: 85%; }
+    .dec.line-4 {
+      height: 2px;
+      width: 70%;
+      left: 12%;
+      bottom: 10%; }
   .dec.circle {
     width: 22vw; }
   .dec.half-circle {
