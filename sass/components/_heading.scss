@@ -1,0 +1,16 @@
+.heading {
+  width: 60%;
+  text-align: center;
+  margin: 0 auto;
+
+  &-header {
+    font-size: 4.3rem;
+    letter-spacing: 0.4rem;
+  }
+}
+
+.paragraph {
+  font-size: 1.35rem;
+  letter-spacing: 0.2rem;
+  line-height: 1.6;
+}

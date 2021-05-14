@@ -19,6 +19,19 @@ a {
 li {
   list-style: none; }
 
+.heading {
+  width: 60%;
+  text-align: center;
+  margin: 0 auto; }
+  .heading-header {
+    font-size: 4.3rem;
+    letter-spacing: 0.4rem; }
+
+.paragraph {
+  font-size: 1.35rem;
+  letter-spacing: 0.2rem;
+  line-height: 1.6; }
+
 .contact-us {
   background-color: #fff7f8;
   width: 100%;
@@ -138,22 +151,12 @@ li {
       bottom: 0; }
 
 .about-us__header {
-  width: 60%;
-  text-align: center;
-  margin: 0 auto;
   margin-bottom: 10rem; }
   .about-us__header h2 {
-    font-size: 4.3rem;
-    letter-spacing: 0.3rem;
-    margin-bottom: 20px; }
-
-.about-us p {
-  font-size: 1.35rem;
-  letter-spacing: 0.2rem;
-  line-height: 1.6; }
+    margin-bottom: 2rem; }
 
 .know-us-better {
-  padding: 0px 15px;
+  padding: 0 1.5rem;
   width: 80%;
   margin: auto; }
   .know-us-better__catch {
