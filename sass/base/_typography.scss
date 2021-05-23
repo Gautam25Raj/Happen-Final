@@ -9,7 +9,25 @@
   &-header {
     font-size: 5rem;
     letter-spacing: 0.4rem;
+    background-image: linear-gradient(
+      to bottom,
+      var(--light-color-heading-1-1),
+      var(--light-color-heading-1-2)
+    );
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-bottom: 2rem;
   }
+}
+
+//////////////////////////////////////////////////////
+////////// H3 HEADING (RED COLOR HEAD)
+//////////////////////////////////////////////////////
+.heading-h3 {
+  font-size: 4.5rem;
+  letter-spacing: 2px;
+  color: var(--light-color-heading-2);
 }
 
 //////////////////////////////////////////////////////
@@ -19,4 +37,11 @@
   font-size: 1.35rem;
   letter-spacing: 0.2rem;
   line-height: 1.6;
+  color: var(--light-text-color-primary);
+  font-size: 13.5px;
+  font-weight: 400;
+
+  &-light {
+    font-weight: 300;
+  }
 }
