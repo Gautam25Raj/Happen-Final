@@ -7,7 +7,7 @@
 
   &__header {
     padding-top: 8rem;
-    margin-bottom: 12rem;
+    margin-bottom: 16rem;
   }
 }
 
@@ -83,18 +83,6 @@
         padding: 1rem 0 1rem 6%;
       }
     }
-  }
-}
-
-.dec {
-  &.familiar-circle {
-    width: 30.5rem;
-    transform: translateX(0.4rem);
-  }
-
-  &.passion-circle {
-    width: 45rem;
-    transform: translateX(-1rem);
   }
 }
 

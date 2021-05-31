@@ -3,6 +3,12 @@
   padding: 1.2rem 4rem;
   cursor: pointer;
 
+  &-teams {
+    width: 25rem;
+    margin: 0 auto;
+    margin-bottom: 10rem;
+  }
+
   &-white {
     background-color: var(--btn-background-color);
     color: var(--btn-color);

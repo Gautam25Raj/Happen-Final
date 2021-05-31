@@ -2,7 +2,11 @@
   background-image: url(/images/teamWaves.png);
   background-repeat: no-repeat;
   background-position: bottom;
-  background-size: 100% 40%;
+  background-size: 100% 30%;
+}
+
+.our-teams__header {
+  margin: 6rem auto 10rem;
 }
 
 .cards-container {
@@ -16,6 +20,7 @@
   h3 {
     font-size: 4rem;
     align-self: flex-start;
+    margin-bottom: 4rem;
   }
 }
 
@@ -23,30 +28,37 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
+  margin-bottom: 8rem;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 25%;
-  height: 40rem;
+  width: 320px;
+  // width: 22vw;
+  height: 420px;
+  // height: 26vw;
   position: relative;
-  background-color: #000;
   color: #fff;
   font-size: 1.6rem;
   border-radius: 2rem;
   overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 
   &-bg {
-    height: 25%;
+    height: 30%;
     width: 100%;
-    background-color: aqua;
+    background-image: url(../../images/CardBackground.png);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   &-team-photo {
-    height: 10vw;
-    width: 10vw;
+    height: 150px;
+    // height: 10vw;
+    width: 150px;
+    // width: 10vw;
     position: absolute;
     top: 6%;
     border-radius: 50%;
@@ -54,12 +66,24 @@
   }
 
   .card-detail {
-    position: absolute;
+    width: 100%;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(92, 92, 92);
     top: 50%;
     text-align: center;
 
     h4 {
+      font-size: 18px;
       margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 15px;
+      font-weight: 100;
     }
   }
 
@@ -74,5 +98,22 @@
     width: 100%;
     bottom: 0;
     background-color: rgb(221, 221, 221);
+
+    ul {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      li {
+        margin: 0 2rem;
+        width: 40px;
+
+        img {
+          -webkit-filter: drop-shadow(5px 5px 5px #222);
+          filter: drop-shadow(0 0 8px rgb(90, 90, 90));
+        }
+      }
+    }
   }
 }

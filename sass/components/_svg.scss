@@ -1,0 +1,60 @@
+.dec {
+  position: absolute;
+
+  &.familiar-circle {
+    width: 30.5rem;
+    transform: translateX(0.4rem);
+  }
+
+  &.passion-circle {
+    width: 45rem;
+    transform: translateX(-1rem);
+  }
+
+  &.line {
+    height: 100%;
+
+    &-1 {
+      left: 16.5%;
+    }
+
+    &-2 {
+      left: 75%;
+    }
+
+    &-3 {
+      left: 85%;
+    }
+
+    &-4 {
+      height: 2px;
+      width: 70%;
+      left: 12%;
+      bottom: 10%;
+    }
+  }
+
+  &.circle {
+    width: 22vw;
+  }
+
+  &.half-circle {
+    right: 0;
+    width: 18vw;
+
+    &.half-circle-up {
+      top: 0;
+    }
+
+    &.half-circle-down {
+      bottom: 0;
+    }
+  }
+
+  //With Image tag HTML
+  // &.triangle {
+  //   top: 0;
+  //   right: 0;
+  //   height: 100%;
+  // }
+}
