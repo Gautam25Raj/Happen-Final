@@ -1,7 +1,8 @@
 .section__header {
-  background-image: url(../../images/HeroImage.png);
+  background-image: url(../../images/HeroImage.png),
+    linear-gradient(to bottom left, #bc9590 0%, #e2c3bc);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: right top;
   height: 100vh;
 }
@@ -21,18 +22,5 @@
     flex-direction: column;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.2);
-
-    h1 {
-      font-size: 11rem;
-      margin-bottom: 4rem;
-
-      span {
-        display: block;
-        font-size: 7rem;
-        font-weight: 400;
-        letter-spacing: 1.4rem;
-        margin-bottom: 1rem;
-      }
-    }
   }
 }

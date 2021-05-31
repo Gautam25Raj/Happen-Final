@@ -1,8 +1,23 @@
 //////////////////////////////////////////////////////
+////////// H1 HEADING
+//////////////////////////////////////////////////////
+h1 {
+  font-size: 10rem;
+  margin-bottom: 4rem;
+
+  span {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 1.4rem;
+    margin-bottom: 1rem;
+  }
+}
+//////////////////////////////////////////////////////
 ////////// H2 HEADING IN EVERY SECTION
 //////////////////////////////////////////////////////
 .heading {
-  width: 60%;
+  width: 70%;
   text-align: center;
   margin: 0 auto;
 
@@ -25,7 +40,7 @@
 ////////// H3 HEADING (RED COLOR HEAD)
 //////////////////////////////////////////////////////
 .heading-h3 {
-  font-size: 4.5rem;
+  font-size: 5.1rem;
   letter-spacing: 2px;
   color: var(--light-color-heading-2);
 }
@@ -34,14 +49,13 @@
 ////////// PARAGRAPH IN EVERY SECTION
 //////////////////////////////////////////////////////
 .paragraph {
-  font-size: 1.35rem;
+  font-size: 1.5rem;
   letter-spacing: 0.2rem;
   line-height: 1.6;
   color: var(--light-text-color-primary);
-  font-size: 13.5px;
-  font-weight: 400;
 
   &-light {
+    font-size: 1.4rem;
     font-weight: 300;
   }
 }
