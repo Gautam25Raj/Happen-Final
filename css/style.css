@@ -98,6 +98,27 @@ li {
   .btn:active {
     transform: scale(0.97); }
 
+.social {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .social__nav {
+    height: 70%; }
+  .social__list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 3rem; }
+  .social__item {
+    width: 36px;
+    transition: transform 0.1s ease-in; }
+    .social__item:hover {
+      transform: scale(1.15); }
+    .social__item:active {
+      transform: scale(0.98); }
+
 .navigation {
   width: 100%;
   height: 15%;

@@ -1,0 +1,26 @@
+.btn {
+  border: none;
+  padding: 1.4rem 5rem;
+  cursor: pointer;
+
+  &-white {
+    background-color: var(--btn-background-color);
+    color: var(--btn-color);
+    font-size: 1.6rem;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    transition: transform 0.1s ease-in, box-shadow 0.1s ease-in;
+  }
+
+  &-round {
+    border-radius: 5rem;
+  }
+
+  &:hover {
+    transform: translateY(-2px) scale(1.01);
+    box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.4);
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+}
