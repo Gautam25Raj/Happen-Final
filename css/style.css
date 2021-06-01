@@ -452,11 +452,11 @@ h1 {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 44% 44% 44%;
-  grid-template-rows: 48% 48%;
-  gap: 4% 12%;
+  grid-template-columns: 45% 45% 45%;
+  grid-template-rows: 1fr 1fr;
+  gap: 6% 12%;
   grid-template-areas: ". . ." ". . .";
-  overflow: hidden; }
+  transform: translateX(0); }
 
 .service {
   display: flex;
@@ -479,7 +479,7 @@ h1 {
   .service-paragraph {
     letter-spacing: 1px;
     margin-top: 3rem;
-    padding-bottom: 1rem; }
+    padding-bottom: 3rem; }
 
 .section-our-teams {
   background-image: url(/images/teamWaves.png);
