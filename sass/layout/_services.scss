@@ -52,7 +52,14 @@
 }
 
 .services {
-  background-color: var(--light-bg-service);
+  background-image: linear-gradient(
+      var(--light-bg-service),
+      var(--light-bg-service)
+    ),
+    url(../../images/serviceBg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   position: relative;
   width: 110%;
   left: -15%;
@@ -64,11 +71,11 @@
   display: grid;
   grid-template-columns: 45% 45% 45%;
   grid-template-rows: 1fr 1fr;
-  gap: 6% 12%;
+  gap: 4% 12%;
   grid-template-areas:
     ". . ."
     ". . .";
-    transform: translateX(0);
+  transform: translateX(0);
   // transform: translateX(-57%);
   // overflow: hidden;
 }
@@ -86,13 +93,14 @@
     font-size: 15px;
     position: relative;
     padding-bottom: 1rem;
+    color: var(--light-text-color-tertiary);
 
     &::after {
       content: "";
       position: absolute;
       width: 40px;
       height: 3px;
-      background-color: red;
+      background-color: var(--light-color-heading-2);
       bottom: 0;
       left: 0;
     }
