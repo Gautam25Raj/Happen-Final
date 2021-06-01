@@ -15,39 +15,39 @@
   </head>
   <body>
     <!-- HEADER SECTION START -->
-    <header class="section__header">
+    <header class="section__header" id="home">
       <!-- HEADER NAVIGATION START -->
       <div class="navigation">
         <nav class="navigation__nav">
           <ul class="navigation__list">
             <li class="navigation__item">
-              <a href="#" class="navigation__link">Home</a>
+              <a href="#home" class="navigation__link">Home</a>
             </li>
 
             <li class="navigation__item">
-              <a href="#" class="navigation__link">About</a>
+              <a href="#about" class="navigation__link">About</a>
             </li>
 
             <li class="navigation__item">
-              <a href="#" class="navigation__link">Services</a>
+              <a href="#services" class="navigation__link">Services</a>
             </li>
 
             <li class="navigation__item">
-              <a href="#"
+              <a href="#home"
                 ><img src="images/HappenLogo.png" alt="Happen Logo"
               /></a>
             </li>
 
             <li class="navigation__item">
-              <a href="#" class="navigation__link">Gallery</a>
+              <a href="#gallery" class="navigation__link">Gallery</a>
             </li>
 
             <li class="navigation__item">
-              <a href="#" class="navigation__link">Packages</a>
+              <a href="#packages" class="navigation__link">Packages</a>
             </li>
 
             <li class="navigation__item">
-              <a href="#" class="navigation__link">Contact</a>
+              <a href="#contact" class="navigation__link">Contact</a>
             </li>
           </ul>
         </nav>
@@ -63,7 +63,12 @@
             HAPPEN
           </h1>
 
-          <button class="btn btn-white btn-round">START YOUR JOURNEY</button>
+          <button
+            class="btn btn-white btn-round"
+            onclick="window.location.href = '#home';"
+          >
+            START YOUR JOURNEY
+          </button>
         </div>
         <!-- HEADER HEADING END -->
 
@@ -131,7 +136,7 @@
 
     <main>
       <!--ABOUT US CONTAINER START-->
-      <article class="about-us">
+      <article class="about-us" id="about">
         <section class="heading about-us__header">
           <h2 class="heading-header">About Us</h2>
 
@@ -328,7 +333,7 @@
       <!-- OUR TEAMS END -->
 
       <!-- OUR SERVICES START -->
-      <article class="section__services">
+      <article class="section__services" id="services">
         <!-- OUR SERVICES HEADING START -->
         <section class="section__services-1">
           <div class="services__heading">
@@ -426,7 +431,7 @@
               </section>
               <!-- SERVICE 4 END -->
 
-              <!-- SERVICE 4 START -->
+              <!-- SERVICE 5 START -->
               <section class="service">
                 <img
                   src="svg/services/Camera.svg"
@@ -442,9 +447,9 @@
                   and bridal photo shoot, etc ).
                 </p>
               </section>
-              <!-- SERVICE 4 END -->
+              <!-- SERVICE 5 END -->
 
-              <!-- SERVICE 4 START -->
+              <!-- SERVICE 6 START -->
               <section class="service">
                 <img
                   src="svg/services/Camera.svg"
@@ -460,7 +465,7 @@
                   and bridal photo shoot, etc ).
                 </p>
               </section>
-              <!-- SERVICE 4 END -->
+              <!-- SERVICE 6 END -->
             </div>
 
             <button class="btn dec arrow">
@@ -474,6 +479,191 @@
         </section>
         <!-- OUR SERVICES SERVICE END -->
       </article>
+
+      <!-- CONTACT US START -->
+      <article class="section-contact-us">
+        <div class="contact-us">
+          <!-- CONTACT US PART-1 START -->
+          <div class="contact-us-1">
+            <!-- LINE SVG START -->
+            <img
+              src="svg/contact/ContactLine.svg"
+              alt=""
+              class="dec line line-1"
+            />
+
+            <img
+              src="svg/contact/ContactLine.svg"
+              alt=""
+              class="dec line line-2"
+            />
+
+            <img
+              src="svg/contact/ContactLine.svg"
+              alt=""
+              class="dec line line-3"
+            />
+
+            <img
+              src="svg/contact/ContactLineVerticle.svg"
+              alt=""
+              class="dec line line-4"
+            />
+            <!-- LINE SVG END -->
+
+            <section class="contact">
+              <!-- HEADER CONTAINER START -->
+              <div class="contact_container">
+                <img
+                  src="svg/contact/ContactCircle.svg"
+                  alt=""
+                  class="dec circle"
+                />
+                <div class="contact_head">
+                  <p class="contact_head-p contact_head-p-1">
+                    say hi to the team
+                  </p>
+
+                  <h3 class="contact_head-heading">
+                    We'd love to <br />
+                    hear from you
+                  </h3>
+
+                  <p class="contact_head-p contact_head-p-2">
+                    feel free to contact us and we will get back <br />
+                    to you as soon as we can.
+                  </p>
+                </div>
+              </div>
+              <!-- HEADER CONTAINER END -->
+
+              <!-- CONTACT FORM  START-->
+              <form class="form">
+                <!-- FORM INPUT START-->
+                <section>
+                  <div class="form-control">
+                    <label for="name">
+                      <span>Name</span>
+                    </label>
+                    <input type="text" id="name" name="username" required />
+                  </div>
+
+                  <p class="form-control">
+                    <label for="mail">
+                      <span>Email</span>
+                    </label>
+                    <input type="email" id="mail" name="username" required />
+                  </p>
+
+                  <p class="form-control">
+                    <label for="number">
+                      <span>Mobile No.</span>
+                    </label>
+                    <input type="number" id="number" name="username" required />
+                  </p>
+                </section>
+                <!-- FORM INPUT END -->
+
+                <!-- FORM ERROR START-->
+                <!-- <section>
+                  <div class="ui success message">
+                    <div class="header">Form Completed</div>
+                    <p>
+                      Your form is submitted successfully. We will try to contact
+                      you as soon as possible.
+                    </p>
+                  </div>
+
+                  <div class="ui error message">
+                    <div class="header">Action Forbidden</div>
+                    <p>Something went Wrong!!</p>
+                  </div>
+                </section> -->
+                <!-- FORM ERROR END-->
+
+                <!-- FORM BUTTON START-->
+                <section>
+                  <p class="form-control">
+                    <button type="button" class="btn form-btn">send</button>
+                  </p>
+                </section>
+                <!-- FORM BUTTON END-->
+              </form>
+              <!-- CONTACT FORM END -->
+            </section>
+          </div>
+          <!-- CONTACT US PART-1 END -->
+
+          <!-- CONTACT LOCATION START -->
+          <section class="contact-us-2">
+            <!-- <img src="svg/ContactTri.svg" alt="" class="dec triangle"/> -->
+
+            <img
+              src="svg/contact/ContactHalfCircleUp.svg"
+              alt=""
+              class="dec half-circle half-circle-up"
+            />
+            <!-- <object
+          type="image/svg+xml"
+          data="svg/ContactHalfCircleUp.svg"
+          class="dec half-circle half-circle-up"
+        ></object> -->
+
+            <img
+              src="svg/contact/ContactHalfCircleDown.svg"
+              alt=""
+              class="dec half-circle half-circle-down"
+            />
+            <!-- <object
+          type="image/svg+xml"
+          data="svg/ContactHalfCircleDown.svg"
+          class="dec half-circle half-circle-down"
+        ></object> -->
+
+            <!-- LOCATION START -->
+            <div class="location">
+              <strong>opening hours</strong>
+              <p class="location-info">
+                Monday - Saturday <br />
+                11am - 6pm <br />
+                Weekend <br />
+                closed
+              </p>
+            </div>
+            <!-- LOCATION END -->
+
+            <!-- ADDRESS START -->
+            <div class="location">
+              <strong>address</strong>
+              <address class="location-info">
+                S.P Verma Road, c/o Ashra, <br />
+                Kedar Bhawan Oppo, Sukirti<br />
+                complex, Patna, Bihar <br />
+                800001
+              </address>
+            </div>
+            <!-- ADDRESS START -->
+
+            <!-- CONTACT START -->
+            <div class="location">
+              <strong>contact</strong>
+              <ul class="location-info">
+                <li>
+                  <a href="mailto:ashrapappu@gmail.com">ashrapappu@gmail.com</a>
+                </li>
+                <li>
+                  <a href="https://api.whatsapp.com/send?phone=9334276667"
+                    >+91 9334276667</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- CONATCT END -->
+          </section>
+          <!-- CONTACT LOCATION END -->
+        </div>
+      </article>
+      <!-- CONTACT US END -->
     </main>
   </body>
 </html>
