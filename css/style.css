@@ -4,24 +4,25 @@
   --light-color-heading-1-2: #903131;
   --btn-background-color: #efefef;
   --btn-color: #332e2e;
+  --services-head: #ababab;
   --light-hero-ovelay: rgba(0, 0, 0, 0);
   --light-background-1: #fff8f8;
   --light-background-2: #ffe6e6;
   --light-text-color-penta: #747474;
-  --light-text-color-quad: #5F5F5F;
+  --light-text-color-quad: #5f5f5f;
   --light-text-color-tertiary: #000;
   --light-text-color-secondary: #332e2e;
   --light-text-color-primary: #332e2e;
   --light-color-1: #ff0000;
   --light-color-2: #ef9595;
   --light-color-heading-2: #e95c6d;
-  --light-bg-services: rgba(53, 47, 55, 0.949);
+  --light-bg-services: rgba(53, 47, 55, 0.95);
   --light-bg-service: rgba(255, 255, 255, 0.9);
   --dark-hero-ovelay: rgba(0, 0, 0, 0.3);
   --dark-background-1: #090909;
   --dark-background-2: #2c2c2c;
-  --dark-text-color-penta: #B1B1B1;
-  --dark-text-color-quad: #DDDDDD;
+  --dark-text-color-penta: #b1b1b1;
+  --dark-text-color-quad: #dddddd;
   --dark-text-color-tertiary: #eee;
   --dark-text-color-secondary: #fff;
   --dark-text-color-primary: #efefef;
@@ -141,24 +142,31 @@ h1 {
 .btn {
   border: none;
   padding: 1.2rem 4rem;
-  cursor: pointer; }
+  cursor: pointer;
+  background-color: transparent; }
   .btn-teams {
     width: 25rem;
     margin: 0 auto;
     margin-bottom: 10rem; }
+  .btn-services {
+    width: 25rem;
+    margin-top: 10rem;
+    margin-left: 10%; }
+  .btn.arrow {
+    padding: 0; }
   .btn-white {
     background-color: var(--btn-background-color);
     color: var(--btn-color);
     font-size: 1.5rem;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
     transition: transform 0.1s ease-in, box-shadow 0.1s ease-in; }
+    .btn-white:hover {
+      transform: translateY(-2px) scale(1.01);
+      box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.4); }
+    .btn-white:active {
+      transform: scale(0.97); }
   .btn-round {
     border-radius: 5rem; }
-  .btn:hover {
-    transform: translateY(-2px) scale(1.01);
-    box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.4); }
-  .btn:active {
-    transform: scale(0.97); }
 
 .social {
   height: 100%;
@@ -189,6 +197,16 @@ h1 {
   .dec.passion-circle {
     width: 45rem;
     transform: translateX(-1rem); }
+  .dec.arrow {
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 1rem;
+    right: 0;
+    transform: translateY(-50%) rotate(180deg); }
+    .dec.arrow-left {
+      transform: translateY(-50%) rotate(0);
+      left: 0;
+      margin-left: 1rem; }
   .dec.line {
     height: 100%; }
     .dec.line-1 {
@@ -384,6 +402,84 @@ h1 {
         border-right: 0;
         border-left: 1px solid var(--light-text-color-primary);
         padding: 1rem 0 1rem 6%; }
+
+.section__services {
+  display: flex;
+  background-image: url(../../images/servicesBg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative; }
+  .section__services-1 {
+    width: 40%;
+    background-color: var(--light-bg-services);
+    padding: 16rem 0 0; }
+  .section__services-2 {
+    width: 60%;
+    padding: 10rem 0; }
+
+.services__heading {
+  text-align: left;
+  width: 55%;
+  margin-left: 10%; }
+  .services__heading h2 {
+    color: #fff; }
+    .services__heading h2 span {
+      display: block;
+      color: var(--services-head); }
+  .services__heading p {
+    color: #efefef;
+    text-align: justify;
+    position: relative;
+    padding-bottom: 4rem; }
+    .services__heading p::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background-color: #efefef;
+      position: absolute;
+      bottom: 0;
+      z-index: 5; }
+
+.services {
+  background-color: var(--light-bg-service);
+  position: relative;
+  width: 110%;
+  left: -15%;
+  padding: 5rem 10rem;
+  overflow: hidden; }
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 44% 44% 44%;
+  grid-template-rows: 48% 48%;
+  gap: 4% 12%;
+  grid-template-areas: ". . ." ". . .";
+  overflow: hidden; }
+
+.service {
+  display: flex;
+  flex-direction: column; }
+  .service-img {
+    width: 70px;
+    margin-bottom: 20px; }
+  .service-head {
+    font-size: 15px;
+    position: relative;
+    padding-bottom: 1rem; }
+    .service-head::after {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 3px;
+      background-color: red;
+      bottom: 0;
+      left: 0; }
+  .service-paragraph {
+    letter-spacing: 1px;
+    margin-top: 3rem;
+    padding-bottom: 1rem; }
 
 .section-our-teams {
   background-image: url(/images/teamWaves.png);
