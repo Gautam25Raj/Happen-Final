@@ -49,6 +49,12 @@ li {
   }
 }
 
+@include respond(2200) {
+  html {
+    font-size: 90%;
+  }
+}
+
 @include respond(1200) {
   html {
     font-size: 58%;

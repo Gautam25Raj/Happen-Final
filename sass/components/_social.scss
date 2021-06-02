@@ -30,6 +30,32 @@
   }
 }
 
+/////////////////////////////////////////////////
+///////// MEDIA QUERRIES
+/////////////////////////////////////////////////
+@include respond(1600) {
+  .social {
+    &__item {
+      width: 4.2rem;
+    }
+  }
+}
+
+@include respond(1900) {
+  .social {
+    &__item {
+      width: 4.5rem;
+    }
+  }
+}
+
+@include respond(1200) {
+  .social {
+    &__item {
+      width: 3.6rem;
+    }
+  }
+}
 //////////////////////////////////////////////////////
 ////////// STICKY SOCIAL
 //////////////////////////////////////////////////////
@@ -41,36 +67,36 @@
   .social__nav {
     height: 50%;
     background-color: pink;
-    border-radius: 8px 0 0 8px;
+    border-radius: 0.8rem 0 0 0.8rem;
     position: fixed;
     right: 0;
-    box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.25);
+    box-shadow: -0.3rem 3rem 8rem rgba(0, 0, 0, 0.25);
     // width: 0;
 
     &::before {
       content: "";
-      width: 25px;
-      height: 50px;
+      width: 2.5rem;
+      height: 5rem;
       background-color: pink;
       position: absolute;
       top: 40%;
-      left: -25px;
-      border-radius: 8px 0 0 8px;
-      box-shadow: -6px 2px 8px rgba(0, 0, 0, 0.2);
+      left: -2.4rem;
+      border-radius: 0.8rem 0 0 0.8rem;
+      box-shadow: -0.6rem 0.2rem 0.8rem rgba(0, 0, 0, 0.2);
     }
 
     &::after {
       content: "▶";
-      font-size: 23px;
+      font-size: 2.3rem;
       position: absolute;
-      top: 43%;
-      left: -20px;
+      top: 42.5%;
+      left: -2rem;
     }
   }
 
   .social__list {
     justify-content: space-around;
-    margin: 0 4px 0 6px;
+    margin: 0 0.4rem 0 0.6rem;
   }
 
   .social__item {

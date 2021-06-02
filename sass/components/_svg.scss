@@ -76,9 +76,24 @@
 /////////////////////////////////////////////////
 ///////// MEDIA QUERRIES
 /////////////////////////////////////////////////
+@include respond(1900) {
+  .dec {
+    &.familiar-circle {
+      width: 34.5rem;
+      transform: translateX(0.4rem);
+    }
+
+    &.passion-circle {
+      width: 50rem;
+      transform: translateX(-1rem);
+    }
+  }
+}
+
 @include respond(1200) {
-  &.passion-circle {
-    width: 35vw;
-    transform: translateX(-1rem);
+  .dec {
+    &.passion-circle {
+      width: 35vw;
+    }
   }
 }

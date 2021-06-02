@@ -17,6 +17,16 @@ h1 {
 //////////////////////////////
 ///////// MEDIA QUERRIES
 //////////////////////////////
+@include respond(1900) {
+  h1 {
+    font-size: 11rem;
+
+    span {
+      font-size: 6.5rem;
+    }
+  }
+}
+
 @include respond(1200) {
   h1 {
     font-size: 9rem;
@@ -62,8 +72,6 @@ h1 {
 
 @include respond(1900) {
   .heading {
-    width: 55%;
-
     &-header {
       font-size: 5.1rem;
     }
@@ -88,6 +96,12 @@ h1 {
 //////////////////////////////
 ///////// MEDIA QUERRIES
 //////////////////////////////
+@include respond(1900) {
+  .heading-h3 {
+    font-size: 5.3rem;
+  }
+}
+
 @include respond(1200) {
   .heading-h3 {
     font-size: 4.6rem;
@@ -118,6 +132,17 @@ h1 {
 
     &-light {
       font-size: 1.5rem;
+    }
+  }
+}
+
+@include respond(1900) {
+  .paragraph {
+    font-size: 1.8rem;
+    line-height: 32px;
+
+    &-light {
+      font-size: 1.6rem;
     }
   }
 }

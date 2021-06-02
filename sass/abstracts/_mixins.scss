@@ -22,4 +22,11 @@
       @content;
     }
   }
+
+  //FOR WIDTH OF 1900
+  @if $breakpoint == 2200 {
+    @media (min-width: 1900px) {
+      @content;
+    }
+  }
 }

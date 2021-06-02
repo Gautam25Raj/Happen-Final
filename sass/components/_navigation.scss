@@ -59,6 +59,59 @@
     }
   }
 }
+/////////////////////////////////////////////////
+///////// MEDIA QUERRIES
+/////////////////////////////////////////////////
+@include respond(1600) {
+  .navigation {
+    &__list {
+      img {
+        width: 10rem;
+      }
+    }
+    &__link {
+      &,
+      &:link,
+      &:visited {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@include respond(1900) {
+  .navigation {
+    &__list {
+      img {
+        width: 11rem;
+      }
+    }
+    &__link {
+      &,
+      &:link,
+      &:visited {
+        font-size: 2.2rem;
+      }
+    }
+  }
+}
+
+@include respond(1200) {
+  .navigation {
+    &__list {
+      img {
+        width: 8rem;
+      }
+    }
+    &__link {
+      &,
+      &:link,
+      &:visited {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
 
 //////////////////////////////////////////////////////
 ////////// STICKY NAVIGATION
