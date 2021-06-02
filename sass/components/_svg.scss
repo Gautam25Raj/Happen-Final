@@ -72,3 +72,13 @@
   //   height: 100%;
   // }
 }
+
+/////////////////////////////////////////////////
+///////// MEDIA QUERRIES
+/////////////////////////////////////////////////
+@include respond(1200) {
+  &.passion-circle {
+    width: 35vw;
+    transform: translateX(-1rem);
+  }
+}

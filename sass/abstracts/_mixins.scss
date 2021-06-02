@@ -1,0 +1,25 @@
+/////////////////////////////////////////////////
+///////// MEDIA QUERRY MIXIN
+/////////////////////////////////////////////////
+@mixin respond($breakpoint) {
+  //FOR WIDTH OF 1200
+  @if $breakpoint == 1200 {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  //FOR WIDTH OF 1600
+  @if $breakpoint == 1600 {
+    @media (min-width: 1600px) {
+      @content;
+    }
+  }
+
+  //FOR WIDTH OF 1900
+  @if $breakpoint == 1900 {
+    @media (min-width: 1900px) {
+      @content;
+    }
+  }
+}

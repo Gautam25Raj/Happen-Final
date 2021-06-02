@@ -33,3 +33,24 @@ li {
   display: flex;
   justify-content: center;
 }
+
+/////////////////////////////////////////////////
+///////// MEDIA QUERRIES
+/////////////////////////////////////////////////
+@include respond(1600) {
+  html {
+    font-size: 68%;
+  }
+}
+
+@include respond(1900) {
+  html {
+    font-size: 76%;
+  }
+}
+
+@include respond(1200) {
+  html {
+    font-size: 58%;
+  }
+}
