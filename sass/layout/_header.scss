@@ -5,13 +5,15 @@
   background-size: contain;
   background-position: right top;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 85%;
+  height: 100%;
 
   &__container {
     width: 40%;

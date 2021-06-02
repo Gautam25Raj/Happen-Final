@@ -1,12 +1,12 @@
 .navigation {
   width: 100%;
-  height: 15%;
   display: flex;
   background-color: rgba(0, 0, 0, 0.4);
+  transition: all 0.5s ease-in;
 
   &__nav {
     width: 80%;
-    margin: 0 auto;
+    margin: 0.5rem auto;
   }
 
   &__list {
@@ -33,7 +33,7 @@
       align-items: center;
       text-transform: uppercase;
       position: relative;
-      transition: color 0.3s ease-in;
+      transition: color 0.2s ease-in;
     }
 
     &::after {
@@ -56,6 +56,54 @@
 
     &:active {
       transform: scale(0.98);
+    }
+  }
+}
+
+//////////////////////////////////////////////////////
+////////// STICKY NAVIGATION
+//////////////////////////////////////////////////////
+.navigation.sticky {
+  background-color: #fff;
+  height: auto;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+
+  .navigation__nav {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .navigation__list {
+    width: 100%;
+    justify-content: flex-end;
+
+    .happen-logo {
+      margin: 0 auto 0 0;
+      padding: 0.2rem 0 0 2rem;
+      order: -1;
+    }
+
+    img {
+      width: 6rem;
+    }
+  }
+
+  .navigation__item {
+    margin-right: 3rem;
+  }
+
+  .navigation__link {
+    &,
+    &:link,
+    &:visited {
+      color: #000;
+    }
+
+    &:hover {
+      color: var(--light-color-2);
     }
   }
 }

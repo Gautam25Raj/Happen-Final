@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 :root {
   --light-color-heading-1-1: #ec9191;
@@ -101,12 +102,12 @@ h1 {
 
 .navigation {
   width: 100%;
-  height: 15%;
   display: flex;
-  background-color: rgba(0, 0, 0, 0.4); }
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all 0.5s ease-in; }
   .navigation__nav {
     width: 80%;
-    margin: 0 auto; }
+    margin: 0.5rem auto; }
   .navigation__list {
     height: 100%;
     display: flex;
@@ -124,7 +125,7 @@ h1 {
     align-items: center;
     text-transform: uppercase;
     position: relative;
-    transition: color 0.3s ease-in; }
+    transition: color 0.2s ease-in; }
   .navigation__link::after {
     content: "";
     position: absolute;
@@ -139,6 +140,32 @@ h1 {
       width: 100%; }
   .navigation__link:active {
     transform: scale(0.98); }
+
+.navigation.sticky {
+  background-color: #fff;
+  height: auto;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25); }
+  .navigation.sticky .navigation__nav {
+    width: 100%;
+    margin: 0 auto; }
+  .navigation.sticky .navigation__list {
+    width: 100%;
+    justify-content: flex-end; }
+    .navigation.sticky .navigation__list .happen-logo {
+      margin: 0 auto 0 0;
+      padding: 0.2rem 0 0 2rem;
+      order: -1; }
+    .navigation.sticky .navigation__list img {
+      width: 6rem; }
+  .navigation.sticky .navigation__item {
+    margin-right: 3rem; }
+  .navigation.sticky .navigation__link, .navigation.sticky .navigation__link:link, .navigation.sticky .navigation__link:visited {
+    color: #000; }
+  .navigation.sticky .navigation__link:hover {
+    color: var(--light-color-2); }
 
 .btn {
   border: none;
@@ -181,14 +208,47 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-right: 3rem; }
+    margin-right: 2rem; }
   .social__item {
-    width: 36px;
+    width: 4rem;
     transition: transform 0.1s ease-in; }
     .social__item:hover {
       transform: scale(1.15); }
     .social__item:active {
       transform: scale(0.98); }
+
+.social.active {
+  height: 100%;
+  position: relative;
+  z-index: 10; }
+  .social.active .social__nav {
+    height: 50%;
+    background-color: pink;
+    border-radius: 8px 0 0 8px;
+    position: fixed;
+    right: 0;
+    box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.25); }
+    .social.active .social__nav::before {
+      content: "";
+      width: 25px;
+      height: 50px;
+      background-color: pink;
+      position: absolute;
+      top: 40%;
+      left: -25px;
+      border-radius: 8px 0 0 8px;
+      box-shadow: -6px 2px 8px rgba(0, 0, 0, 0.2); }
+    .social.active .social__nav::after {
+      content: "▶";
+      font-size: 23px;
+      position: absolute;
+      top: 43%;
+      left: -20px; }
+  .social.active .social__list {
+    justify-content: space-around;
+    margin: 0 4px 0 6px; }
+  .social.active .social__item {
+    width: 3.8rem; }
 
 .dec {
   position: absolute; }
@@ -338,13 +398,15 @@ h1 {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right top;
-  height: 100vh; }
+  height: 100vh;
+  display: flex;
+  flex-direction: column; }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 85%; }
+  height: 100%; }
   .header__container {
     width: 40%;
     height: 100%;
@@ -448,7 +510,8 @@ h1 {
       height: 3px;
       background-color: #efefef;
       position: absolute;
-      bottom: 0; }
+      bottom: 0;
+      left: 0; }
 
 .services {
   background-image: linear-gradient(var(--light-bg-service), var(--light-bg-service)), url(../../images/serviceBg.jpg);
