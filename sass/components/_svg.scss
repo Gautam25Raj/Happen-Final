@@ -90,10 +90,24 @@
   }
 }
 
+@include respond(1400) {
+  .dec.arrow {
+    img {
+      width: 4rem;
+    }
+  }
+}
+
 @include respond(1200) {
   .dec {
     &.passion-circle {
       width: 35vw;
+    }
+
+    &.arrow {
+      img {
+        width: 3.4rem;
+      }
     }
   }
 }

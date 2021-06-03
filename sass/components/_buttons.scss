@@ -6,8 +6,7 @@
 
   &-teams {
     width: 25rem;
-    margin: 0 auto;
-    margin-bottom: 10rem;
+    margin: 0 auto 10rem auto;
   }
 
   &-services {
@@ -39,5 +38,34 @@
 
   &-round {
     border-radius: 5rem;
+  }
+}
+
+/////////////////////////////////////////////////
+///////// MEDIA QUERRIES
+/////////////////////////////////////////////////
+@include respond(1600) {
+  .btn {
+    padding: 1.5rem 5rem;
+
+    &-teams {
+      width: 28rem;
+    }
+
+    &-services {
+      width: 28rem;
+    }
+
+    &-white {
+      font-size: 1.7rem;
+    }
+  }
+}
+
+@include respond(1400) {
+  .btn-services {
+    width: 20rem;
+    margin-top: 6rem;
+    margin-left: 8%;
   }
 }

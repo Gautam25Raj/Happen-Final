@@ -20,7 +20,7 @@
   h3 {
     font-size: 4rem;
     align-self: flex-start;
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
   }
 }
 
@@ -35,9 +35,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  // width: 320px;
+  max-width: 32rem;
   width: 22vw;
-  // height: 420px;
+  max-height: 42rem;
   height: 26vw;
   position: relative;
   color: #fff;
@@ -45,6 +45,10 @@
   border-radius: 2rem;
   overflow: hidden;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+
+  &:nth-child(odd) {
+    transform: translateY(3rem);
+  }
 
   &-bg {
     height: 30%;
@@ -55,10 +59,10 @@
   }
 
   &-team-photo {
-    // height: 150px;
     height: 10vw;
-    // width: 150px;
+    max-height: 14rem;
     width: 10vw;
+    max-width: 14rem;
     position: absolute;
     top: 6%;
     border-radius: 50%;
@@ -122,10 +126,25 @@
 ///////// MEDIA QUERRIES
 /////////////////////////////////////////////////
 @include respond(1600) {
+  .section-our-teams {
+    background-size: 100% 35%;
+  }
+
+  .cards-container {
+    width: 75%;
+  }
+
+  .cards {
+    margin-bottom: 12rem;
+  }
+
   .card {
+    max-height: 42rem;
+    max-width: 34rem;
+
     &-team-photo {
-      height: 10vw;
-      width: 10vw;
+      max-height: 15rem;
+      max-width: 15rem;
     }
 
     .card-detail {
@@ -164,6 +183,10 @@
     }
   }
 
+  .cards {
+    margin-bottom: 14rem;
+  }
+
   .card {
     width: 21vw;
     height: 25vw;
@@ -189,6 +212,10 @@
 }
 
 @include respond(1200) {
+  .our-teams__header {
+    margin: 5rem auto 8rem;
+  }
+
   .cards-container {
     width: 85%;
     h3 {
