@@ -3,8 +3,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 110vh;
-  //   padding: 8rem 12rem;
+  padding: 8rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,14 +11,13 @@
 
 .testimonials-container {
   background-color: rgba(var(--light-background-3), 0.8);
-  height: 100%;
-  width: 84%;
-  height: 85%;
+  width: 85%;
   padding: 4rem;
 }
 
 .testimonials-heading {
   margin-bottom: 12rem;
+  letter-spacing: 3px;
 
   & strong {
     color: var(--light-color-1);

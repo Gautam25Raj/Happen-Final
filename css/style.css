@@ -939,20 +939,19 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  height: 110vh;
+  padding: 8rem 0;
   display: flex;
   justify-content: center;
   align-items: center; }
 
 .testimonials-container {
   background-color: rgba(var(--light-background-3), 0.8);
-  height: 100%;
-  width: 84%;
-  height: 85%;
+  width: 85%;
   padding: 4rem; }
 
 .testimonials-heading {
-  margin-bottom: 12rem; }
+  margin-bottom: 12rem;
+  letter-spacing: 3px; }
   .testimonials-heading strong {
     color: var(--light-color-1);
     font-size: 1.6rem; }
@@ -1007,3 +1006,109 @@ h1 {
   .testimonial .testimonial-detail {
     letter-spacing: 1px;
     margin-bottom: 1rem; }
+
+.footer {
+  display: grid;
+  grid-template-columns: 90%;
+  grid-template-rows: auto;
+  grid-template-areas: "nav" "contact" "copy";
+  justify-content: center; }
+
+.nav-links {
+  grid-area: nav; }
+  .nav-links__social-media {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0px;
+    position: relative; }
+    .nav-links__social-media a {
+      margin: 0px 10px; }
+    .nav-links__social-media::after {
+      content: "";
+      position: absolute;
+      bottom: 0px;
+      width: 100%;
+      height: 2px;
+      background-color: black; }
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 10px 0px; }
+  .menu__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .menu__links a {
+      font-size: 1.8rem;
+      margin: 2.5px 0px; }
+  .menu__location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-style: normal; }
+  .menu::after {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 2px;
+    background-color: black; }
+
+.contact {
+  grid-area: contact;
+  margin: 20px 0px; }
+  .contact__call {
+    display: flex;
+    flex-direction: row; }
+  .contact__email {
+    display: flex;
+    flex-direction: row; }
+
+.form .form__bttn {
+  width: 100px;
+  padding: 15px 20px;
+  background-color: white;
+  border: black solid 1px; }
+
+.inquire-form {
+  grid-area: form;
+  display: none;
+  flex-direction: column;
+  margin: 0px 100px; }
+  .inquire-form label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    font-size: 1.5rem; }
+    .inquire-form label img {
+      margin-right: 10px; }
+
+.form-group {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  width: 90%;
+  max-width: 600px;
+  margin: 8px 0px; }
+  .form-group__row {
+    width: 47%;
+    position: inherit; }
+  .form-group:nth-child(5) label {
+    top: 10px;
+    transform: translateY(0); }
+
+.copyright {
+  grid-area: copy;
+  padding: 15px 0px; }
+  .copyright__header {
+    text-align: center;
+    font-size: 1.8rem !important; }
