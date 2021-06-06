@@ -25,6 +25,22 @@
     }
   }
 
+  &.arrow-t {
+    top: 50%;
+    transform: translateY(-50%);
+    right: 28%;
+    transform: translateY(-50%) rotate(180deg);
+
+    img {
+      width: 3.2rem;
+    }
+
+    &.arrow-t-left {
+      left: 28%;
+      transform: translateY(-50%) rotate(0);
+    }
+  }
+
   &.line {
     height: 100%;
 
@@ -65,12 +81,12 @@
     }
   }
 
-  //With Image tag HTML
-  // &.triangle {
-  //   top: 0;
-  //   right: 0;
-  //   height: 100%;
-  // }
+  // With Image tag HTML
+  &.triangle {
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
 }
 
 /////////////////////////////////////////////////
@@ -108,6 +124,30 @@
       img {
         width: 3.4rem;
       }
+    }
+
+    &.line {
+      &-1 {
+        left: 12%;
+      }
+
+      &-2 {
+        left: 75%;
+      }
+
+      &-3 {
+        left: 85%;
+      }
+
+      &-4 {
+        width: 70%;
+        left: 10%;
+        bottom: 12%;
+      }
+    }
+
+    &.circle {
+      width: 28rem;
     }
   }
 }
