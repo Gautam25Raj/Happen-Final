@@ -1,17 +1,3 @@
-// .toggle:focus {
-//     outline: none;
-//   }
-
-.active {
-  display: block;
-  transform: scale(1);
-}
-
-.hidden {
-  display: none;
-  transform: scale(0);
-}
-
 .overlay {
   position: fixed;
   top: 0;
@@ -34,8 +20,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url(https://images.unsplash.com/photo-1553915632-175f60dd8e36?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../../images/modal-pop-up.jpg);
   background-size: cover;
   display: flex;
   align-items: center;
@@ -75,11 +61,6 @@
     height: 10vw;
     opacity: 0.6;
   }
-
-  //   &.second {
-  //     transform: translate(-50%, -100%) rotate(0deg);
-  //     height: 12vw;
-  //   }
 }
 
 .coming {
@@ -88,7 +69,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
-  font-size: 7rem;
+  font-size: 5vw;
   letter-spacing: 12px;
   text-align: center;
 }
@@ -106,12 +87,12 @@
 
 .cross {
   position: absolute;
-  top: 10%;
+  top: 5%;
   left: 50%;
-  //   transform: translate(-10%, -50%);
+  transform: translateX(-50%);
   width: 40px;
   height: 40px;
-  font-size: 16px;
+  font-size: 1.8rem;
   background-color: pink;
   color: rgb(41, 41, 41);
   border: 0;
@@ -126,6 +107,33 @@
   }
 
   &:active {
-    transform: scale(0.9);
+    transform: translateX(-50%) scale(0.9);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+/////////////////////////////////////////////////
+///////// MEDIA QUERRIES
+/////////////////////////////////////////////////
+@include respond(1600) {
+  .cross {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+  }
+}
+
+@include respond(1200) {
+  .coming {
+    font-size: 4vw;
+  }
+
+  .cross {
+    width: 35px;
+    height: 35px;
+    font-size: 1.6rem;
   }
 }

@@ -1,13 +1,11 @@
 const hourEl = document.querySelector(".hour");
 console.log("1");
 const minuteEl = document.querySelector(".minute");
-// const secondEl = document.querySelector(".second");
 
 function setTime() {
   const time = new Date();
   const hours = time.getHours();
   const minutes = time.getMinutes();
-  //   const seconds = time.getSeconds();
 
   hourEl.style.transform = `translate(-50%, -100%) rotate(${scale(
     hours,
@@ -24,14 +22,6 @@ function setTime() {
     0,
     360
   )}deg)`;
-
-  //   secondEl.style.transform = `translate(-50%, -100%) rotate(${scale(
-  //     seconds,
-  //     0,
-  //     60,
-  //     0,
-  //     360
-  //   )}deg)`;
 }
 
 const scale = (num, in_min, in_max, out_min, out_max) => {
