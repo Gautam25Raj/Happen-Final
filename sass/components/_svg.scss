@@ -103,6 +103,31 @@
       width: 50rem;
       transform: translateX(-1rem);
     }
+
+    &.circle {
+      width: 24vw;
+    }
+
+    &.line {
+      &-1 {
+        left: 14%;
+      }
+
+      &-2 {
+        left: 75%;
+      }
+
+      &-3 {
+        left: 85%;
+      }
+
+      &-4 {
+        height: 2px;
+        width: 72%;
+        left: 9%;
+        bottom: 10%;
+      }
+    }
   }
 }
 

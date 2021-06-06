@@ -2,8 +2,8 @@
   margin-top: 15%;
 
   &-control {
-    width: 100%;
-    max-width: 280px;
+    width: 42%;
+    // max-width: 280px;
     margin: 0 auto;
     position: relative;
     transform: translateX(5.5rem);
@@ -49,14 +49,77 @@
 /////////////////////////////////////////////////
 ///////// MEDIA QUERRIES
 /////////////////////////////////////////////////
+@include respond(1600) {
+  .form {
+    margin-top: 17%;
+
+    &-control {
+      &:not(:last-child) {
+        margin-bottom: 4.2rem;
+      }
+
+      & label {
+        font-size: 1.7rem;
+      }
+
+      & input {
+        font-size: 1.7rem;
+      }
+
+      & .form-btn {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+@include respond(1900) {
+  .form {
+    margin-top: 20%;
+
+    &-control {
+      width: 48%;
+
+      &:not(:last-child) {
+        margin-bottom: 4.8rem;
+      }
+
+      & label {
+        font-size: 1.9rem;
+      }
+
+      & input {
+        font-size: 1.9rem;
+      }
+
+      & .form-btn {
+        margin-top: 8rem;
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
+
+@include respond(2200) {
+  .form {
+    margin-top: 22%;
+  }
+}
+
 @include respond(1200) {
   .form {
+    margin-top: 12%;
+
     &-control {
-      max-width: 220px;
+      min-width: 220px;
 
       &:not(:last-child) {
         margin-bottom: 3.2rem;
       }
+    }
+
+    & .form-btn {
+      margin-top: 4rem;
     }
   }
 }

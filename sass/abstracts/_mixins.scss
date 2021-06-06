@@ -4,35 +4,35 @@
 @mixin respond($breakpoint) {
   //FOR WIDTH OF 1200
   @if $breakpoint == 1200 {
-    @media (max-width: 1200px) {
+    @media only screen and (max-width: 1200px) {
       @content;
     }
   }
 
   //FOR WIDTH OF 1400
   @if $breakpoint == 1400 {
-    @media (max-width: 1400px) {
+    @media only screen and (max-width: 1400px) {
       @content;
     }
   }
 
   //FOR WIDTH OF 1600
   @if $breakpoint == 1600 {
-    @media (min-width: 1600px) {
+    @media only screen and (min-width: 1600px) {
       @content;
     }
   }
 
   //FOR WIDTH OF 1900
   @if $breakpoint == 1900 {
-    @media (min-width: 1900px) {
+    @media only screen and (min-width: 1900px) {
       @content;
     }
   }
 
   //FOR WIDTH OF 1900
   @if $breakpoint == 2200 {
-    @media (min-width: 2200px) {
+    @media only screen and (min-width: 2200px) {
       @content;
     }
   }
