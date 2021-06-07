@@ -44,6 +44,41 @@
     }
   }
 }
+
+@include respond(700) {
+  .social {
+    display: none;
+    height: auto;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    margin: 0 auto;
+    top: 66%;
+    transform: translateY(-80%);
+    transition: transform 1s ease-out;
+
+    &__nav {
+      width: 80%;
+      max-width: 26rem;
+      background-color: #000;
+      padding: 0.5rem;
+    }
+
+    &__list {
+      flex-direction: row;
+      margin-right: 0;
+    }
+
+    &__item {
+      width: 3rem;
+    }
+  }
+
+  .social.hamburger-open {
+    display: flex;
+    transform: translateY(0);
+  }
+}
 //////////////////////////////////////////////////////
 ////////// STICKY SOCIAL
 //////////////////////////////////////////////////////
