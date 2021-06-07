@@ -28,9 +28,6 @@
       font-size: 1.8rem;
       height: 100%;
       padding: 0 4px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
       text-transform: uppercase;
       position: relative;
       transition: color 0.2s ease-in;
@@ -42,6 +39,7 @@
       width: 0;
       height: 2px;
       background-color: #000;
+      left: 0;
       bottom: -6px;
       transition: width 0.2s linear;
     }
@@ -53,12 +51,21 @@
         width: 100%;
       }
     }
-
-    &:active {
-      transform: scale(0.98);
-    }
   }
 }
+
+.click {
+  transition: transform 0.1s ease-in;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
 /////////////////////////////////////////////////
 ///////// MEDIA QUERRIES
 /////////////////////////////////////////////////
@@ -113,6 +120,68 @@
   }
 }
 
+@include respond(950) {
+  .navigation {
+    &__nav {
+      width: 100%;
+    }
+
+    &__list {
+      justify-content: space-evenly;
+      img {
+        width: 7rem;
+      }
+    }
+  }
+}
+
+@include respond(700) {
+  .navigation {
+    background-color: #fff;
+    height: auto;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+
+    .navigation__nav {
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .navigation__list {
+      width: 100%;
+      justify-content: flex-end;
+
+      .happen-logo {
+        margin: 0 auto 0 0;
+        padding: 0.2rem 0 0 2rem;
+        order: -1;
+      }
+
+      img {
+        width: 6rem;
+      }
+    }
+
+    .navigation__item {
+      margin-right: 3rem;
+    }
+
+    .navigation__link {
+      &,
+      &:link,
+      &:visited {
+        color: #000;
+      }
+
+      &:hover {
+        color: var(--light-color-2);
+      }
+    }
+  }
+}
+
 //////////////////////////////////////////////////////
 ////////// STICKY NAVIGATION
 //////////////////////////////////////////////////////
@@ -158,5 +227,14 @@
     &:hover {
       color: var(--light-color-2);
     }
+  }
+}
+
+/////////////////////////////////////////////////
+///////// MEDIA QUERRIES
+/////////////////////////////////////////////////
+@include respond(700) {
+  .navigation.sticky {
+    display: none;
   }
 }
