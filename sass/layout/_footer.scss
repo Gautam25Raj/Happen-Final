@@ -1,0 +1,113 @@
+.footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  color: white;
+  background: gray;
+  padding: 0px 20px ;
+  &__container {
+    max-width: 800px;
+    flex: 1 0 475px;
+    &:first-of-type {
+      margin: 0px 20px 0px 0px;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    max-width: 600px;
+  }
+}
+
+.container__title {
+  font-size: 4.2rem;
+  margin: 0px 0px 20px;
+}
+
+.social-media {
+  display: flex;
+  align-items: center;
+  &__link {
+    width: 100%;
+    max-width: 40px;
+    margin: 0px 10px 0px 0px;
+  }
+}
+
+.menu {
+  margin: 40px 0px;
+  padding: 25px 0px;
+  border-top: 1px white solid;
+  border-bottom: 1px white solid;
+  &__link {
+    a {
+      color: white;
+    }
+    font-size: 2rem;
+    padding: 5px 0px;
+  }
+}
+
+.contact {
+  color: white;
+  &__phone {
+    margin: 10px 0px;
+  }
+}
+
+.f-form {
+  &__grp {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__bttn {
+    width: 100px;
+    height: 50px;
+    margin: 10px 0px 0px;
+  }
+}
+
+.f-form__grp {
+  .input-label {
+    width: 45%;
+  }
+}
+
+.input-label {
+  position: relative;
+  margin-bottom: 20px;
+  label {
+    color: black;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.4rem;
+  }
+  input {
+    width: 100%;
+    height: 40px;
+  }
+}
+
+.textarea-label {
+  position: relative;
+  label {
+    color: black;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 1.4rem;
+  }
+  textarea {
+    width: 100%;
+    height: 200px;
+  }
+}
+.copyright {
+  width: 100%;
+  text-align: center;
+  font-size: 2.1rem;
+  margin: 30px 0;
+}
