@@ -42,7 +42,7 @@ function windowSizeUpdate() {
   } else {
     maxArrowClickable = 1;
   }
-  serviceGridContainer.style.transform = `translateX(0%)`
+  serviceGridContainer.style.transform = `translateX(0%)`;
 }
 
 window.addEventListener("resize", windowSizeUpdate);
@@ -50,7 +50,7 @@ windowSizeUpdate();
 
 arrowRight.addEventListener("click", () => {
   rightClicked = true;
-  serviceSlider()
+  serviceSlider();
 });
 
 arrowLeft.addEventListener("click", () => {
