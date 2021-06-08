@@ -74,11 +74,29 @@
     }
   }
 
-  .social.hamburger-open {
+  // .social.hamburger-open {
+  //   display: flex;
+  //   transform: translateY(0);
+  // }
+
+  .hamburger.open {
     display: flex;
     transform: translateY(0);
   }
 }
+
+@include respond(450) {
+  .social {
+    &__nav {
+      max-width: 30rem;
+    }
+
+    &__item {
+      width: 3.6rem;
+    }
+  }
+}
+
 //////////////////////////////////////////////////////
 ////////// STICKY SOCIAL
 //////////////////////////////////////////////////////

@@ -157,7 +157,7 @@
     background-color: #fff;
     top: 0;
     z-index: 10;
-    height: 8rem;
+    height: 7rem;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
     position: fixed;
 
@@ -169,7 +169,7 @@
         margin: 0;
         padding: 0;
         position: fixed;
-        top: 0.5rem;
+        top: 0.1rem;
         left: 2rem;
         z-index: 1000;
 
@@ -200,7 +200,12 @@
       }
     }
 
-    &__list.hamburger-open {
+    // &__list.hamburger-open {
+    //   display: flex;
+    //   transform: translateY(0);
+    // }
+
+    .hamburger.open {
       display: flex;
       transform: translateY(0);
     }
@@ -217,6 +222,22 @@
       &:visited {
         color: #000;
         font-size: 2.2rem;
+      }
+
+      &:hover {
+        color: var(--light-color-2);
+      }
+    }
+  }
+}
+
+@include respond(450) {
+  .navigation {
+    &__link {
+      &,
+      &:link,
+      &:visited {
+        font-size: 2.4rem;
       }
     }
   }

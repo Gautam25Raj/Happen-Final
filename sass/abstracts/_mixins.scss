@@ -2,6 +2,20 @@
 ///////// MEDIA QUERRY MIXIN
 /////////////////////////////////////////////////
 @mixin respond($breakpoint) {
+  //FOR WIDTH OF 450
+  @if $breakpoint == 450 {
+    @media only screen and (max-width: 450px) {
+      @content;
+    }
+  }
+
+  //FOR WIDTH OF 550
+  @if $breakpoint == 550 {
+    @media only screen and (max-width: 550px) {
+      @content;
+    }
+  }
+
   //FOR WIDTH OF 700
   @if $breakpoint == 700 {
     @media only screen and (max-width: 700px) {

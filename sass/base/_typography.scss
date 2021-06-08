@@ -40,9 +40,18 @@ h1 {
   }
 }
 
-// @include respond(950) {
+@include respond(700) {
+  h1 {
+    font-size: 12rem;
+    margin-top: 10rem;
+    margin-bottom: 8rem;
 
-// }
+    span {
+      font-size: 7rem;
+    }
+  }
+}
+
 //////////////////////////////////////////////////////
 ////////// H2 HEADING IN EVERY SECTION
 //////////////////////////////////////////////////////
@@ -89,6 +98,12 @@ h1 {
   }
 }
 
+@include respond(700) {
+  .heading {
+    width: 98%;
+  }
+}
+
 //////////////////////////////////////////////////////
 ////////// H3 HEADING (RED COLOR HEAD)
 //////////////////////////////////////////////////////
@@ -104,6 +119,12 @@ h1 {
 @include respond(1900) {
   .heading-h3 {
     font-size: 5.3rem;
+  }
+}
+
+@include respond(1200) {
+  .heading-h3 {
+    font-size: 4.6rem;
   }
 }
 
@@ -149,6 +170,12 @@ h1 {
     &-light {
       font-size: 1.6rem;
     }
+  }
+}
+
+@include respond(1200) {
+  .paragraph {
+    line-height: 24px;
   }
 }
 

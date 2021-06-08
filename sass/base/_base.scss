@@ -67,3 +67,9 @@ li {
     font-size: 52%;
   }
 }
+
+@include respond(700) {
+  html {
+    font-size: 48%;
+  }
+}

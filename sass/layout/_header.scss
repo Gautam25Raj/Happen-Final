@@ -43,3 +43,15 @@
     }
   }
 }
+
+@include respond(700) {
+  .header {
+    &__container {
+      width: 100%;
+
+      button {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
