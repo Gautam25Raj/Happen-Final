@@ -184,7 +184,7 @@
     }
 
     &__list {
-      display: none;
+      display: flex;
       background-color: #fff;
       position: fixed;
       width: 100%;
@@ -192,8 +192,8 @@
       flex-direction: column;
       justify-content: center;
       z-index: 100;
-      transform: translateY(80%);
-      transition: transform 1s ease-out;
+      transform: translateY(-100%);
+      transition: all 1s ease-out;
 
       .happen-logo {
         display: none;

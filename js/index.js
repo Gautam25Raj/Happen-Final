@@ -1,9 +1,25 @@
 ////////////////////////////////////////////////////////////////
-//////////// FIXED NAVIGATION BAR AND SOCIAL BAR 
+//////////// FIXED NAVIGATION BAR AND SOCIAL BAR
 ////////////////////////////////////////////////////////////////
 
+const hamburgerMenu = document.querySelector(".hamburger__menu");
+const hamburgerNav = document.querySelectorAll(".hamburger");
+const navigationItem = document.querySelectorAll(".navigation__item");
+
+hamburgerMenu.addEventListener("click", responsiveNav);
+
+navigationItem.forEach((item) => {
+  item.addEventListener("click", responsiveNav);
+});
+
+function responsiveNav() {
+  hamburgerNav.forEach((item) => {
+    item.classList.toggle('open')
+  })
+}
+
 ////////////////////////////////////////////////////////////////
-//////////// SOCIAL BAR CLOSE OPEN BUTTON 
+//////////// SOCIAL BAR CLOSE OPEN BUTTON
 ////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////

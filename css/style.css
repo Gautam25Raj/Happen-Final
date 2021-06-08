@@ -372,7 +372,7 @@ h1 span {
     display: block;
   }
   .navigation__list {
-    display: none;
+    display: flex;
     background-color: #fff;
     position: fixed;
     width: 100%;
@@ -380,8 +380,8 @@ h1 span {
     flex-direction: column;
     justify-content: center;
     z-index: 100;
-    transform: translateY(80%);
-    transition: transform 1s ease-out;
+    transform: translateY(-100%);
+    transition: all 1s ease-out;
   }
   .navigation__list .happen-logo {
     display: none;
@@ -587,15 +587,15 @@ h1 span {
 }
 @media only screen and (max-width: 700px) {
   .social {
-    display: none;
+    display: flex;
     height: auto;
     position: fixed;
     z-index: 1000;
     width: 100%;
     margin: 0 auto;
     top: 66%;
-    transform: translateY(-80%);
-    transition: transform 1s ease-out;
+    transform: translateY(-110vh);
+    transition: transform 1.05s ease-out;
   }
   .social__nav {
     width: 80%;
@@ -612,7 +612,6 @@ h1 span {
   }
 
   .hamburger.open {
-    display: flex;
     transform: translateY(0);
   }
 }
