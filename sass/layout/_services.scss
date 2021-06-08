@@ -79,8 +79,7 @@
     ". . ."
     ". . .";
   transform: translateX(0);
-  // transform: translateX(-57%);
-  // overflow: hidden;
+  // transform: translateX(-110%);
 }
 
 .service {
@@ -195,7 +194,6 @@
 
     &-1 {
       width: 100%;
-      background-color: var(--light-bg-services);
       padding: 0 0 4rem;
     }
 
@@ -208,7 +206,7 @@
   .services__heading {
     width: 80%;
     margin: 0 auto;
-    padding: 8rem 0 0 4rem;
+    padding: 8rem 0 4rem 0;
     text-align: center;
 
     h2 {
@@ -237,40 +235,19 @@
   }
 }
 
-@include respond(950) {
-  .section__services {
-    flex-direction: column;
-
-    &-1 {
-      width: 100%;
-      background-color: var(--light-bg-services);
-      padding: 0 0 4rem;
-    }
-
-    &-2 {
-      width: 100%;
-      padding: 0;
-    }
-  }
-
+@include respond(700) {
   .services__heading {
     width: 95%;
-    p {
-      text-align: center;
-      padding-bottom: 2rem;
-
-      &::after {
-        transform: translateX(-50%);
-        left: 50%;
-        width: 10rem;
-      }
-    }
   }
 
-  .services {
-    width: 100%;
-    padding: 2rem 6rem;
-    left: 0;
-    margin-bottom: 15rem;
+  .service-paragraph {
+    font-size: 1.5rem;
+  }
+}
+
+@include respond(550) {
+  .grid-container {
+    grid-template-columns: 100% 100% 100%;
+    // transform: translateX(-110%);
   }
 }

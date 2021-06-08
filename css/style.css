@@ -1105,7 +1105,6 @@ h1 {
     flex-direction: column; }
     .section__services-1 {
       width: 100%;
-      background-color: var(--light-bg-services);
       padding: 0 0 4rem; }
     .section__services-2 {
       width: 100%;
@@ -1113,7 +1112,7 @@ h1 {
   .services__heading {
     width: 80%;
     margin: 0 auto;
-    padding: 8rem 0 0 4rem;
+    padding: 8rem 0 4rem 0;
     text-align: center; }
     .services__heading h2 span {
       display: inline; }
@@ -1130,30 +1129,15 @@ h1 {
     left: 0;
     margin-bottom: 15rem; } }
 
-@media only screen and (max-width: 950px) {
-  .section__services {
-    flex-direction: column; }
-    .section__services-1 {
-      width: 100%;
-      background-color: var(--light-bg-services);
-      padding: 0 0 4rem; }
-    .section__services-2 {
-      width: 100%;
-      padding: 0; }
+@media only screen and (max-width: 700px) {
   .services__heading {
     width: 95%; }
-    .services__heading p {
-      text-align: center;
-      padding-bottom: 2rem; }
-      .services__heading p::after {
-        transform: translateX(-50%);
-        left: 50%;
-        width: 10rem; }
-  .services {
-    width: 100%;
-    padding: 2rem 6rem;
-    left: 0;
-    margin-bottom: 15rem; } }
+  .service-paragraph {
+    font-size: 1.5rem; } }
+
+@media only screen and (max-width: 550px) {
+  .grid-container {
+    grid-template-columns: 100% 100% 100%; } }
 
 .section-our-teams {
   background-image: url(/images/teamWaves.png);
@@ -1522,7 +1506,7 @@ h1 {
   padding: 0px 20px; }
   .footer__container {
     max-width: 800px;
-    flex: 1 0 475px; }
+    flex: 1 1 475px; }
     .footer__container:first-of-type {
       margin: 0px 20px 0px 0px; }
   .footer__form {
