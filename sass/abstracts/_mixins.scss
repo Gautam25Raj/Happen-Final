@@ -23,6 +23,13 @@
     }
   }
 
+  //FOR WIDTH OF 850
+  @if $breakpoint == 850 {
+    @media only screen and (max-width: 850px) {
+      @content;
+    }
+  }
+
   //FOR WIDTH OF 950
   @if $breakpoint == 950 {
     @media only screen and (max-width: 950px) {

@@ -168,3 +168,23 @@
     }
   }
 }
+
+@include respond(1200) {
+  .dec {
+    &.passion-circle {
+      width: 40rem;
+    }
+  }
+}
+
+@include respond(1200) {
+  .dec {
+    &.familiar-circle {
+      width: 26rem;
+    }
+
+    &.passion-circle {
+      width: 30rem;
+    }
+  }
+}

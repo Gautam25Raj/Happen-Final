@@ -170,3 +170,73 @@
     }
   }
 }
+
+@include respond(850) {
+  .about-us {
+    &__header {
+      margin-bottom: 12rem;
+    }
+  }
+
+  .know-us-better {
+    &-about {
+      flex-direction: column;
+      padding: 0 5rem;
+
+      h4 {
+        font-size: 3.4rem;
+        text-align: right;
+        border-bottom: 1px solid var(--light-text-color-secondary);
+        padding: 0 0 0 1rem;
+        margin-left: auto;
+      }
+
+      p {
+        padding: 1rem 0 0 0;
+        border: 0;
+        font-size: 1.5rem;
+      }
+
+      &-2 {
+        flex-direction: column;
+
+        h4 {
+          margin-right: auto;
+          margin-left: 0;
+        }
+
+        p {
+          border-right: 0;
+          padding: 1rem 0 1rem 0;
+        }
+      }
+    }
+  }
+}
+
+@include respond(550) {
+  .know-us-better {
+    &-heading {
+      justify-content: center;
+    }
+
+    .passion {
+      margin: 4rem auto 0;
+      text-align: center;
+
+      span {
+        display: inline;
+      }
+    }
+
+    &-about {
+      padding: 0 1rem;
+      margin: 9rem 0;
+      text-align: center;
+
+      h4 {
+        margin: 0 auto;
+      }
+    }
+  }
+}
