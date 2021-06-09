@@ -37,7 +37,7 @@
     height: 100%;
 
     &-1 {
-      left: 16.5%;
+      left: 12%;
     }
 
     &-2 {
@@ -50,8 +50,8 @@
 
     &-4 {
       height: 2px;
-      width: 70%;
-      left: 12%;
+      width: 80%;
+      left: 8%;
       bottom: 10%;
     }
   }
@@ -169,15 +169,31 @@
   }
 }
 
-@include respond(1200) {
+@include respond(950) {
   .dec {
     &.passion-circle {
-      width: 40rem;
+      width: 38rem;
+    }
+
+    &.line {
+      &-1 {
+        left: 8%;
+      }
+
+      &-4 {
+        width: 76%;
+        left: 5%;
+        bottom: 12%;
+      }
+    }
+
+    &.triangle {
+      width: 40%;
     }
   }
 }
 
-@include respond(1200) {
+@include respond(700) {
   .dec {
     &.familiar-circle {
       width: 26rem;

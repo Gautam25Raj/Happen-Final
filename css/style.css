@@ -450,8 +450,11 @@ h1 {
     position: absolute;
     bottom: 5rem;
     margin: 0;
+    left: 40%;
     left: 50%;
-    transform: translateX(-50%); } }
+    transform: translateX(-50%); }
+    .btn-services.click:hover {
+      transform: translateX(-50%) translateY(-2px) scale(1.01); } }
 
 @media only screen and (max-width: 700px) {
   .btn-teams {
@@ -554,7 +557,7 @@ h1 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   background-color: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(3px);
   z-index: 100; }
@@ -562,6 +565,8 @@ h1 {
 .modal {
   width: 30vw;
   height: 30vw;
+  min-width: 42rem;
+  min-height: 42rem;
   background-color: #fff;
   border-radius: 5px;
   overflow: hidden;
@@ -570,8 +575,9 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../images/modal-pop-up.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/modal-bg.jpeg);
   background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -592,17 +598,17 @@ h1 {
   position: absolute;
   top: 50%;
   left: 50%;
-  height: 8vw;
+  height: 6vw;
   width: 2px;
   transform-origin: bottom center;
   transition: transform 0.25s ease-in;
+  opacity: 0.6;
   z-index: 1000; }
   .needle.hour {
     transform: translate(-50%, -100%) rotate(0deg); }
   .needle.minute {
     transform: translate(-50%, -100%) rotate(0deg);
-    height: 10vw;
-    opacity: 0.6; }
+    height: 10vw; }
 
 .coming {
   position: absolute;
@@ -655,12 +661,29 @@ h1 {
     font-size: 2rem; } }
 
 @media only screen and (max-width: 1200px) {
+  .modal {
+    min-width: 36rem;
+    min-height: 36rem; }
   .coming {
     font-size: 4vw; }
   .cross {
     width: 35px;
     height: 35px;
     font-size: 1.6rem; } }
+
+@media only screen and (max-width: 700px) {
+  .modal {
+    min-width: 32rem;
+    min-height: 32rem; }
+  .needle {
+    height: 5rem; }
+    .needle.minute {
+      height: 9rem; }
+  .coming {
+    font-size: 4rem; }
+  .cross {
+    width: 30px;
+    height: 30px; } }
 
 .dec {
   position: absolute; }
@@ -685,15 +708,15 @@ h1 {
   .dec.line {
     height: 100%; }
     .dec.line-1 {
-      left: 16.5%; }
+      left: 12%; }
     .dec.line-2 {
       left: 75%; }
     .dec.line-3 {
       left: 85%; }
     .dec.line-4 {
       height: 2px;
-      width: 70%;
-      left: 12%;
+      width: 80%;
+      left: 8%;
       bottom: 10%; }
   .dec.circle {
     width: 22vw; }
@@ -752,29 +775,34 @@ h1 {
   .dec.circle {
     width: 28rem; } }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 950px) {
   .dec.passion-circle {
-    width: 40rem; } }
+    width: 38rem; }
+  .dec.line-1 {
+    left: 8%; }
+  .dec.line-4 {
+    width: 76%;
+    left: 5%;
+    bottom: 12%; }
+  .dec.triangle {
+    width: 40%; } }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 700px) {
   .dec.familiar-circle {
     width: 26rem; }
   .dec.passion-circle {
     width: 30rem; } }
 
-.section-contact-us {
-  height: 100vh; }
-
 .contact-us {
   background-color: #fff7f8;
   width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: space-between;
   position: relative; }
   .contact-us-1 {
     position: relative;
-    width: 60%; }
+    width: 60%;
+    z-index: 10; }
   .contact-us-2 {
     width: 40%;
     display: flex;
@@ -862,11 +890,34 @@ h1 {
 
 @media only screen and (max-width: 1200px) {
   .contact_head-p-1 {
-    transform: translateY(-1rem) translateX(-3rem); }
+    transform: translate(-3rem, -1rem); }
   .contact_head-p-2 {
-    transform: translateY(2rem) translateX(6rem); }
+    transform: translate(6rem, 2rem); }
   .contact_head-heading {
     font-size: 5.2rem; } }
+
+@media only screen and (max-width: 950px) {
+  .contact_container {
+    margin-top: 14%; }
+  .contact_head-p {
+    font-size: 1.25rem; }
+    .contact_head-p-1 {
+      transform: translate(0, -1rem); }
+    .contact_head-p-2 {
+      transform: translate(0, 2rem); }
+  .contact_head-heading {
+    font-size: 5rem; }
+  .location {
+    width: 70%;
+    max-width: 200px; } }
+
+@media only screen and (max-width: 700px) {
+  .contact-us {
+    flex-direction: column; }
+    .contact-us-1, .contact-us-2 {
+      width: 100%; }
+    .contact-us-2 {
+      flex-direction: row; } }
 
 .section__header {
   background-image: url(../../images/HeroImage.png), linear-gradient(to bottom left, #bc9590 0%, #e2c3bc);
@@ -1031,14 +1082,16 @@ h1 {
   .know-us-better-heading {
     justify-content: center; }
   .know-us-better .passion {
-    margin: 4rem auto 0;
+    margin: 0;
     text-align: center; }
     .know-us-better .passion span {
       display: inline; }
   .know-us-better-about {
     padding: 0 1rem;
-    margin: 9rem 0;
+    margin: 9rem 0 14rem;
     text-align: center; }
+    .know-us-better-about-2 {
+      margin: 10rem 0 9rem; }
     .know-us-better-about h4 {
       margin: 0 auto; } }
 
@@ -1497,7 +1550,7 @@ h1 {
     margin-bottom: 1rem; }
 
 .form {
-  margin-top: 15%; }
+  margin-top: 18%; }
   .form-control {
     width: 42%;
     margin: 0 auto;
@@ -1524,52 +1577,56 @@ h1 {
         border-bottom: 3px solid red; }
     .form-control .form-btn {
       width: 100%;
-      margin-top: 6rem;
+      margin: 6rem 0;
       padding: 1.6rem 0;
       background-color: #000;
       color: #fff;
       border: 0; }
 
 @media only screen and (min-width: 1600px) {
-  .form {
-    margin-top: 17%; }
-    .form-control:not(:last-child) {
-      margin-bottom: 4.2rem; }
-    .form-control label {
-      font-size: 1.7rem; }
-    .form-control input {
-      font-size: 1.7rem; }
-    .form-control .form-btn {
-      font-size: 1.6rem; } }
+  .form-control:not(:last-child) {
+    margin-bottom: 4.2rem; }
+  .form-control label {
+    font-size: 1.7rem; }
+  .form-control input {
+    font-size: 1.7rem; }
+  .form-control .form-btn {
+    font-size: 1.6rem; } }
 
 @media only screen and (min-width: 1900px) {
-  .form {
-    margin-top: 20%; }
-    .form-control {
-      width: 48%; }
-      .form-control:not(:last-child) {
-        margin-bottom: 4.8rem; }
-      .form-control label {
-        font-size: 1.9rem; }
-      .form-control input {
-        font-size: 1.9rem; }
-      .form-control .form-btn {
-        margin-top: 8rem;
-        font-size: 1.7rem; } }
+  .form-control {
+    width: 48%; }
+    .form-control:not(:last-child) {
+      margin-bottom: 4.8rem; }
+    .form-control label {
+      font-size: 1.9rem; }
+    .form-control input {
+      font-size: 1.9rem; }
+    .form-control .form-btn {
+      margin-top: 8rem;
+      font-size: 1.7rem; } }
 
 @media only screen and (min-width: 2200px) {
   .form {
     margin-top: 22%; } }
 
 @media only screen and (max-width: 1200px) {
-  .form {
-    margin-top: 12%; }
-    .form-control {
-      min-width: 220px; }
-      .form-control:not(:last-child) {
-        margin-bottom: 3.2rem; }
-    .form .form-btn {
-      margin-top: 4rem; } }
+  .form-control {
+    min-width: 220px; }
+    .form-control:not(:last-child) {
+      margin-bottom: 4.2rem; }
+  .form .form-btn {
+    margin-top: 6rem; } }
+
+@media only screen and (max-width: 950px) {
+  .form-control {
+    width: 55%;
+    min-width: 180px;
+    margin-left: 15%; }
+    .form-control:not(:last-child) {
+      margin-bottom: 4rem; }
+  .form .form-btn {
+    margin: 6rem 0; } }
 
 .footer {
   display: flex;

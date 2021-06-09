@@ -1,5 +1,5 @@
 .form {
-  margin-top: 15%;
+  margin-top: 18%;
 
   &-control {
     width: 42%;
@@ -37,7 +37,7 @@
 
     & .form-btn {
       width: 100%;
-      margin-top: 6rem;
+      margin: 6rem 0;
       padding: 1.6rem 0;
       background-color: #000;
       color: #fff;
@@ -51,8 +51,6 @@
 /////////////////////////////////////////////////
 @include respond(1600) {
   .form {
-    margin-top: 17%;
-
     &-control {
       &:not(:last-child) {
         margin-bottom: 4.2rem;
@@ -75,8 +73,6 @@
 
 @include respond(1900) {
   .form {
-    margin-top: 20%;
-
     &-control {
       width: 48%;
 
@@ -108,18 +104,34 @@
 
 @include respond(1200) {
   .form {
-    margin-top: 12%;
-
     &-control {
       min-width: 220px;
 
       &:not(:last-child) {
-        margin-bottom: 3.2rem;
+        margin-bottom: 4.2rem;
       }
     }
 
     & .form-btn {
-      margin-top: 4rem;
+      margin-top: 6rem;
+    }
+  }
+}
+
+@include respond(950) {
+  .form {
+    &-control {
+      width: 55%;
+      min-width: 180px;
+      margin-left: 15%;
+
+      &:not(:last-child) {
+        margin-bottom: 4rem;
+      }
+    }
+
+    & .form-btn {
+      margin: 6rem 0;
     }
   }
 }
