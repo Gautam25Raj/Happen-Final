@@ -2,19 +2,21 @@
 //////////// FIXED NAVIGATION BAR AND SOCIAL BAR
 ////////////////////////////////////////////////////////////////
 
-const hamburgerMenu = document.querySelector(".hamburger__menu");
-const hamburgerNav = document.querySelectorAll(".hamburger");
-const navigationItem = document.querySelectorAll(".navigation__item");
+// const hamburgerMenu = document.querySelector(".hamburger__menu");
+// const navigationItem = document.querySelectorAll(".navigation__item");
 
 function responsiveNav() {
+  const hamburgerNav = document.querySelectorAll(".hamburger");
   hamburgerNav.forEach((item) => {
     item.classList.toggle("open");
   });
 }
 
-hamburgerMenu.addEventListener("click", responsiveNav);
+document
+  .querySelector(".hamburger__menu")
+  .addEventListener("click", responsiveNav);
 
-navigationItem.forEach((item) => {
+document.querySelectorAll(".navigation__item").forEach((item) => {
   item.addEventListener("click", responsiveNav);
 });
 
@@ -85,6 +87,7 @@ function serviceSlider() {
 ////////////////////////////////////////////////////////////////
 const hourEl = document.querySelector(".hour");
 const minuteEl = document.querySelector(".minute");
+const readMoreBtns = document.querySelectorAll(".read-more");
 
 function setTime() {
   const time = new Date();
@@ -111,6 +114,27 @@ function setTime() {
 const scale = (num, in_min, in_max, out_min, out_max) => {
   return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
 };
-setTime();
 
-setInterval(setTime, 60000);
+function comingSoon() {
+  const modal = document.querySelector(".modal");
+  const overlay = document.querySelector(".overlay");
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+
+  overlay.addEventListener("click", () => {
+    overlay.classList.add("hidden");
+    modal.classList.add("hidden");
+  });
+
+  document.querySelector(".cross").addEventListener("click", () => {
+    overlay.classList.add("hidden");
+    modal.classList.add("hidden");
+  });
+
+  setTime();
+  setInterval(setTime, 60000);
+}
+
+readMoreBtns.forEach((readMore) => {
+  readMore.addEventListener("click", comingSoon);
+});
