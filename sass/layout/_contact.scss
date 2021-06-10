@@ -214,6 +214,117 @@
 
     &-2 {
       flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin: 8% 0;
+    }
+  }
+
+  .contact {
+    width: 100%;
+
+    &_container {
+      transform: translateX(-4rem);
+    }
+
+    &_head {
+      &-p {
+        font-size: 1.5rem;
+
+        &-1 {
+          transform: translate(-4rem, -1rem);
+        }
+
+        &-2 {
+          transform: translate(5rem, 2rem);
+        }
+      }
+
+      &-heading {
+        font-size: 6.5rem;
+      }
+    }
+  }
+
+  .location {
+    padding: 2rem 4rem;
+    max-width: none;
+    width: auto;
+
+    &:not(:last-child) {
+      margin: 0;
+      padding: 2rem 4rem;
+      border-bottom: 0;
+      border-right: 2px solid pink;
+    }
+  }
+}
+
+@include respond(550) {
+  .contact-us {
+    &-1 {
+      position: static;
+    }
+
+    &-2 {
+      flex-direction: column;
+      margin: 0 0 4rem;
+      text-align: center;
+    }
+  }
+
+  .contact {
+    &_container {
+      transform: translateX(0rem);
+    }
+
+    &_head {
+      &-p {
+        font-size: 1.4rem;
+        text-align: center;
+
+        &-1 {
+          transform: translate(0, -2rem);
+        }
+
+        &-2 {
+          transform: translate(0, 2rem);
+          align-self: center;
+        }
+      }
+
+      &-heading {
+        font-size: 10vw;
+        text-align: center;
+      }
+    }
+  }
+
+  .location {
+    padding: 4rem 0;
+    max-width: 220px;
+    width: 100%;
+    font-size: 1.7rem;
+
+    &:not(:last-child) {
+      padding: 4rem 0;
+      border-bottom: 2px solid pink;
+      border-right: 0;
+    }
+  }
+}
+
+@include respond(450) {
+  .contact {
+    &_head {
+      &-p {
+        word-spacing: 0;
+        font-size: 1.35rem;
+      }
+
+      &-heading {
+        font-size: 5.5rem;
+      }
     }
   }
 }

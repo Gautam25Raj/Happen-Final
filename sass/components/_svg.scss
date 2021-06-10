@@ -202,5 +202,73 @@
     &.passion-circle {
       width: 30rem;
     }
+
+    &.line {
+      &-1 {
+        left: 4%;
+      }
+
+      &-2 {
+        left: 85%;
+      }
+
+      &-3 {
+        left: 96%;
+      }
+
+      &-4 {
+        width: 90%;
+        left: 2%;
+      }
+    }
+
+    &.circle {
+      width: 36rem;
+    }
+
+    &.half-circle {
+      &.half-circle-up {
+        display: none;
+      }
+
+      &.half-circle-down {
+        bottom: 0;
+      }
+    }
+
+    &.triangle {
+      display: none;
+    }
+  }
+}
+
+@include respond(550) {
+  .dec.circle {
+    width: 50vw;
+  }
+
+  .dec.line-4 {
+    top: 48%;
+  }
+
+  .dec.half-circle-down {
+    width: 35vw;
+  }
+}
+
+@include respond(450) {
+  .dec.circle {
+    width: 30rem;
+  }
+
+  .dec.line {
+    &-2 {
+      display: none;
+    }
+
+    &-4 {
+      width: 98%;
+      left: 1%;
+    }
   }
 }

@@ -1,6 +1,6 @@
 .section__services {
   display: flex;
-  background-image: url(../../images/servicesBg.jpg);
+  background-image: url(../images/servicesBg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -55,7 +55,7 @@
       var(--light-bg-service),
       var(--light-bg-service)
     ),
-    url(../../images/serviceBg.jpg);
+    url(../images/serviceBg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;

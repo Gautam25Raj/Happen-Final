@@ -179,6 +179,12 @@
   }
 
   .know-us-better {
+    .passion {
+      span {
+        text-align: right;
+      }
+    }
+
     &-about {
       flex-direction: column;
       padding: 0 5rem;
@@ -231,7 +237,7 @@
 
     &-about {
       padding: 0 1rem;
-      margin: 9rem 0 14rem;
+      margin: 9rem 0 15rem;
       text-align: center;
 
       &-2 {

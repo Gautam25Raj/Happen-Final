@@ -146,7 +146,7 @@ h1 {
   }
 }
 
-@include respond(700) {
+@include respond(850) {
   .heading-h3 {
     font-size: 4rem;
   }

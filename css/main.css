@@ -176,7 +176,7 @@ h1 {
   .heading-h3 {
     font-size: 4.6rem; } }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 850px) {
   .heading-h3 {
     font-size: 4rem; } }
 
@@ -303,8 +303,8 @@ h1 {
   .navigation {
     background-color: #fff;
     top: 0;
-    z-index: 10;
-    height: 7rem;
+    z-index: 100;
+    height: 8.4rem;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
     position: fixed; }
     .navigation__nav {
@@ -314,11 +314,11 @@ h1 {
         margin: 0;
         padding: 0;
         position: fixed;
-        top: 0.1rem;
+        top: 0.4rem;
         left: 2rem;
         z-index: 1000; }
         .navigation__nav .happen-logo-m img {
-          width: 16rem; }
+          width: 18rem; }
     .navigation .hamburger__menu {
       display: block; }
     .navigation__list {
@@ -346,8 +346,14 @@ h1 {
       color: var(--light-color-2); } }
 
 @media only screen and (max-width: 450px) {
-  .navigation__link, .navigation__link:link, .navigation__link:visited {
-    font-size: 2.4rem; } }
+  .navigation {
+    height: 7rem; }
+    .navigation .happen-logo-m {
+      left: 0.8rem; }
+      .navigation .happen-logo-m img {
+        width: 15rem; }
+    .navigation__link, .navigation__link:link, .navigation__link:visited {
+      font-size: 2.4rem; } }
 
 .navigation.sticky {
   background-color: #fff;
@@ -792,7 +798,41 @@ h1 {
   .dec.familiar-circle {
     width: 26rem; }
   .dec.passion-circle {
-    width: 30rem; } }
+    width: 30rem; }
+  .dec.line-1 {
+    left: 4%; }
+  .dec.line-2 {
+    left: 85%; }
+  .dec.line-3 {
+    left: 96%; }
+  .dec.line-4 {
+    width: 90%;
+    left: 2%; }
+  .dec.circle {
+    width: 36rem; }
+  .dec.half-circle.half-circle-up {
+    display: none; }
+  .dec.half-circle.half-circle-down {
+    bottom: 0; }
+  .dec.triangle {
+    display: none; } }
+
+@media only screen and (max-width: 550px) {
+  .dec.circle {
+    width: 50vw; }
+  .dec.line-4 {
+    top: 48%; }
+  .dec.half-circle-down {
+    width: 35vw; } }
+
+@media only screen and (max-width: 450px) {
+  .dec.circle {
+    width: 30rem; }
+  .dec.line-2 {
+    display: none; }
+  .dec.line-4 {
+    width: 98%;
+    left: 1%; } }
 
 .contact-us {
   background-color: #fff7f8;
@@ -918,10 +958,71 @@ h1 {
     .contact-us-1, .contact-us-2 {
       width: 100%; }
     .contact-us-2 {
-      flex-direction: row; } }
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin: 8% 0; }
+  .contact {
+    width: 100%; }
+    .contact_container {
+      transform: translateX(-4rem); }
+    .contact_head-p {
+      font-size: 1.5rem; }
+      .contact_head-p-1 {
+        transform: translate(-4rem, -1rem); }
+      .contact_head-p-2 {
+        transform: translate(5rem, 2rem); }
+    .contact_head-heading {
+      font-size: 6.5rem; }
+  .location {
+    padding: 2rem 4rem;
+    max-width: none;
+    width: auto; }
+    .location:not(:last-child) {
+      margin: 0;
+      padding: 2rem 4rem;
+      border-bottom: 0;
+      border-right: 2px solid pink; } }
+
+@media only screen and (max-width: 550px) {
+  .contact-us-1 {
+    position: static; }
+  .contact-us-2 {
+    flex-direction: column;
+    margin: 0 0 4rem;
+    text-align: center; }
+  .contact_container {
+    transform: translateX(0rem); }
+  .contact_head-p {
+    font-size: 1.4rem;
+    text-align: center; }
+    .contact_head-p-1 {
+      transform: translate(0, -2rem); }
+    .contact_head-p-2 {
+      transform: translate(0, 2rem);
+      align-self: center; }
+  .contact_head-heading {
+    font-size: 10vw;
+    text-align: center; }
+  .location {
+    padding: 4rem 0;
+    max-width: 220px;
+    width: 100%;
+    font-size: 1.7rem; }
+    .location:not(:last-child) {
+      padding: 4rem 0;
+      border-bottom: 2px solid pink;
+      border-right: 0; } }
+
+@media only screen and (max-width: 450px) {
+  .contact_head-p {
+    word-spacing: 0;
+    font-size: 1.35rem; }
+  .contact_head-heading {
+    font-size: 5.5rem; } }
 
 .section__header {
-  background-image: url(../../images/HeroImage.png), linear-gradient(to bottom left, #bc9590 0%, #e2c3bc);
+  background-image: url(../images/HeroImage.png), linear-gradient(to bottom left, #bc9590 0%, #e2c3bc);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right top;
@@ -1057,6 +1158,8 @@ h1 {
 @media only screen and (max-width: 850px) {
   .about-us__header {
     margin-bottom: 12rem; }
+  .know-us-better .passion span {
+    text-align: right; }
   .know-us-better-about {
     flex-direction: column;
     padding: 0 5rem; }
@@ -1089,7 +1192,7 @@ h1 {
       display: inline; }
   .know-us-better-about {
     padding: 0 1rem;
-    margin: 9rem 0 14rem;
+    margin: 9rem 0 15rem;
     text-align: center; }
     .know-us-better-about-2 {
       margin: 10rem 0 9rem; }
@@ -1098,7 +1201,7 @@ h1 {
 
 .section__services {
   display: flex;
-  background-image: url(../../images/servicesBg.jpg);
+  background-image: url(../images/servicesBg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -1135,7 +1238,7 @@ h1 {
       left: 0; }
 
 .services {
-  background-image: linear-gradient(var(--light-bg-service), var(--light-bg-service)), url(../../images/serviceBg.jpg);
+  background-image: linear-gradient(var(--light-bg-service), var(--light-bg-service)), url(../images/serviceBg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -1260,7 +1363,7 @@ h1 {
     grid-template-columns: 100% 100% 100%; } }
 
 .section-our-teams {
-  background-image: url(/images/teamWaves.png);
+  background-image: url(../images/teamWaves.png);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: 100% 30%; }
@@ -1302,7 +1405,7 @@ h1 {
   .card-bg {
     height: 30%;
     width: 100%;
-    background-image: url(../../images/CardBackground.png);
+    background-image: url(../images/CardBackground.png);
     background-repeat: no-repeat;
     background-size: cover; }
   .card-team-photo {
@@ -1622,10 +1725,20 @@ h1 {
 @media only screen and (max-width: 950px) {
   .form-control {
     width: 55%;
-    min-width: 180px;
+    min-width: 220px;
     margin-left: 15%; }
     .form-control:not(:last-child) {
       margin-bottom: 4rem; }
+  .form .form-btn {
+    margin: 6rem 0; } }
+
+@media only screen and (max-width: 700px) {
+  .form-control {
+    width: 40%;
+    margin: 0 auto;
+    transform: translateX(0); }
+    .form-control:not(:last-child) {
+      margin-bottom: 5rem; }
   .form .form-btn {
     margin: 6rem 0; } }
 
