@@ -1587,7 +1587,8 @@ h1 {
   padding: 8rem 0;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  display: none; }
 
 .testimonials-container {
   background-color: rgba(var(--light-background-3), 0.8);
