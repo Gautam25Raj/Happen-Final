@@ -1,10 +1,57 @@
-////////////////////////////////////////////////////////////////
-//////////// FIXED NAVIGATION BAR AND SOCIAL BAR
-////////////////////////////////////////////////////////////////
+let screenSize = window.screen.availWidth;
+window.addEventListener("resize", windowSizeUpdate);
 
-// const hamburgerMenu = document.querySelector(".hamburger__menu");
-// const navigationItem = document.querySelectorAll(".navigation__item");
+////////////////////////////////////////////////////////////////
+//////////// FIXED NAVIGATION BAR AND SOCIAL BAR TRIGGER
+////////////////////////////////////////////////////////////////
+const header = document.querySelector("header");
+const footer = document.querySelector("footer");
 
+function removeNav() {
+  document.querySelector(".navigation").classList.remove("sticky");
+  document.querySelector(".social").classList.remove("active");
+}
+
+const fixedNav = function (entries) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) {
+    document.querySelector(".navigation").classList.add("sticky");
+    document.querySelector(".social").classList.add("active");
+  } else {
+    removeNav();
+  }
+};
+
+function remove(entries) {
+  const [entry] = entries;
+
+  if (entry.isIntersecting) {
+    removeNav();
+  } else {
+    fixedNav();
+  }
+}
+
+if (screenSize > 700) {
+  const headerObserver = new IntersectionObserver(fixedNav, {
+    root: null,
+    threshold: 0.15,
+  });
+
+  headerObserver.observe(header);
+
+  const footerObserver = new IntersectionObserver(remove, {
+    root: null,
+    threshold: 0.1,
+  });
+
+  footerObserver.observe(footer);
+}
+
+////////////////////////////////////////////////////////////////
+//////////// HAMBURGER MENU CLICK
+////////////////////////////////////////////////////////////////
 function responsiveNav() {
   const hamburgerNav = document.querySelectorAll(".hamburger");
   hamburgerNav.forEach((item) => {
@@ -25,8 +72,59 @@ document.querySelectorAll(".navigation__item").forEach((item) => {
 ////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////
-//////////// START YOUR JOURNEY BUTTON CLICK
+//////////// SECTION TRIGGER
 ////////////////////////////////////////////////////////////////
+const sections = document.querySelectorAll(".section");
+const sectionsM = document.querySelectorAll(".section-m");
+
+const revealSection = function (entries, oberserver) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove("section--hidden-bottom");
+  oberserver.unobserve(entry.target);
+};
+
+const revealSectionM = function (entries1, oberserver1) {
+  const [entry1] = entries1;
+
+  if (!entry1.isIntersecting) return;
+
+  if (entry1.target.classList.contains("section--hidden-right")) {
+    entry1.target.classList.remove("section--hidden-right");
+  } else {
+    entry1.target.classList.remove("section--hidden-l");
+  }
+  oberserver1.unobserve(entry.target);
+};
+
+// if (screenSize > 700) {
+//   const sectionObserver = new IntersectionObserver(revealSection, {
+//     root: null,
+//     threshold: 0.4,
+//   });
+
+//   sections.forEach((section) => {
+//     sectionObserver.observe(section);
+//     section.classList.add("section--hidden-bottom");
+//   });
+// };
+
+if (screenSize < 700) {
+  const sectionObserverM = new IntersectionObserver(revealSectionM, {
+    root: null,
+    threshold: 0.25,
+  });
+  sectionsM.forEach((sectionM, i) => {
+    sectionObserverM.observe(sectionM);
+    if (i % 2 == 0) {
+      sectionM.classList.add("section--hidden-l");
+    } else {
+      sectionM.classList.add("section--hidden-right");
+    }
+  });
+}
 
 ////////////////////////////////////////////////////////////////
 //////////// SERVICES SLIDER BUTTON CLICK
@@ -39,15 +137,16 @@ let arrowClicked = 0;
 let rightClicked = null;
 
 function windowSizeUpdate() {
-  if (window.screen.width < 550) {
+  screenSize = window.screen.width;
+
+  if (screenSize < 550) {
     maxArrowClickable = 3;
   } else {
     maxArrowClickable = 1;
   }
+
   serviceGridContainer.style.transform = `translateX(0%)`;
 }
-
-window.addEventListener("resize", windowSizeUpdate);
 windowSizeUpdate();
 
 arrowRight.addEventListener("click", () => {

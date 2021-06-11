@@ -181,6 +181,11 @@
 
     .hamburger__menu {
       display: block;
+      z-index: 98469;
+
+      img {
+        z-index: 1111111;
+      }
     }
 
     &__list {
@@ -256,7 +261,7 @@
   height: auto;
   position: fixed;
   top: 0;
-  z-index: 10;
+  z-index: 1000;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
 
   .navigation__nav {

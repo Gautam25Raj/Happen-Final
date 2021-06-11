@@ -31,6 +31,26 @@ li {
   list-style: none;
 }
 
+.section,
+.section-m {
+  transition: transform 0.3s ease-in;
+}
+
+.section--hidden-bottom {
+  opacity: 0;
+  transform: translateY(6rem) !important;
+}
+
+.section--hidden-l {
+  opacity: 0;
+  transform: translateX(20rem) !important;
+}
+
+.section--hidden-right {
+  opacity: 0;
+  transform: translateX(-20rem) !important;
+}
+
 .center {
   display: flex;
   justify-content: center;

@@ -60,6 +60,22 @@ a {
 li {
   list-style: none; }
 
+.section,
+.section-m {
+  transition: transform 0.3s ease-in; }
+
+.section--hidden-bottom {
+  opacity: 0;
+  transform: translateY(6rem) !important; }
+
+.section--hidden-l {
+  opacity: 0;
+  transform: translateX(20rem) !important; }
+
+.section--hidden-right {
+  opacity: 0;
+  transform: translateX(-20rem) !important; }
+
 .center {
   display: flex;
   justify-content: center;
@@ -320,7 +336,10 @@ h1 {
         .navigation__nav .happen-logo-m img {
           width: 18rem; }
     .navigation .hamburger__menu {
-      display: block; }
+      display: block;
+      z-index: 98469; }
+      .navigation .hamburger__menu img {
+        z-index: 1111111; }
     .navigation__list {
       display: flex;
       background-color: #fff;
@@ -360,7 +379,7 @@ h1 {
   height: auto;
   position: fixed;
   top: 0;
-  z-index: 10;
+  z-index: 1000;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25); }
   .navigation.sticky .navigation__nav {
     width: 100%;
@@ -1747,8 +1766,8 @@ h1 {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  color: white;
-  background: gray;
+  color: var(--light-text-color-primary);
+  background-color: var(--light-background-2);
   padding: 0px 20px; }
   .footer__container {
     max-width: 800px;
@@ -1776,13 +1795,13 @@ h1 {
 .menu {
   margin: 40px 0px;
   padding: 25px 0px;
-  border-top: 1px white solid;
-  border-bottom: 1px white solid; }
+  border-top: 1px var(--light-text-color-primary) solid;
+  border-bottom: 1px var(--light-text-color-primary) solid; }
   .menu__link {
     font-size: 2rem;
     padding: 5px 0px; }
     .menu__link a {
-      color: white; }
+      color: var(--light-text-color-secondary); }
 
 .contact__phone {
   margin: 10px 0px; }
