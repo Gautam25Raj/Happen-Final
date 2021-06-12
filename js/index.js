@@ -1,4 +1,4 @@
-let screenSize = window.screen.availWidth;
+let screenSize = window.screen.width;
 window.addEventListener("resize", windowSizeUpdate);
 
 ////////////////////////////////////////////////////////////////
@@ -24,23 +24,22 @@ const fixedNav = function (entries) {
 };
 
 function remove(entries) {
+  console.log(entries);
   const [entry] = entries;
 
   if (entry.isIntersecting) {
     removeNav();
   } else {
-    fixedNav();
+    headerObserver = new IntersectionObserver(fixedNav, {
+      root: null,
+      threshold: 0.15,
+    });
+
+    headerObserver.observe(header);
   }
 }
 
 if (screenSize > 700) {
-  const headerObserver = new IntersectionObserver(fixedNav, {
-    root: null,
-    threshold: 0.15,
-  });
-
-  headerObserver.observe(header);
-
   const footerObserver = new IntersectionObserver(remove, {
     root: null,
     threshold: 0.1,
@@ -70,6 +69,12 @@ document.querySelectorAll(".navigation__item").forEach((item) => {
 ////////////////////////////////////////////////////////////////
 //////////// SOCIAL BAR CLOSE OPEN BUTTON
 ////////////////////////////////////////////////////////////////
+const socialBtn = document.querySelector(".social-btn");
+const social = document.querySelector(".social__nav");
+
+socialBtn.addEventListener("click", () => {
+  social.classList.toggle("social-hidden");
+});
 
 ////////////////////////////////////////////////////////////////
 //////////// SECTION TRIGGER
@@ -86,43 +91,27 @@ const revealSection = function (entries, oberserver) {
   oberserver.unobserve(entry.target);
 };
 
-const revealSectionM = function (entries1, oberserver1) {
-  const [entry1] = entries1;
+if (screenSize > 700) {
+  const sectionObserver = new IntersectionObserver(revealSection, {
+    root: null,
+    threshold: 0.4,
+  });
 
-  if (!entry1.isIntersecting) return;
-
-  if (entry1.target.classList.contains("section--hidden-right")) {
-    entry1.target.classList.remove("section--hidden-right");
-  } else {
-    entry1.target.classList.remove("section--hidden-l");
-  }
-  oberserver1.unobserve(entry.target);
-};
-
-// if (screenSize > 700) {
-//   const sectionObserver = new IntersectionObserver(revealSection, {
-//     root: null,
-//     threshold: 0.4,
-//   });
-
-//   sections.forEach((section) => {
-//     sectionObserver.observe(section);
-//     section.classList.add("section--hidden-bottom");
-//   });
-// };
+  sections.forEach((section) => {
+    sectionObserver.observe(section);
+    section.classList.add("section--hidden-bottom");
+  });
+}
 
 if (screenSize < 700) {
-  const sectionObserverM = new IntersectionObserver(revealSectionM, {
+  const sectionObserverM = new IntersectionObserver(revealSection, {
     root: null,
-    threshold: 0.25,
+    threshold: 0.3,
   });
-  sectionsM.forEach((sectionM, i) => {
+
+  sectionsM.forEach((sectionM) => {
     sectionObserverM.observe(sectionM);
-    if (i % 2 == 0) {
-      sectionM.classList.add("section--hidden-l");
-    } else {
-      sectionM.classList.add("section--hidden-right");
-    }
+    sectionM.classList.add("section--hidden-bottom");
   });
 }
 
@@ -132,9 +121,10 @@ if (screenSize < 700) {
 const arrowLeft = document.querySelector(".arrow-left");
 const arrowRight = document.querySelector(".arrow-right");
 const serviceGridContainer = document.querySelector(".grid-container");
+
 let maxArrowClickable = null;
 let arrowClicked = 0;
-let rightClicked = null;
+let rightClicked = true;
 
 function windowSizeUpdate() {
   screenSize = window.screen.width;
@@ -150,7 +140,6 @@ function windowSizeUpdate() {
 windowSizeUpdate();
 
 arrowRight.addEventListener("click", () => {
-  rightClicked = true;
   serviceSlider();
 });
 
@@ -178,15 +167,10 @@ function serviceSlider() {
 ////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////
-//////////// READ MORE BUTTON CLICK
-////////////////////////////////////////////////////////////////
-
-////////////////////////////////////////////////////////////////
 //////////// POP-UP CLOCK JS
 ////////////////////////////////////////////////////////////////
 const hourEl = document.querySelector(".hour");
 const minuteEl = document.querySelector(".minute");
-const readMoreBtns = document.querySelectorAll(".read-more");
 
 function setTime() {
   const time = new Date();
@@ -233,6 +217,11 @@ function comingSoon() {
   setTime();
   setInterval(setTime, 60000);
 }
+
+////////////////////////////////////////////////////////////////
+//////////// READ MORE BUTTON CLICK
+////////////////////////////////////////////////////////////////
+const readMoreBtns = document.querySelectorAll(".read-more");
 
 readMoreBtns.forEach((readMore) => {
   readMore.addEventListener("click", comingSoon);

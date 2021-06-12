@@ -68,10 +68,6 @@ li {
   opacity: 0;
   transform: translateY(6rem) !important; }
 
-.section--hidden-l {
-  opacity: 0;
-  transform: translateX(20rem) !important; }
-
 .section--hidden-right {
   opacity: 0;
   transform: translateX(-20rem) !important; }
@@ -336,10 +332,7 @@ h1 {
         .navigation__nav .happen-logo-m img {
           width: 18rem; }
     .navigation .hamburger__menu {
-      display: block;
-      z-index: 98469; }
-      .navigation .hamburger__menu img {
-        z-index: 1111111; }
+      display: block; }
     .navigation__list {
       display: flex;
       background-color: #fff;
@@ -502,6 +495,8 @@ h1 {
     margin-right: 2rem; }
   .social__item {
     width: 4rem; }
+  .social-btn {
+    display: none; }
 
 @media only screen and (min-width: 1600px) {
   .social__item {
@@ -549,29 +544,35 @@ h1 {
   height: 100%;
   position: relative;
   z-index: 10; }
+  .social.active .social-btn {
+    display: block;
+    content: "";
+    width: 2.5rem;
+    height: 5rem;
+    background-color: pink;
+    position: absolute;
+    top: 40%;
+    left: -2.4rem;
+    border-radius: 0.8rem 0 0 0.8rem;
+    box-shadow: -0.6rem 0.2rem 0.8rem rgba(0, 0, 0, 0.2);
+    cursor: pointer; }
+    .social.active .social-btn::after {
+      content: "▶";
+      font-size: 2.3rem;
+      position: absolute;
+      top: 25%;
+      left: 0.3rem;
+      cursor: pointer; }
   .social.active .social__nav {
     height: 50%;
     background-color: pink;
     border-radius: 0.8rem 0 0 0.8rem;
     position: fixed;
     right: 0;
-    box-shadow: -0.3rem 3rem 8rem rgba(0, 0, 0, 0.25); }
-    .social.active .social__nav::before {
-      content: "";
-      width: 2.5rem;
-      height: 5rem;
-      background-color: pink;
-      position: absolute;
-      top: 40%;
-      left: -2.4rem;
-      border-radius: 0.8rem 0 0 0.8rem;
-      box-shadow: -0.6rem 0.2rem 0.8rem rgba(0, 0, 0, 0.2); }
-    .social.active .social__nav::after {
-      content: "▶";
-      font-size: 2.3rem;
-      position: absolute;
-      top: 42.5%;
-      left: -2rem; }
+    box-shadow: -0.3rem 3rem 8rem rgba(0, 0, 0, 0.25);
+    transition: all 0.3s linear; }
+  .social.active .social-hidden {
+    transform: translateX(5rem); }
   .social.active .social__list {
     justify-content: space-around;
     margin: 0 0.4rem 0 0.6rem; }
@@ -601,7 +602,7 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../images/modal-bg.jpeg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/modal-bg.jpeg);
   background-size: cover;
   background-position: center;
   display: flex;
