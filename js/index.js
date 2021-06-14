@@ -4,48 +4,48 @@ window.addEventListener("resize", windowSizeUpdate);
 ////////////////////////////////////////////////////////////////
 //////////// FIXED NAVIGATION BAR AND SOCIAL BAR TRIGGER
 ////////////////////////////////////////////////////////////////
-// const header = document.querySelector("header");
-// const footer = document.querySelector("footer");
+const header = document.querySelector("header");
+const footer = document.querySelector("footer");
 
-// function removeNav() {
-//   document.querySelector(".navigation").classList.remove("sticky");
-//   document.querySelector(".social").classList.remove("active");
-// }
+function removeNav() {
+  document.querySelector(".navigation").classList.remove("sticky");
+  document.querySelector(".social").classList.remove("active");
+}
 
-// const fixedNav = function (entries) {
-//   const [entry] = entries;
+const fixedNav = function (entries) {
+  const [entry] = entries;
 
-//   if (!entry.isIntersecting) {
-//     document.querySelector(".navigation").classList.add("sticky");
-//     document.querySelector(".social").classList.add("active");
-//   } else {
-//     removeNav();
-//   }
-// };
+  if (!entry.isIntersecting) {
+    document.querySelector(".navigation").classList.add("sticky");
+    document.querySelector(".social").classList.add("active");
+  } else {
+    removeNav();
+  }
+};
 
-// function remove(entries) {
-//   const [entry] = entries;
+function remove(entries) {
+  const [entry] = entries;
 
-//   if (entry.isIntersecting) {
-//     removeNav();
-//   } else {
-//     headerObserver = new IntersectionObserver(fixedNav, {
-//       root: null,
-//       threshold: 0.15,
-//     });
+  if (entry.isIntersecting) {
+    removeNav();
+  } else {
+    headerObserver = new IntersectionObserver(fixedNav, {
+      root: null,
+      threshold: 0.15,
+    });
 
-//     headerObserver.observe(header);
-//   }
-// }
+    headerObserver.observe(header);
+  }
+}
 
-// if (screenSize > 700) {
-//   const footerObserver = new IntersectionObserver(remove, {
-//     root: null,
-//     threshold: 0.1,
-//   });
+if (screenSize > 700) {
+  const footerObserver = new IntersectionObserver(remove, {
+    root: null,
+    threshold: 0.1,
+  });
 
-//   footerObserver.observe(footer);
-// }
+  footerObserver.observe(footer);
+}
 
 ////////////////////////////////////////////////////////////////
 //////////// HAMBURGER MENU CLICK
@@ -78,41 +78,41 @@ socialBtn.addEventListener("click", () => {
 ////////////////////////////////////////////////////////////////
 //////////// SECTION TRIGGER
 ////////////////////////////////////////////////////////////////
-// const sections = document.querySelectorAll(".section");
-// const sectionsM = document.querySelectorAll(".section-m");
+const sections = document.querySelectorAll(".section");
+const sectionsM = document.querySelectorAll(".section-m");
 
-// const revealSection = function (entries, oberserver) {
-//   const [entry] = entries;
+const revealSection = function (entries, oberserver) {
+  const [entry] = entries;
 
-//   if (!entry.isIntersecting) return;
+  if (!entry.isIntersecting) return;
 
-//   entry.target.classList.remove("section--hidden-bottom");
-//   oberserver.unobserve(entry.target);
-// };
+  entry.target.classList.remove("section--hidden-bottom");
+  oberserver.unobserve(entry.target);
+};
 
-// if (screenSize > 550) {
-//   const sectionObserver = new IntersectionObserver(revealSection, {
-//     root: null,
-//     threshold: 0.4,
-//   });
+if (screenSize > 550) {
+  const sectionObserver = new IntersectionObserver(revealSection, {
+    root: null,
+    threshold: 0.4,
+  });
 
-//   sections.forEach((section) => {
-//     sectionObserver.observe(section);
-//     section.classList.add("section--hidden-bottom");
-//   });
-// }
+  sections.forEach((section) => {
+    sectionObserver.observe(section);
+    section.classList.add("section--hidden-bottom");
+  });
+}
 
-// if (screenSize < 550) {
-//   const sectionObserverM = new IntersectionObserver(revealSection, {
-//     root: null,
-//     threshold: 0.3,
-//   });
+if (screenSize < 550) {
+  const sectionObserverM = new IntersectionObserver(revealSection, {
+    root: null,
+    threshold: 0.3,
+  });
 
-//   sectionsM.forEach((sectionM) => {
-//     sectionObserverM.observe(sectionM);
-//     sectionM.classList.add("section--hidden-bottom");
-//   });
-// }
+  sectionsM.forEach((sectionM) => {
+    sectionObserverM.observe(sectionM);
+    sectionM.classList.add("section--hidden-bottom");
+  });
+}
 
 ////////////////////////////////////////////////////////////////
 //////////// SERVICES SLIDER BUTTON CLICK
