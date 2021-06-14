@@ -73,12 +73,12 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: 45% 45% 45%;
+  grid-template-columns: 45% 45% 45% 45%;
   grid-template-rows: 1fr 1fr;
   gap: 4% 10%;
   grid-template-areas:
-    ". . ."
-    ". . .";
+    ". . . ."
+    ". . . .";
   transform: translateX(0);
   transition: transform 0.5s ease-in;
 }
@@ -230,7 +230,7 @@
 
   .services {
     width: 100%;
-    padding: 2rem 6rem;
+    padding: 3rem 6rem;
     left: 0;
     margin-bottom: 15rem;
   }
@@ -248,7 +248,7 @@
 
 @include respond(550) {
   .grid-container {
-    grid-template-columns: 100% 100% 100%;
+    grid-template-columns: 100% 100% 100% 100%;
     // transform: translateX(-110%);
   }
 }

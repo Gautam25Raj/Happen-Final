@@ -1039,7 +1039,11 @@ h1 {
     word-spacing: 0;
     font-size: 1.35rem; }
   .contact_head-heading {
-    font-size: 5.5rem; } }
+    font-size: 5.5rem; }
+  .location {
+    padding: 6rem 0; }
+    .location:not(:last-child) {
+      padding: 6rem 0; } }
 
 .section__header {
   background-image: url(../images/HeroImage.png), linear-gradient(to bottom left, #bc9590 0%, #e2c3bc);
@@ -1203,6 +1207,8 @@ h1 {
         padding: 1rem 0 1rem 0; } }
 
 @media only screen and (max-width: 550px) {
+  .about-us__header {
+    margin-bottom: 12rem; }
   .know-us-better-heading {
     justify-content: center; }
   .know-us-better .passion {
@@ -1212,12 +1218,18 @@ h1 {
       display: inline; }
   .know-us-better-about {
     padding: 0 1rem;
-    margin: 9rem 0 15rem;
+    margin: 9rem 0 14rem;
     text-align: center; }
     .know-us-better-about-2 {
       margin: 10rem 0 9rem; }
     .know-us-better-about h4 {
       margin: 0 auto; } }
+
+@media only screen and (max-width: 450px) {
+  .about-us__header {
+    margin-bottom: 16rem; }
+  -about {
+    margin: 9rem 0 18rem; } }
 
 .section__services {
   display: flex;
@@ -1274,10 +1286,10 @@ h1 {
 
 .grid-container {
   display: grid;
-  grid-template-columns: 45% 45% 45%;
+  grid-template-columns: 45% 45% 45% 45%;
   grid-template-rows: 1fr 1fr;
   gap: 4% 10%;
-  grid-template-areas: ". . ." ". . .";
+  grid-template-areas: ". . . ." ". . . .";
   transform: translateX(0);
   transition: transform 0.5s ease-in; }
 
@@ -1369,7 +1381,7 @@ h1 {
         width: 10rem; }
   .services {
     width: 100%;
-    padding: 2rem 6rem;
+    padding: 3rem 6rem;
     left: 0;
     margin-bottom: 15rem; } }
 
@@ -1381,7 +1393,7 @@ h1 {
 
 @media only screen and (max-width: 550px) {
   .grid-container {
-    grid-template-columns: 100% 100% 100%; } }
+    grid-template-columns: 100% 100% 100% 100%; } }
 
 .section-our-teams {
   background-image: url(../images/teamWaves.png);
@@ -1588,10 +1600,10 @@ h1 {
     height: 40rem; }
     .card:nth-child(even) {
       order: -1;
-      margin: 0 auto 4rem;
+      margin: 2rem auto 6rem;
       transform: translateY(0); }
     .card:nth-child(odd) {
-      margin: 0 auto 4rem;
+      margin: 0 auto 6rem;
       transform: translateY(0); }
   .cards-container {
     width: 98%; }
@@ -1606,10 +1618,7 @@ h1 {
   background-size: cover;
   background-position: center center;
   padding: 8rem 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  display: none; }
+  display: flex; }
 
 .testimonials-container {
   background-color: rgba(var(--light-background-3), 0.8);
@@ -1689,6 +1698,11 @@ h1 {
       font-size: 1.6rem;
       padding-bottom: 1rem;
       top: 0.6rem; }
+      .form-control label span {
+        font-size: 18px;
+        display: inline-block;
+        min-width: 5px;
+        transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
     .form-control input {
       display: block;
       width: 100%;
@@ -1699,8 +1713,19 @@ h1 {
       border-bottom: 3px solid var(--light-text-color-primary);
       transition: border 0.3s; }
       .form-control input:focus {
+        outline: none; }
+      .form-control input:invalid {
         outline: none;
-        border-bottom: 3px solid red; }
+        border-bottom: 3px solid #ee4545; }
+      .form-control input:valid {
+        border-bottom: 3px solid limegreen; }
+      .form-control input:focus + label span,
+      .form-control input:valid + label span {
+        transform: translateY(-30px); }
+      .form-control input:focus + label span {
+        color: #ee4545; }
+      .form-control input:valid + label span {
+        color: var(--light-text-color-primary); }
     .form-control .form-btn {
       width: 100%;
       margin: 6rem 0;
@@ -1759,10 +1784,17 @@ h1 {
     width: 40%;
     margin: 0 auto;
     transform: translateX(0); }
+    .form-control input {
+      padding-bottom: 1rem;
+      font-size: 2.2rem; }
     .form-control:not(:last-child) {
       margin-bottom: 5rem; }
   .form .form-btn {
     margin: 6rem 0; } }
+
+@media only screen and (max-width: 450px) {
+  .form {
+    margin-top: 20%; } }
 
 .section__counter {
   padding: 3rem 0;

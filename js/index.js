@@ -4,48 +4,48 @@ window.addEventListener("resize", windowSizeUpdate);
 ////////////////////////////////////////////////////////////////
 //////////// FIXED NAVIGATION BAR AND SOCIAL BAR TRIGGER
 ////////////////////////////////////////////////////////////////
-const header = document.querySelector("header");
-const footer = document.querySelector("footer");
+// const header = document.querySelector("header");
+// const footer = document.querySelector("footer");
 
-function removeNav() {
-  document.querySelector(".navigation").classList.remove("sticky");
-  document.querySelector(".social").classList.remove("active");
-}
+// function removeNav() {
+//   document.querySelector(".navigation").classList.remove("sticky");
+//   document.querySelector(".social").classList.remove("active");
+// }
 
-const fixedNav = function (entries) {
-  const [entry] = entries;
+// const fixedNav = function (entries) {
+//   const [entry] = entries;
 
-  if (!entry.isIntersecting) {
-    document.querySelector(".navigation").classList.add("sticky");
-    document.querySelector(".social").classList.add("active");
-  } else {
-    removeNav();
-  }
-};
+//   if (!entry.isIntersecting) {
+//     document.querySelector(".navigation").classList.add("sticky");
+//     document.querySelector(".social").classList.add("active");
+//   } else {
+//     removeNav();
+//   }
+// };
 
-function remove(entries) {
-  const [entry] = entries;
+// function remove(entries) {
+//   const [entry] = entries;
 
-  if (entry.isIntersecting) {
-    removeNav();
-  } else {
-    headerObserver = new IntersectionObserver(fixedNav, {
-      root: null,
-      threshold: 0.15,
-    });
+//   if (entry.isIntersecting) {
+//     removeNav();
+//   } else {
+//     headerObserver = new IntersectionObserver(fixedNav, {
+//       root: null,
+//       threshold: 0.15,
+//     });
 
-    headerObserver.observe(header);
-  }
-}
+//     headerObserver.observe(header);
+//   }
+// }
 
-if (screenSize > 700) {
-  const footerObserver = new IntersectionObserver(remove, {
-    root: null,
-    threshold: 0.1,
-  });
+// if (screenSize > 700) {
+//   const footerObserver = new IntersectionObserver(remove, {
+//     root: null,
+//     threshold: 0.1,
+//   });
 
-  footerObserver.observe(footer);
-}
+//   footerObserver.observe(footer);
+// }
 
 ////////////////////////////////////////////////////////////////
 //////////// HAMBURGER MENU CLICK
@@ -78,41 +78,41 @@ socialBtn.addEventListener("click", () => {
 ////////////////////////////////////////////////////////////////
 //////////// SECTION TRIGGER
 ////////////////////////////////////////////////////////////////
-const sections = document.querySelectorAll(".section");
-const sectionsM = document.querySelectorAll(".section-m");
+// const sections = document.querySelectorAll(".section");
+// const sectionsM = document.querySelectorAll(".section-m");
 
-const revealSection = function (entries, oberserver) {
-  const [entry] = entries;
+// const revealSection = function (entries, oberserver) {
+//   const [entry] = entries;
 
-  if (!entry.isIntersecting) return;
+//   if (!entry.isIntersecting) return;
 
-  entry.target.classList.remove("section--hidden-bottom");
-  oberserver.unobserve(entry.target);
-};
+//   entry.target.classList.remove("section--hidden-bottom");
+//   oberserver.unobserve(entry.target);
+// };
 
-if (screenSize > 550) {
-  const sectionObserver = new IntersectionObserver(revealSection, {
-    root: null,
-    threshold: 0.4,
-  });
+// if (screenSize > 550) {
+//   const sectionObserver = new IntersectionObserver(revealSection, {
+//     root: null,
+//     threshold: 0.4,
+//   });
 
-  sections.forEach((section) => {
-    sectionObserver.observe(section);
-    section.classList.add("section--hidden-bottom");
-  });
-}
+//   sections.forEach((section) => {
+//     sectionObserver.observe(section);
+//     section.classList.add("section--hidden-bottom");
+//   });
+// }
 
-if (screenSize < 550) {
-  const sectionObserverM = new IntersectionObserver(revealSection, {
-    root: null,
-    threshold: 0.3,
-  });
+// if (screenSize < 550) {
+//   const sectionObserverM = new IntersectionObserver(revealSection, {
+//     root: null,
+//     threshold: 0.3,
+//   });
 
-  sectionsM.forEach((sectionM) => {
-    sectionObserverM.observe(sectionM);
-    sectionM.classList.add("section--hidden-bottom");
-  });
-}
+//   sectionsM.forEach((sectionM) => {
+//     sectionObserverM.observe(sectionM);
+//     sectionM.classList.add("section--hidden-bottom");
+//   });
+// }
 
 ////////////////////////////////////////////////////////////////
 //////////// SERVICES SLIDER BUTTON CLICK
@@ -123,7 +123,7 @@ const serviceGridContainer = document.querySelector(".grid-container");
 
 let maxArrowClickable = null;
 let arrowClicked = 0;
-let rightClicked = true;
+let rightClicked = null;
 
 function windowSizeUpdate() {
   screenSize = window.screen.width;
@@ -139,6 +139,7 @@ function windowSizeUpdate() {
 windowSizeUpdate();
 
 arrowRight.addEventListener("click", () => {
+  rightClicked = true;
   serviceSlider();
 });
 
@@ -167,64 +168,18 @@ function serviceSlider() {
 ////////////////////////////////////////////////////////////////
 
 ////////////////////////////////////////////////////////////////
-//////////// POP-UP CLOCK JS
+//////////// FORM LABEL WAVE ANIMATION
 ////////////////////////////////////////////////////////////////
-const hourEl = document.querySelector(".hour");
-const minuteEl = document.querySelector(".minute");
+const labels = document.querySelectorAll(".form-control label");
 
-function setTime() {
-  const time = new Date();
-  const hours = time.getHours();
-  const minutes = time.getMinutes();
-
-  hourEl.style.transform = `translate(-50%, -100%) rotate(${scale(
-    hours,
-    0,
-    12,
-    0,
-    360
-  )}deg)`;
-
-  minuteEl.style.transform = `translate(-50%, -100%) rotate(${scale(
-    minutes,
-    0,
-    60,
-    0,
-    360
-  )}deg)`;
-}
-
-const scale = (num, in_min, in_max, out_min, out_max) => {
-  return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
-};
-
-function comingSoon() {
-  const modal = document.querySelector(".modal");
-  const overlay = document.querySelector(".overlay");
-  modal.classList.remove("hidden");
-  overlay.classList.remove("hidden");
-
-  overlay.addEventListener("click", () => {
-    overlay.classList.add("hidden");
-    modal.classList.add("hidden");
-  });
-
-  document.querySelector(".cross").addEventListener("click", () => {
-    overlay.classList.add("hidden");
-    modal.classList.add("hidden");
-  });
-
-  setTime();
-  setInterval(setTime, 60000);
-}
-
-////////////////////////////////////////////////////////////////
-//////////// READ MORE BUTTON CLICK
-////////////////////////////////////////////////////////////////
-const readMoreBtns = document.querySelectorAll(".read-more");
-
-readMoreBtns.forEach((readMore) => {
-  readMore.addEventListener("click", comingSoon);
+labels.forEach((label) => {
+  label.innerHTML = label.innerText
+    .split("")
+    .map(
+      (letter, i) =>
+        `<span style="transition-delay:${i * 80}ms">${letter}</span>`
+    )
+    .join("");
 });
 
 ////////////////////////////////////////////////////////////////
@@ -306,3 +261,64 @@ if (screenSize < 550) {
 
   counterObserverC.observe(counterContainer);
 }
+
+////////////////////////////////////////////////////////////////
+//////////// POP-UP CLOCK JS
+////////////////////////////////////////////////////////////////
+const hourEl = document.querySelector(".hour");
+const minuteEl = document.querySelector(".minute");
+
+function setTime() {
+  const time = new Date();
+  const hours = time.getHours();
+  const minutes = time.getMinutes();
+
+  hourEl.style.transform = `translate(-50%, -100%) rotate(${scale(
+    hours,
+    0,
+    12,
+    0,
+    360
+  )}deg)`;
+
+  minuteEl.style.transform = `translate(-50%, -100%) rotate(${scale(
+    minutes,
+    0,
+    60,
+    0,
+    360
+  )}deg)`;
+}
+
+const scale = (num, in_min, in_max, out_min, out_max) => {
+  return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
+};
+
+function comingSoon() {
+  const modal = document.querySelector(".modal");
+  const overlay = document.querySelector(".overlay");
+  modal.classList.remove("hidden");
+  overlay.classList.remove("hidden");
+
+  overlay.addEventListener("click", () => {
+    overlay.classList.add("hidden");
+    modal.classList.add("hidden");
+  });
+
+  document.querySelector(".cross").addEventListener("click", () => {
+    overlay.classList.add("hidden");
+    modal.classList.add("hidden");
+  });
+
+  setTime();
+  setInterval(setTime, 60000);
+}
+
+////////////////////////////////////////////////////////////////
+//////////// READ MORE BUTTON CLICK
+////////////////////////////////////////////////////////////////
+const readMoreBtns = document.querySelectorAll(".read-more");
+
+readMoreBtns.forEach((readMore) => {
+  readMore.addEventListener("click", comingSoon);
+});

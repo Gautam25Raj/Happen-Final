@@ -221,6 +221,9 @@
 }
 
 @include respond(550) {
+  .about-us__header {
+    margin-bottom: 12rem;
+  }
   .know-us-better {
     &-heading {
       justify-content: center;
@@ -237,7 +240,7 @@
 
     &-about {
       padding: 0 1rem;
-      margin: 9rem 0 15rem;
+      margin: 9rem 0 14rem;
       text-align: center;
 
       &-2 {
@@ -248,5 +251,14 @@
         margin: 0 auto;
       }
     }
+  }
+}
+
+@include respond(450) {
+  .about-us__header {
+    margin-bottom: 16rem;
+  }
+  &-about {
+    margin: 9rem 0 18rem;
   }
 }
