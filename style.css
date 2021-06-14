@@ -2267,7 +2267,6 @@ h1 span {
   color: var(--light-text-color-primary);
   background-color: var(--light-background-2);
   padding: 0px 20px;
-  border: 50px black solid;
 }
 .footer__container {
   max-width: 800px;
