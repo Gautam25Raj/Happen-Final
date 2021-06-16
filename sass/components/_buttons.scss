@@ -116,14 +116,13 @@
 @include respond(950) {
   .btn {
     &-white {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
     }
 
     &-services {
       position: absolute;
-      bottom: 5rem;
+      bottom: 8rem;
       margin: 0;
-      left: 40%;
       left: 50%;
       transform: translateX(-50%);
 
@@ -136,6 +135,14 @@
 
 @include respond(700) {
   .btn {
+    &-services {
+      width: 24rem;
+    }
+
+    &-white {
+      font-size: 1.6rem;
+    }
+
     &-teams {
       margin-top: -12rem;
     }

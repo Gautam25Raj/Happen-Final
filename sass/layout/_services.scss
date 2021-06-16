@@ -1,10 +1,10 @@
 .section__services {
   display: flex;
-  background-image: url(../images/servicesBg.jpg);
+  background-image: url(../images/services/services-bg-l.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   position: relative;
 
   &-1 {
@@ -56,7 +56,7 @@
       var(--light-bg-service),
       var(--light-bg-service)
     ),
-    url(../images/serviceBg.jpg);
+    url(../images/services/service-bg-l.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -126,6 +126,45 @@
   }
 }
 
+@include respond(1900) {
+  .section__services {
+    background-image: url(../images/services/services-bg-xl.jpg);
+  }
+
+  .services {
+    background-image: linear-gradient(
+        var(--light-bg-service),
+        var(--light-bg-service)
+      ),
+      url(../images/services/service-bg-xl.jpg);
+  }
+
+  .service {
+    &-img {
+      width: 90px;
+      margin-bottom: 1.9rem;
+    }
+
+    &-head {
+      font-size: 22px;
+
+      &::after {
+        height: 3.4px;
+        width: 80px;
+      }
+    }
+  }
+}
+
+@include respond(2200) {
+  .service {
+    &-img {
+      width: 110px;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
 @include respond(1400) {
   .section__services {
     &-1 {
@@ -156,6 +195,8 @@
 
 @include respond(1200) {
   .section__services {
+    background-image: url(../images/services/services-bg-m.jpg);
+
     &-1 {
       width: 40%;
       background-color: var(--light-bg-services);
@@ -176,6 +217,11 @@
   }
 
   .services {
+    background-image: linear-gradient(
+        var(--light-bg-service),
+        var(--light-bg-service)
+      ),
+      url(../images/services/service-bg-m.jpg);
     width: 115%;
     padding: 2rem 6rem;
     left: -20%;
@@ -196,6 +242,10 @@
     &-1 {
       width: 100%;
       padding: 0 0 4rem;
+
+      p {
+        font-size: 1.5rem;
+      }
     }
 
     &-2 {
@@ -230,25 +280,37 @@
 
   .services {
     width: 100%;
-    padding: 3rem 6rem;
+    padding: 4rem 6rem;
     left: 0;
-    margin-bottom: 15rem;
+    margin-bottom: 20rem;
   }
 }
 
 @include respond(700) {
+  .section__services {
+    background-image: url(../images/services/services-bg-s.jpg);
+  }
+
+  .services {
+    background-image: linear-gradient(
+        var(--light-bg-service),
+        var(--light-bg-service)
+      ),
+      url(../images/services/service-bg-s.jpg);
+  }
+
   .services__heading {
     width: 95%;
   }
 
   .service-paragraph {
     font-size: 1.5rem;
+    padding-bottom: 2rem;
   }
 }
 
 @include respond(550) {
   .grid-container {
     grid-template-columns: 100% 100% 100% 100%;
-    // transform: translateX(-110%);
   }
 }

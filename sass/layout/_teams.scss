@@ -1,8 +1,8 @@
 .section-our-teams {
-  background-image: url(../images/teamWaves.png);
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: 100% 30%;
+  // background-image: url(../svg/teams/teamsWaves.svg);
+  // background-repeat: no-repeat;
+  // background-position: bottom;
+  background: url(../svg/teams/teamsWaves.svg) no-repeat bottom;
 }
 
 .our-teams__header {
@@ -25,7 +25,7 @@
   display: flex;
   width: 100%;
   justify-content: space-between;
-  margin-bottom: 8rem;
+  margin-bottom: 12rem;
 }
 
 .card {
@@ -50,8 +50,10 @@
   &-bg {
     height: 30%;
     width: 100%;
-    background-image: url(../images/CardBackground.png);
-    background-repeat: no-repeat;
+    // background-image: url(../images/teams/CardBackground.png);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    background: url(../images/teams/CardBackground.png) no-repeat;
     background-size: cover;
   }
 
@@ -120,10 +122,6 @@
 ///////// MEDIA QUERRIES
 /////////////////////////////////////////////////
 @include respond(1600) {
-  .section-our-teams {
-    background-size: 100% 35%;
-  }
-
   .cards-container {
     width: 75%;
   }
@@ -169,7 +167,7 @@
 
   .cards-container {
     width: 75%;
-    max-width: 1550px;
+    max-width: 1700px;
 
     h3 {
       font-size: 4.2rem;
@@ -183,15 +181,15 @@
 
   .card {
     width: 21vw;
-    height: 25vw;
-    max-width: 430px;
-    max-height: 515px;
+    height: 26vw;
+    max-width: 420px;
+    max-height: 540px;
 
     &-team-photo {
-      height: 9vw;
-      width: 9vw;
-      max-width: 186px;
-      max-height: 186px;
+      height: 10vw;
+      width: 10vw;
+      max-width: 190px;
+      max-height: 190px;
     }
 
     &-social {
@@ -205,7 +203,32 @@
   }
 }
 
+@include respond(2200) {
+  .card {
+    max-width: 450px;
+    max-height: 550px;
+
+    &-team-photo {
+      max-width: 200px;
+      max-height: 200px;
+    }
+
+    &-social {
+      ul {
+        li {
+          width: 2.8vw;
+          max-width: 65px;
+        }
+      }
+    }
+  }
+}
+
 @include respond(1200) {
+  .section-our-teams {
+    background: url(../svg/teams/teamsWaves-m.svg) no-repeat bottom;
+  }
+
   .our-teams__header {
     margin: 5rem auto 8rem;
   }
@@ -251,6 +274,10 @@
 }
 
 @include respond(700) {
+  .section-our-teams {
+    background: url(../svg/teams/teamsWaves-s.svg) no-repeat bottom;
+  }
+
   .our-teams__header {
     margin: 6rem auto 6rem;
   }

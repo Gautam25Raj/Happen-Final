@@ -464,18 +464,21 @@ h1 {
 
 @media only screen and (max-width: 950px) {
   .btn-white {
-    font-size: 1.4rem; }
+    font-size: 1.5rem; }
   .btn-services {
     position: absolute;
-    bottom: 5rem;
+    bottom: 8rem;
     margin: 0;
-    left: 40%;
     left: 50%;
     transform: translateX(-50%); }
     .btn-services.click:hover {
       transform: translateX(-50%) translateY(-2px) scale(1.01); } }
 
 @media only screen and (max-width: 700px) {
+  .btn-services {
+    width: 24rem; }
+  .btn-white {
+    font-size: 1.6rem; }
   .btn-teams {
     margin-top: -12rem; } }
 
@@ -1150,9 +1153,10 @@ h1 {
     .know-us-better-2 {
       margin-bottom: 6rem; }
     .know-us-better-container h3 {
-      width: 32rem; }
+      width: 40rem; }
     .know-us-better-container .passion {
-      margin: 6rem 0; }
+      margin: 6rem 0;
+      width: 56rem; }
     .know-us-better-about h4 {
       font-size: 3.8rem;
       text-align: right; } }
@@ -1218,10 +1222,10 @@ h1 {
       display: inline; }
   .know-us-better-about {
     padding: 0 1rem;
-    margin: 9rem 0 14rem;
+    margin: 11.5rem 0 16rem;
     text-align: center; }
     .know-us-better-about-2 {
-      margin: 10rem 0 9rem; }
+      margin: 13.2rem 0 9rem; }
     .know-us-better-about h4 {
       margin: 0 auto; } }
 
@@ -1233,11 +1237,11 @@ h1 {
 
 .section__services {
   display: flex;
-  background-image: url(../images/servicesBg.jpg);
+  background-image: url(../images/services/services-bg-l.jpg);
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   position: relative; }
   .section__services-1 {
     width: 40%;
@@ -1271,7 +1275,7 @@ h1 {
       left: 0; }
 
 .services {
-  background-image: linear-gradient(var(--light-bg-service), var(--light-bg-service)), url(../images/serviceBg.jpg);
+  background-image: linear-gradient(var(--light-bg-service), var(--light-bg-service)), url(../images/services/service-bg-l.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -1322,6 +1326,25 @@ h1 {
     width: 105%;
     left: -12%; } }
 
+@media only screen and (min-width: 1900px) {
+  .section__services {
+    background-image: url(../images/services/services-bg-xl.jpg); }
+  .services {
+    background-image: linear-gradient(var(--light-bg-service), var(--light-bg-service)), url(../images/services/service-bg-xl.jpg); }
+  .service-img {
+    width: 90px;
+    margin-bottom: 1.9rem; }
+  .service-head {
+    font-size: 22px; }
+    .service-head::after {
+      height: 3.4px;
+      width: 80px; } }
+
+@media only screen and (min-width: 2200px) {
+  .service-img {
+    width: 110px;
+    margin-bottom: 2rem; } }
+
 @media only screen and (max-width: 1400px) {
   .section__services-1 {
     width: 38%;
@@ -1337,18 +1360,21 @@ h1 {
     width: 60px; } }
 
 @media only screen and (max-width: 1200px) {
-  .section__services-1 {
-    width: 40%;
-    background-color: var(--light-bg-services);
-    padding: 6rem 0 0; }
-  .section__services-2 {
-    width: 60%;
-    padding: 4rem 0; }
+  .section__services {
+    background-image: url(../images/services/services-bg-m.jpg); }
+    .section__services-1 {
+      width: 40%;
+      background-color: var(--light-bg-services);
+      padding: 6rem 0 0; }
+    .section__services-2 {
+      width: 60%;
+      padding: 4rem 0; }
   .services__heading {
     width: 50%; }
     .services__heading h2 {
       font-size: 4.4rem; }
   .services {
+    background-image: linear-gradient(var(--light-bg-service), var(--light-bg-service)), url(../images/services/service-bg-m.jpg);
     width: 115%;
     padding: 2rem 6rem;
     left: -20%; }
@@ -1362,6 +1388,8 @@ h1 {
     .section__services-1 {
       width: 100%;
       padding: 0 0 4rem; }
+      .section__services-1 p {
+        font-size: 1.5rem; }
     .section__services-2 {
       width: 100%;
       padding: 0; }
@@ -1381,25 +1409,27 @@ h1 {
         width: 10rem; }
   .services {
     width: 100%;
-    padding: 3rem 6rem;
+    padding: 4rem 6rem;
     left: 0;
-    margin-bottom: 15rem; } }
+    margin-bottom: 20rem; } }
 
 @media only screen and (max-width: 700px) {
+  .section__services {
+    background-image: url(../images/services/services-bg-s.jpg); }
+  .services {
+    background-image: linear-gradient(var(--light-bg-service), var(--light-bg-service)), url(../images/services/service-bg-s.jpg); }
   .services__heading {
     width: 95%; }
   .service-paragraph {
-    font-size: 1.5rem; } }
+    font-size: 1.5rem;
+    padding-bottom: 2rem; } }
 
 @media only screen and (max-width: 550px) {
   .grid-container {
     grid-template-columns: 100% 100% 100% 100%; } }
 
 .section-our-teams {
-  background-image: url(../images/teamWaves.png);
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: 100% 30%; }
+  background: url(../svg/teams/teamsWaves.svg) no-repeat bottom; }
 
 .our-teams__header {
   margin: 6rem auto 10rem; }
@@ -1417,7 +1447,7 @@ h1 {
   display: flex;
   width: 100%;
   justify-content: space-between;
-  margin-bottom: 8rem; }
+  margin-bottom: 12rem; }
 
 .card {
   display: flex;
@@ -1438,8 +1468,7 @@ h1 {
   .card-bg {
     height: 30%;
     width: 100%;
-    background-image: url(../images/CardBackground.png);
-    background-repeat: no-repeat;
+    background: url(../images/teams/CardBackground.png) no-repeat;
     background-size: cover; }
   .card-team-photo {
     height: 10vw;
@@ -1485,8 +1514,6 @@ h1 {
           filter: drop-shadow(0 0 8px #5a5a5a); }
 
 @media only screen and (min-width: 1600px) {
-  .section-our-teams {
-    background-size: 100% 35%; }
   .cards-container {
     width: 75%; }
   .cards {
@@ -1510,7 +1537,7 @@ h1 {
     margin: 6rem auto 10rem; }
   .cards-container {
     width: 75%;
-    max-width: 1550px; }
+    max-width: 1700px; }
     .cards-container h3 {
       font-size: 4.2rem;
       margin-bottom: 6rem; }
@@ -1518,19 +1545,32 @@ h1 {
     margin-bottom: 14rem; }
   .card {
     width: 21vw;
-    height: 25vw;
-    max-width: 430px;
-    max-height: 515px; }
+    height: 26vw;
+    max-width: 420px;
+    max-height: 540px; }
     .card-team-photo {
-      height: 9vw;
-      width: 9vw;
-      max-width: 186px;
-      max-height: 186px; }
+      height: 10vw;
+      width: 10vw;
+      max-width: 190px;
+      max-height: 190px; }
     .card-social ul li {
       width: 2.7vw;
       max-width: 58px; } }
 
+@media only screen and (min-width: 2200px) {
+  .card {
+    max-width: 450px;
+    max-height: 550px; }
+    .card-team-photo {
+      max-width: 200px;
+      max-height: 200px; }
+    .card-social ul li {
+      width: 2.8vw;
+      max-width: 65px; } }
+
 @media only screen and (max-width: 1200px) {
+  .section-our-teams {
+    background: url(../svg/teams/teamsWaves-m.svg) no-repeat bottom; }
   .our-teams__header {
     margin: 5rem auto 8rem; }
   .cards-container {
@@ -1561,6 +1601,8 @@ h1 {
       min-width: 13rem; } }
 
 @media only screen and (max-width: 700px) {
+  .section-our-teams {
+    background: url(../svg/teams/teamsWaves-s.svg) no-repeat bottom; }
   .our-teams__header {
     margin: 6rem auto 6rem; }
   .cards {
@@ -1613,10 +1655,11 @@ h1 {
       text-align: center; } }
 
 .section-testimonials {
-  background-image: url(../../images/TestimonialBg.jpg);
+  background-image: url(../../img/testimonials/testi-l.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  background-attachment: fixed;
   padding: 8rem 0;
   display: flex; }
 
