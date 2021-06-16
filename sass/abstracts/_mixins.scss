@@ -3,8 +3,8 @@
 /////////////////////////////////////////////////
 @mixin respond($breakpoint) {
   //FOR WIDTH OF 350
-  @if $breakpoint == 350 {
-    @media only screen and (max-width: 350px) {
+  @if $breakpoint == 300 {
+    @media only screen and (max-width: 300px) {
       @content;
     }
   }

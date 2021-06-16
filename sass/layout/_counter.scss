@@ -4,7 +4,7 @@
       rgba(255, 255, 255, 0.8),
       rgba(255, 255, 255, 0.8)
     ),
-    url(../../images/counter.jpg);
+    url(../images/counter/counter-l.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -48,12 +48,27 @@
 }
 
 @include respond(1900) {
+  .section__counter {
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.8)
+      ),
+      url(../images/counter/counter-xl.jpg);
+  }
   .counters {
     width: 70%;
   }
 }
 
 @include respond(1200) {
+  .section__counter {
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.8)
+      ),
+      url(../images/counter/counter-m.jpg);
+  }
+
   .counters {
     width: 90%;
   }
@@ -78,7 +93,7 @@
   }
 }
 
-@include respond(1200) {
+@include respond(950) {
   .counters {
     width: 100%;
     justify-content: space-around;
@@ -110,6 +125,11 @@
 @include respond(700) {
   .section__counter {
     padding: 3rem 1rem;
+    background-image: linear-gradient(
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.8)
+      ),
+      url(../images/counter/counter-s.jpg);
   }
   .counters {
     justify-content: space-between;
@@ -140,28 +160,19 @@
 
 @include respond(550) {
   .section__counter {
-    padding: 4rem 1rem 0;
+    padding: 6rem 0;
   }
+
   .counters {
     flex-wrap: wrap;
     justify-content: center;
   }
 
   .counter {
-    width: 50%;
-    margin-bottom: 4rem;
-  }
-}
-
-@include respond(550) {
-  .section__counter {
-    padding: 4rem 0 0;
-  }
-
-  .counter {
     width: 100%;
+
     &:not(:last-child) {
-      margin-bottom: 6rem;
+      margin-bottom: 8rem;
     }
 
     &-img {
@@ -177,11 +188,11 @@
     }
 
     &-count {
-      font-size: 3.4rem;
+      font-size: 3.6rem;
     }
 
     &-text {
-      font-size: 1.7rem;
+      font-size: 1.9rem;
     }
   }
 }

@@ -219,6 +219,7 @@
       &-4 {
         width: 90%;
         left: 2%;
+        bottom: 11%;
       }
     }
 
@@ -248,7 +249,7 @@
   }
 
   .dec.line-4 {
-    top: 48%;
+    bottom: 47%;
   }
 
   .dec.half-circle-down {
@@ -259,6 +260,7 @@
 @include respond(450) {
   .dec.circle {
     width: 30rem;
+    width: calc(60vw + 20px);
   }
 
   .dec.line {
@@ -269,6 +271,13 @@
     &-4 {
       width: 98%;
       left: 1%;
+      top: 47%;
     }
+  }
+}
+
+@include respond(300) {
+  .dec.line {
+    display: none;
   }
 }
