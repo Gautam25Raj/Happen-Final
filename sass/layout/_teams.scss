@@ -324,6 +324,10 @@
 }
 
 @include respond(550) {
+  .section-our-teams {
+    background: url(../svg/teams/teamsWaves-ss.svg) no-repeat bottom;
+  }
+
   .cards {
     width: 95%;
     flex-direction: column;
