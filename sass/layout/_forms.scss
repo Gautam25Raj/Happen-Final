@@ -19,7 +19,7 @@
       top: 0.6rem;
 
       & span {
-        font-size: 18px;
+        font-size: 1.8rem;
         display: inline-block;
         min-width: 5px;
         transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
@@ -34,19 +34,18 @@
       background-color: transparent;
       border: 0;
       border-bottom: 3px solid var(--light-text-color-primary);
-      transition: border 0.3s;
+      transition: all 0.3s;
 
       &:focus {
         outline: none;
       }
 
-      &:invalid {
-        outline: none;
-        border-bottom: 3px solid rgb(238, 69, 69);
+      &:focus:valid {
+        border-bottom: 3px solid limegreen;
       }
 
-      &:valid {
-        border-bottom: 3px solid limegreen;
+      &:focus:invalid {
+        border-bottom: 3px solid rgb(238, 69, 69);
       }
 
       &:focus + label span,
@@ -54,7 +53,7 @@
         transform: translateY(-30px);
       }
 
-      &:focus + label span {
+      &:focus:invalid + label {
         color: rgb(238, 69, 69);
       }
 
