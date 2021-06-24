@@ -3,15 +3,23 @@
   cursor: pointer;
   background-color: transparent;
 
-  &-teams {
+  &-teams,
+  &-services,
+  &-gallery {
     width: 25rem;
+  }
+
+  &-teams {
     margin: 0 auto 10rem auto;
   }
 
   &-services {
-    width: 25rem;
     margin-top: 10rem;
     margin-left: 10%;
+  }
+
+  &-gallery {
+    margin: 6rem 0 4rem;
   }
 
   &.arrow {
