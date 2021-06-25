@@ -1806,7 +1806,6 @@ h1 {
   /*grid-template-columns: repeat(8, 1fr);
       grid-template-rows: repeat(7, 5vw);*/
   grid-template: repeat(7, 5vw)/repeat(8, 1fr);
-  display: none;
   grid-gap: 1.5rem;
   padding: 1.5rem; }
   .gallery__header {
@@ -1860,7 +1859,7 @@ h1 {
     display: block; }
 
 .section__packages {
-  background: url(../svg/teams/teamsWaves.svg) no-repeat bottom;
+  background: url(../svg/packages/teamsWaves.svg) no-repeat bottom;
   width: 100%; }
 
 .packages {
@@ -1891,17 +1890,17 @@ h1 {
   .card__picture--clip {
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); }
   .card__picture--1 {
-    background-image: linear-gradient(rgba(247, 76, 76, 0.5), rgba(238, 66, 66, 0.5)), url(../../images/packages/package1.jpg); }
+    background-image: linear-gradient(rgba(247, 76, 76, 0.5), rgba(238, 66, 66, 0.5)), url(../images/packages/package1.jpg); }
   .card__picture--2 {
-    background-image: linear-gradient(rgba(247, 76, 76, 0.5), rgba(238, 66, 66, 0.5)), url(../../images/packages/package2.jpg); }
+    background-image: linear-gradient(rgba(247, 76, 76, 0.5), rgba(238, 66, 66, 0.5)), url(../images/packages/package2.jpg); }
   .card__picture--3 {
-    background-image: linear-gradient(rgba(247, 76, 76, 0.5), rgba(238, 66, 66, 0.5)), url(../../images/packages/package3.jpg); }
+    background-image: linear-gradient(rgba(247, 76, 76, 0.5), rgba(238, 66, 66, 0.5)), url(../images/packages/package3.jpg); }
   .card__picture--4 {
-    background-image: linear-gradient(rgba(247, 76, 76, 0.5), rgba(238, 66, 66, 0.5)), url(../../images/packages/package4.jpg); }
+    background-image: linear-gradient(rgba(247, 76, 76, 0.5), rgba(238, 66, 66, 0.5)), url(../images/packages/package4.jpg); }
   .card__picture--5 {
-    background-image: linear-gradient(rgba(247, 76, 76, 0.5), rgba(238, 66, 66, 0.5)), url(../../images/packages/package5.jpg); }
+    background-image: linear-gradient(rgba(247, 76, 76, 0.5), rgba(238, 66, 66, 0.5)), url(../images/packages/package5.jpg); }
   .card__picture--6 {
-    background-image: linear-gradient(rgba(247, 76, 76, 0.5), rgba(238, 66, 66, 0.5)), url(../../images/packages/package6.jpg); }
+    background-image: linear-gradient(rgba(247, 76, 76, 0.5), rgba(238, 66, 66, 0.5)), url(../images/packages/package6.jpg); }
 
 .card__head {
   background-color: #fff;
@@ -1981,6 +1980,14 @@ h1 {
 
 .btn-back-download {
   margin-top: 45%; }
+
+@media only screen and (max-width: 1200px) {
+  .section__packages {
+    background: url(../svg/packages/teamsWaves-m.svg) no-repeat bottom; } }
+
+@media only screen and (max-width: 950px) {
+  .section__packages {
+    background: url(../svg/packages/teamsWaves-s.svg) no-repeat bottom; } }
 
 .form {
   margin-top: 18%; }

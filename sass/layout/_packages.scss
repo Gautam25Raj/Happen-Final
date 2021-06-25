@@ -1,5 +1,5 @@
 .section__packages {
-  background: url(../svg/teams/teamsWaves.svg) no-repeat bottom;
+  background: url(../svg/packages/teamsWaves.svg) no-repeat bottom;
   width: 100%;
 }
 
@@ -41,42 +41,42 @@
           rgba(247, 76, 76, 0.5),
           rgba(238, 66, 66, 0.5)
         ),
-        url(../../images/packages/package1.jpg);
+        url(../images/packages/package1.jpg);
     }
     &--2 {
       background-image: linear-gradient(
           rgba(247, 76, 76, 0.5),
           rgba(238, 66, 66, 0.5)
         ),
-        url(../../images/packages/package2.jpg);
+        url(../images/packages/package2.jpg);
     }
     &--3 {
       background-image: linear-gradient(
           rgba(247, 76, 76, 0.5),
           rgba(238, 66, 66, 0.5)
         ),
-        url(../../images/packages/package3.jpg);
+        url(../images/packages/package3.jpg);
     }
     &--4 {
       background-image: linear-gradient(
           rgba(247, 76, 76, 0.5),
           rgba(238, 66, 66, 0.5)
         ),
-        url(../../images/packages/package4.jpg);
+        url(../images/packages/package4.jpg);
     }
     &--5 {
       background-image: linear-gradient(
           rgba(247, 76, 76, 0.5),
           rgba(238, 66, 66, 0.5)
         ),
-        url(../../images/packages/package5.jpg);
+        url(../images/packages/package5.jpg);
     }
     &--6 {
       background-image: linear-gradient(
           rgba(247, 76, 76, 0.5),
           rgba(238, 66, 66, 0.5)
         ),
-        url(../../images/packages/package6.jpg);
+        url(../images/packages/package6.jpg);
     }
   }
 
@@ -189,5 +189,20 @@
 
   &-back-download {
     margin-top: 45%;
+  }
+}
+
+/////////////////////////////////////////////////
+///////// MEDIA QUERRIES
+/////////////////////////////////////////////////
+@include respond(1200) {
+  .section__packages {
+    background: url(../svg/packages/teamsWaves-m.svg) no-repeat bottom;
+  }
+}
+
+@include respond(950) {
+  .section__packages {
+    background: url(../svg/packages/teamsWaves-s.svg) no-repeat bottom;
   }
 }
