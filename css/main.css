@@ -1866,15 +1866,15 @@ h1 {
   display: grid;
   justify-content: center;
   align-items: center;
-  width: 108rem;
+  width: 100%;
   grid-template-columns: 32rem 32rem 32rem;
   grid-template-rows: 50rem 50rem;
   gap: 6rem;
   margin: 0 auto; }
 
 .package {
-  width: 32rem;
-  height: 50rem;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
   position: relative;
   border-radius: 10px;
@@ -1890,17 +1890,17 @@ h1 {
   .card__picture--clip {
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); }
   .card__picture--1 {
-    background-image: linear-gradient(rgba(247, 76, 76, 0.5), rgba(238, 66, 66, 0.5)), url(../images/packages/package1.jpg); }
+    background-image: linear-gradient(rgba(41, 152, 255, 0.3), rgba(86, 67, 250, 0.3)), url(../images/packages/package1.jpg); }
   .card__picture--2 {
-    background-image: linear-gradient(rgba(247, 76, 76, 0.5), rgba(238, 66, 66, 0.5)), url(../images/packages/package2.jpg); }
+    background-image: linear-gradient(rgba(94, 255, 245, 0.3), rgba(0, 190, 190, 0.3)), url(../images/packages/package2.jpg); }
   .card__picture--3 {
-    background-image: linear-gradient(rgba(247, 76, 76, 0.5), rgba(238, 66, 66, 0.5)), url(../images/packages/package3.jpg); }
+    background-image: linear-gradient(rgba(249, 7, 109, 0.3), rgba(249, 7, 109, 0.3)), url(../images/packages/package3.jpg); }
   .card__picture--4 {
-    background-image: linear-gradient(rgba(247, 76, 76, 0.5), rgba(238, 66, 66, 0.5)), url(../images/packages/package4.jpg); }
+    background-image: linear-gradient(rgba(1, 167, 57, 0.3), rgba(1, 167, 57, 0.3)), url(../images/packages/package4.jpg); }
   .card__picture--5 {
-    background-image: linear-gradient(rgba(247, 76, 76, 0.5), rgba(238, 66, 66, 0.5)), url(../images/packages/package5.jpg); }
+    background-image: linear-gradient(rgba(255, 76, 9, 0.3), rgba(255, 76, 9, 0.3)), url(../images/packages/package5.jpg); }
   .card__picture--6 {
-    background-image: linear-gradient(rgba(247, 76, 76, 0.5), rgba(238, 66, 66, 0.5)), url(../images/packages/package6.jpg); }
+    background-image: linear-gradient(rgba(204, 248, 30, 0.3), rgba(204, 248, 30, 0.3)), url(../images/packages/package6.jpg); }
 
 .card__head {
   background-color: #fff;
@@ -1912,9 +1912,17 @@ h1 {
     letter-spacing: 1.5px;
     font-weight: 500; }
   .card__head small {
-    color: pink;
+    font-weight: 500;
     font-size: 1.5rem;
     letter-spacing: 1.5px; }
+  .card__head .small--3 {
+    color: #f9076d; }
+  .card__head .small--4 {
+    color: #009331; }
+  .card__head .small--5 {
+    color: #ff4c09; }
+  .card__head .small--6 {
+    color: #a1c610; }
   .card__head p {
     margin-top: 3.5rem;
     font-size: 1.5rem; }
@@ -1923,12 +1931,10 @@ h1 {
 
 .card__details {
   height: 8rem;
-  background-color: #f58698;
   padding: 0 3rem;
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  color: #fff; }
+  align-items: center; }
   .card__details p {
     flex-direction: column;
     font-size: 2.5rem; }
@@ -1936,6 +1942,14 @@ h1 {
     display: block;
     margin-top: 2px;
     font-size: 1.1rem; }
+  .card__details--3 {
+    background-color: rgba(249, 7, 109, 0.8); }
+  .card__details--4 {
+    background-color: rgba(1, 167, 57, 0.8); }
+  .card__details--5 {
+    background-color: rgba(255, 76, 9, 0.8); }
+  .card__details--6 {
+    background-color: rgba(204, 248, 30, 0.8); }
   .card__details--clip {
     text-align: center;
     background-color: #fff;
@@ -1952,12 +1966,22 @@ h1 {
 .card__back {
   width: 100%;
   position: absolute;
-  background-color: brown;
   top: 0;
   left: 0;
   height: 100%;
-  transform: rotateY(180deg);
-  backface-visibility: hidden; }
+  z-index: -1; }
+  .card__back--1 {
+    background-image: linear-gradient(45deg, #5bb0ff, #1e00c9); }
+  .card__back--2 {
+    background-image: linear-gradient(45deg, #0ad8df, #0011a7); }
+  .card__back--3 {
+    background-image: linear-gradient(45deg, #fa4993, #df0013); }
+  .card__back--4 {
+    background-image: linear-gradient(45deg, #00ff55, #007a14); }
+  .card__back--5 {
+    background-image: linear-gradient(45deg, #ff895e, #ac6810); }
+  .card__back--6 {
+    background-image: linear-gradient(45deg, #95f546, #348b1f); }
 
 .card__price {
   font-size: 3rem;
@@ -1983,11 +2007,30 @@ h1 {
 
 @media only screen and (max-width: 1200px) {
   .section__packages {
-    background: url(../svg/packages/teamsWaves-m.svg) no-repeat bottom; } }
+    background: url(../svg/packages/teamsWaves-m.svg) no-repeat bottom; }
+  .packages {
+    width: 100%;
+    gap: 5% 3%; } }
 
 @media only screen and (max-width: 950px) {
   .section__packages {
-    background: url(../svg/packages/teamsWaves-s.svg) no-repeat bottom; } }
+    background: url(../svg/packages/teamsWaves-s.svg) no-repeat bottom; }
+  .packages {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(32rem, 30%));
+    grid-template-rows: 50rem 50rem 50rem;
+    gap: 8rem 6rem; } }
+
+@media only screen and (max-width: 550px) {
+  .section__packages {
+    background: url(../svg/packages/teamsWaves-ss.svg) no-repeat bottom; }
+  .packages {
+    width: 100%;
+    grid-template-columns: repeat(1, minmax(50%, 32rem));
+    grid-template-rows: 50rem 50rem 50rem;
+    gap: 6rem 2rem; }
+  .package-m {
+    display: none; } }
 
 .form {
   margin-top: 18%; }
