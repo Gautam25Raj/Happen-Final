@@ -1,6 +1,6 @@
 footer {
   background-image: var(--light-bg-footer),
-    url(../images/footer/footer-bg-xl.jpg);
+    url(../images/footer/footer-bg-l.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -94,16 +94,6 @@ footer {
     position: relative;
     margin-bottom: 3rem;
 
-    & label {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      padding-left: 1.3rem;
-      font-weight: 500;
-      font-size: 1.6rem;
-      opacity: 1;
-    }
-
     & input {
       width: 100%;
       padding: 1.4rem;
@@ -127,15 +117,10 @@ footer {
   }
 
   .textarea-label {
-    label {
-      top: 0rem;
-      transform: none;
-      margin: 1rem 0 0 0;
-    }
-
     textarea {
       border: 0;
       border-radius: 5px;
+      font-size: 1.6rem;
       width: 100%;
       height: 14rem;
       padding: 1rem 1.5rem;
@@ -162,7 +147,19 @@ footer {
   padding-bottom: 3rem;
 }
 
+@include respond(1900) {
+  footer {
+    background-image: var(--light-bg-footer),
+      url(../images/footer/footer-bg-xl.jpg);
+  }
+}
+
 @include respond(1200) {
+  footer {
+    background-image: var(--light-bg-footer),
+      url(../images/footer/footer-bg-m.jpg);
+  }
+
   .f-form {
     width: 100%;
   }
@@ -185,6 +182,14 @@ footer {
 }
 
 @include respond(700) {
+  footer {
+    background-image: var(--light-bg-footer),
+      url(../images/footer/footer-bg-s.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
   .footer {
     &__container {
       width: 100%;

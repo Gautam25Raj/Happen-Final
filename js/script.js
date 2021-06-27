@@ -1,11 +1,25 @@
 let screenSize = window.screen.width;
 window.addEventListener('resize', windowSizeUpdate);
 
-////////////////////////////////////////////////////////////////
-//////////// FIXED NAVIGATION BAR AND SOCIAL BAR TRIGGER
-////////////////////////////////////////////////////////////////
 const header = document.querySelector('header');
 const footer = document.querySelector('footer');
+const socialBtn = document.querySelector('.social-btn');
+const social = document.querySelector('.social__nav');
+const sections = document.querySelectorAll('.section');
+const sectionsM = document.querySelectorAll('.section-m');
+const arrowLeft = document.querySelector('.arrow-left');
+const arrowRight = document.querySelector('.arrow-right');
+const serviceGridContainer = document.querySelector('.grid-container');
+const labels = document.querySelectorAll('.form-control label');
+const counters = document.querySelectorAll('.counter-count');
+const counterContainer = document.querySelector('.counters');
+let counterObserver, counterObserverC;
+const hourEl = document.querySelector('.hour');
+const minuteEl = document.querySelector('.minute');
+const readMoreBtns = document.querySelectorAll('.read-more');
+const scale = (num, in_min, in_max, out_min, out_max) => {
+  return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
+};
 
 function removeNav() {
   document.querySelector('.navigation').classList.remove('sticky');
@@ -47,9 +61,6 @@ if (screenSize > 700) {
   footerObserver.observe(footer);
 }
 
-////////////////////////////////////////////////////////////////
-//////////// HAMBURGER MENU CLICK
-////////////////////////////////////////////////////////////////
 function responsiveNav() {
   const hamburgerNav = document.querySelectorAll('.hamburger');
   hamburgerNav.forEach((item) => {
@@ -65,21 +76,9 @@ document.querySelectorAll('.navigation__item').forEach((item) => {
   item.addEventListener('click', responsiveNav);
 });
 
-////////////////////////////////////////////////////////////////
-//////////// SOCIAL BAR CLOSE OPEN BUTTON
-////////////////////////////////////////////////////////////////
-const socialBtn = document.querySelector('.social-btn');
-const social = document.querySelector('.social__nav');
-
 socialBtn.addEventListener('click', () => {
   social.classList.toggle('social-hidden');
 });
-
-////////////////////////////////////////////////////////////////
-//////////// SECTION TRIGGER
-////////////////////////////////////////////////////////////////
-const sections = document.querySelectorAll('.section');
-const sectionsM = document.querySelectorAll('.section-m');
 
 const revealSection = function (entries, oberserver) {
   const [entry] = entries;
@@ -113,13 +112,6 @@ if (screenSize < 550) {
     sectionM.classList.add('section--hidden-bottom');
   });
 }
-
-////////////////////////////////////////////////////////////////
-//////////// SERVICES SLIDER BUTTON CLICK
-////////////////////////////////////////////////////////////////
-const arrowLeft = document.querySelector('.arrow-left');
-const arrowRight = document.querySelector('.arrow-right');
-const serviceGridContainer = document.querySelector('.grid-container');
 
 let maxArrowClickable = null;
 let arrowClicked = 0;
@@ -163,15 +155,6 @@ function serviceSlider() {
   serviceGridContainer.style.transform = `translateX(${arrowClicked * -110}%)`;
 }
 
-////////////////////////////////////////////////////////////////
-//////////// TESTIMONIAL SLIDER BUTTON CLICK
-////////////////////////////////////////////////////////////////
-
-////////////////////////////////////////////////////////////////
-//////////// FORM LABEL WAVE ANIMATION
-////////////////////////////////////////////////////////////////
-const labels = document.querySelectorAll('.form-control label');
-
 labels.forEach((label) => {
   label.innerHTML = label.innerText
     .split('')
@@ -181,13 +164,6 @@ labels.forEach((label) => {
     )
     .join('');
 });
-
-////////////////////////////////////////////////////////////////
-//////////// Increment Counter
-////////////////////////////////////////////////////////////////
-const counters = document.querySelectorAll('.counter-count');
-const counterContainer = document.querySelector('.counters');
-let counterObserver, counterObserverC;
 
 const increment = function (entries) {
   const [entry] = entries;
@@ -264,12 +240,6 @@ if (screenSize < 550) {
   counterObserverC.observe(counterContainer);
 }
 
-////////////////////////////////////////////////////////////////
-//////////// POP-UP CLOCK JS
-////////////////////////////////////////////////////////////////
-const hourEl = document.querySelector('.hour');
-const minuteEl = document.querySelector('.minute');
-
 function setTime() {
   const time = new Date();
   const hours = time.getHours();
@@ -292,10 +262,6 @@ function setTime() {
   )}deg)`;
 }
 
-const scale = (num, in_min, in_max, out_min, out_max) => {
-  return ((num - in_min) * (out_max - out_min)) / (in_max - in_min) + out_min;
-};
-
 function comingSoon() {
   const modal = document.querySelector('.modal');
   const overlay = document.querySelector('.overlay');
@@ -315,11 +281,6 @@ function comingSoon() {
   setTime();
   setInterval(setTime, 60000);
 }
-
-////////////////////////////////////////////////////////////////
-//////////// READ MORE BUTTON CLICK
-////////////////////////////////////////////////////////////////
-const readMoreBtns = document.querySelectorAll('.read-more');
 
 readMoreBtns.forEach((readMore) => {
   readMore.addEventListener('click', comingSoon);

@@ -611,7 +611,7 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/modal-bg.jpeg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/logo-modal/modal-bg.jpeg);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -1283,7 +1283,7 @@ h1 {
     position: relative;
     padding-bottom: 4rem; }
     .services__heading p::after {
-      content: "";
+      content: '';
       width: 80px;
       height: 3px;
       background-color: #efefef;
@@ -1310,7 +1310,7 @@ h1 {
   grid-template-columns: 45% 45% 45% 45%;
   grid-template-rows: 1fr 1fr;
   gap: 4% 10%;
-  grid-template-areas: ". . . ." ". . . .";
+  grid-template-areas: '. . . .' '. . . .';
   transform: translateX(0);
   transition: transform 0.5s ease-in; }
 
@@ -1326,7 +1326,7 @@ h1 {
     padding-bottom: 1rem;
     color: var(--light-text-color-tertiary); }
     .service-head::after {
-      content: "";
+      content: '';
       position: absolute;
       width: 40px;
       height: 3px;
@@ -1794,7 +1794,7 @@ h1 {
     gap: 4%; } }
 
 .section__gallery {
-  background-image: linear-gradient(var(--light-bg-service), var(--light-bg-service)), url(../images/gallery/gallery2.jpg);
+  background-image: linear-gradient(var(--light-bg-service), var(--light-bg-service)), url(../../images/gallery/gallery-l.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -1803,8 +1803,6 @@ h1 {
 .gallery {
   grid-column: full-start / full-end;
   display: grid;
-  /*grid-template-columns: repeat(8, 1fr);
-      grid-template-rows: repeat(7, 5vw);*/
   grid-template: repeat(7, 5vw)/repeat(8, 1fr);
   grid-gap: 1.5rem;
   padding: 1.5rem; }
@@ -1857,6 +1855,18 @@ h1 {
     height: 100%;
     object-fit: cover;
     display: block; }
+
+@media only screen and (min-width: 2200px) {
+  .section__gallery {
+    background-image: linear-gradient(var(--light-bg-service), var(--light-bg-service)), url(../../images/gallery/gallery-xl.jpg); } }
+
+@media only screen and (max-width: 1200px) {
+  .section__gallery {
+    background-image: linear-gradient(var(--light-bg-service), var(--light-bg-service)), url(../../images/gallery/gallery-m.jpg); } }
+
+@media only screen and (max-width: 700px) {
+  .section__gallery {
+    background-image: linear-gradient(var(--light-bg-service), var(--light-bg-service)), url(../../images/gallery/gallery-s.jpg); } }
 
 .section__packages {
   background: url(../svg/packages/teamsWaves.svg) no-repeat bottom;
@@ -2059,7 +2069,7 @@ h1 {
       background-color: transparent;
       border: 0;
       border-bottom: 3px solid var(--light-text-color-primary);
-      transition: all 0.3s; }
+      transition: transform 0.3s, color 0.3s, border-bottom 0.3s; }
       .form-control input:focus {
         outline: none; }
       .form-control input:focus:valid {
@@ -2256,7 +2266,7 @@ h1 {
       font-size: 1.9rem; } }
 
 footer {
-  background-image: var(--light-bg-footer), url(../images/footer/footer-bg-xl.jpg);
+  background-image: var(--light-bg-footer), url(../images/footer/footer-bg-l.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed; }
@@ -2319,14 +2329,6 @@ footer {
   .f-form .input-label {
     position: relative;
     margin-bottom: 3rem; }
-    .f-form .input-label label {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      padding-left: 1.3rem;
-      font-weight: 500;
-      font-size: 1.6rem;
-      opacity: 1; }
     .f-form .input-label input {
       width: 100%;
       padding: 1.4rem;
@@ -2340,13 +2342,10 @@ footer {
         border-bottom: 3px solid #ee4545; }
       .f-form .input-label input:focus:valid {
         border-bottom: 3px solid limegreen; }
-  .f-form .textarea-label label {
-    top: 0rem;
-    transform: none;
-    margin: 1rem 0 0 0; }
   .f-form .textarea-label textarea {
     border: 0;
     border-radius: 5px;
+    font-size: 1.6rem;
     width: 100%;
     height: 14rem;
     padding: 1rem 1.5rem; }
@@ -2365,7 +2364,13 @@ footer {
   margin-top: 6rem;
   padding-bottom: 3rem; }
 
+@media only screen and (min-width: 1900px) {
+  footer {
+    background-image: var(--light-bg-footer), url(../images/footer/footer-bg-xl.jpg); } }
+
 @media only screen and (max-width: 1200px) {
+  footer {
+    background-image: var(--light-bg-footer), url(../images/footer/footer-bg-m.jpg); }
   .f-form {
     width: 100%; } }
 
@@ -2380,6 +2385,11 @@ footer {
         margin-top: 8rem; } }
 
 @media only screen and (max-width: 700px) {
+  footer {
+    background-image: var(--light-bg-footer), url(../images/footer/footer-bg-s.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; }
   .footer__container {
     width: 100%; } }
 

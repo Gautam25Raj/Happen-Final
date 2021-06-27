@@ -3,7 +3,7 @@
       var(--light-bg-service),
       var(--light-bg-service)
     ),
-    url(../images/gallery/gallery2.jpg);
+    url(../../images/gallery/gallery-l.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
@@ -11,13 +11,9 @@
 }
 
 .gallery {
-  //   background-color: $color-grey-light-1;
   grid-column: full-start / full-end;
   display: grid;
-  /*grid-template-columns: repeat(8, 1fr);
-      grid-template-rows: repeat(7, 5vw);*/
   grid-template: repeat(7, 5vw) / repeat(8, 1fr);
-  // display: none;
   grid-gap: 1.5rem;
   padding: 1.5rem;
 
@@ -102,5 +98,34 @@
     height: 100%;
     object-fit: cover;
     display: block;
+  }
+}
+@include respond(2200) {
+  .section__gallery {
+    background-image: linear-gradient(
+        var(--light-bg-service),
+        var(--light-bg-service)
+      ),
+      url(../../images/gallery/gallery-xl.jpg);
+  }
+}
+
+@include respond(1200) {
+  .section__gallery {
+    background-image: linear-gradient(
+        var(--light-bg-service),
+        var(--light-bg-service)
+      ),
+      url(../../images/gallery/gallery-m.jpg);
+  }
+}
+
+@include respond(700) {
+  .section__gallery {
+    background-image: linear-gradient(
+        var(--light-bg-service),
+        var(--light-bg-service)
+      ),
+      url(../../images/gallery/gallery-s.jpg);
   }
 }
