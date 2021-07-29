@@ -1,0 +1,86 @@
+:root {
+  --light-color-heading-1-1: #ec9191;
+  --light-color-heading-1-2: #903131;
+  --btn-background-color: #efefef;
+  --btn-color: #332e2e;
+  --services-head: #ababab;
+  --light-hero-ovelay: rgba(0, 0, 0, 0);
+  --light-background-1: #fff8f8;
+  --light-background-2: #ffe6e6;
+  --light-background-3: 255, 248, 248;
+  --light-text-color-penta: #747474;
+  --light-text-color-quad: #5f5f5f;
+  --light-text-color-tertiary: #000;
+  --light-text-color-secondary: #332e2e;
+  --light-text-color-primary: #332e2e;
+  --light-color-1: #ff0000;
+  --light-color-2: #ef9595;
+  --light-color-heading-2: #e95c6d;
+  --light-bg-services: rgba(53, 47, 55, 0.95);
+  --light-bg-service: rgba(255, 255, 255, 0.9);
+  --light-bg-footer: linear-gradient(rgba(255, 230, 230, 0.8), rgba(255, 230, 230, 0.8)); }
+
+.navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25); }
+  .navigation__list {
+    display: flex;
+    align-items: center; }
+  .navigation__item, .navigation__item:link, .navigation__item:visited {
+    color: #fff;
+    font-size: 1.7rem;
+    height: 100%;
+    padding: 0 4px;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.2s ease-in;
+    margin-right: 3rem; }
+  .navigation__item::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #000;
+    left: 0;
+    bottom: -6px;
+    transition: width 0.2s ease-out; }
+  .navigation__item.active::after {
+    width: 100%;
+    transform: scale(1.05); }
+  .navigation__item:hover::after {
+    width: 100%; }
+  .navigation__link, .navigation__link:link, .navigation__link:visited {
+    color: #000; }
+  .navigation__link:hover {
+    color: var(--light-color-2); }
+
+.click {
+  transition: transform 0.1s ease-in; }
+  .click:hover {
+    transform: scale(1.05); }
+  .click:active {
+    transform: scale(0.98); }
+
+.happen-logo {
+  width: 5.8rem;
+  margin-left: 1rem;
+  padding: 0.2rem 0; }
+
+.hamburger__menu {
+  display: none;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  cursor: pointer;
+  position: fixed;
+  right: 1.5rem;
+  top: 1.8rem;
+  z-index: 1000; }
