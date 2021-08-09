@@ -20,71 +20,6 @@
   --light-bg-service: rgba(255, 255, 255, 0.9);
   --light-bg-footer: linear-gradient(rgba(255, 230, 230, 0.8), rgba(255, 230, 230, 0.8)); }
 
-.navigation {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #fff;
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25); }
-  .navigation__list {
-    display: flex;
-    align-items: center; }
-  .navigation__item, .navigation__item:link, .navigation__item:visited {
-    color: #fff;
-    font-size: 1.7rem;
-    height: 100%;
-    padding: 0 4px;
-    text-transform: uppercase;
-    position: relative;
-    transition: color 0.2s ease-in;
-    margin-right: 3rem; }
-  .navigation__item::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    background-color: #000;
-    left: 0;
-    bottom: -6px;
-    transition: width 0.2s ease-out; }
-  .navigation__item.active::after {
-    width: 100%;
-    transform: scale(1.05); }
-  .navigation__item:hover::after {
-    width: 100%; }
-  .navigation__link, .navigation__link:link, .navigation__link:visited {
-    color: #000; }
-  .navigation__link:hover {
-    color: var(--light-color-2); }
-
-.click {
-  transition: transform 0.1s ease-in; }
-  .click:hover {
-    transform: scale(1.05); }
-  .click:active {
-    transform: scale(0.98); }
-
-.happen-logo {
-  width: 5.8rem;
-  margin-left: 1rem;
-  padding: 0.2rem 0; }
-
-.hamburger__menu {
-  display: none;
-  background-color: transparent;
-  width: 30px;
-  height: 30px;
-  border: 0;
-  cursor: pointer;
-  position: fixed;
-  right: 1.5rem;
-  top: 1.8rem;
-  z-index: 1000; }
-
 .header {
   margin-bottom: 10rem; }
   .header__heading {
@@ -326,16 +261,6 @@ article {
   width: 70%;
   font-size: 2rem;
   line-height: 1.8; }
-
-footer {
-  width: 90%;
-  margin: 0 auto; }
-
-.footer__container {
-  display: flex;
-  justify-content: space-between; }
-  .footer__container--2 {
-    display: flex; }
 
 .section__values {
   border-top: 2px solid #a0a0a0;
