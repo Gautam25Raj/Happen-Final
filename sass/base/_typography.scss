@@ -1,0 +1,209 @@
+//////////////////////////////////////////////////////
+////////// H1 HEADING
+//////////////////////////////////////////////////////
+h1 {
+  font-size: 10rem;
+  margin-bottom: 4rem;
+
+  span {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 1.4rem;
+    margin-bottom: 1rem;
+  }
+}
+
+//////////////////////////////
+///////// MEDIA QUERRIES
+//////////////////////////////
+@include respond(1900) {
+  h1 {
+    font-size: 12rem;
+    margin-bottom: 6rem;
+
+    span {
+      font-size: 7rem;
+    }
+  }
+}
+
+@include respond(1200) {
+  h1 {
+    font-size: 9rem;
+
+    span {
+      letter-spacing: 1rem;
+      font-size: 5rem;
+      font-weight: 500;
+    }
+  }
+}
+
+@include respond(700) {
+  h1 {
+    font-size: 11rem;
+    margin-top: 10rem;
+    margin-bottom: 8rem;
+
+    span {
+      font-size: 6.5rem;
+    }
+  }
+}
+
+@include respond(550) {
+  h1 {
+    font-size: 9rem;
+    margin-top: 10rem;
+    margin-bottom: 8rem;
+
+    span {
+      font-size: 5rem;
+    }
+  }
+}
+
+//////////////////////////////////////////////////////
+////////// H2 HEADING IN EVERY SECTION
+//////////////////////////////////////////////////////
+.heading {
+  width: 70%;
+  text-align: center;
+  margin: 0 auto;
+
+  &-header {
+    font-size: 5rem;
+    letter-spacing: 0.4rem;
+    background-image: linear-gradient(
+      to bottom,
+      var(--light-color-heading-1-1),
+      var(--light-color-heading-1-2)
+    );
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    margin-bottom: 4rem;
+  }
+}
+
+//////////////////////////////
+///////// MEDIA QUERRIES
+//////////////////////////////
+@include respond(1600) {
+  .heading {
+    width: 60%;
+  }
+}
+
+@include respond(1900) {
+  .heading {
+    &-header {
+      font-size: 5.1rem;
+    }
+  }
+}
+
+@include respond(1200) {
+  .heading {
+    width: 80%;
+  }
+}
+
+@include respond(700) {
+  .heading {
+    width: 98%;
+  }
+}
+
+//////////////////////////////////////////////////////
+////////// H3 HEADING (RED COLOR HEAD)
+//////////////////////////////////////////////////////
+.heading-h3 {
+  font-size: 5.1rem;
+  letter-spacing: 2px;
+  color: var(--light-color-heading-2);
+}
+
+//////////////////////////////
+///////// MEDIA QUERRIES
+//////////////////////////////
+@include respond(1900) {
+  .heading-h3 {
+    font-size: 5.3rem;
+  }
+}
+
+@include respond(1200) {
+  .heading-h3 {
+    font-size: 4.6rem;
+  }
+}
+
+@include respond(1200) {
+  .heading-h3 {
+    font-size: 4.6rem;
+  }
+}
+
+@include respond(850) {
+  .heading-h3 {
+    font-size: 4rem;
+  }
+}
+
+@include respond(700) {
+  .heading-h3 {
+    font-size: 3.6rem;
+  }
+}
+//////////////////////////////////////////////////////
+////////// PARAGRAPH IN EVERY SECTION
+//////////////////////////////////////////////////////
+.paragraph {
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  color: var(--light-text-color-primary);
+  line-height: 25px;
+
+  &-light {
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+}
+
+//////////////////////////////
+///////// MEDIA QUERRIES
+//////////////////////////////
+@include respond(1600) {
+  .paragraph {
+    font-size: 1.6rem;
+
+    &-light {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+@include respond(1900) {
+  .paragraph {
+    font-size: 1.8rem;
+    line-height: 32px;
+
+    &-light {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+@include respond(1200) {
+  .paragraph {
+    line-height: 24px;
+  }
+}
+
+@include respond(1200) {
+  .paragraph {
+    line-height: 24px;
+  }
+}

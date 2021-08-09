@@ -1,0 +1,104 @@
+.navigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25);
+
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        &,
+        &:link,
+        &:visited {
+            color: #fff;
+            font-size: 1.7rem;
+            height: 100%;
+            padding: 0 4px;
+            text-transform: uppercase;
+            position: relative;
+            transition: color 0.2s ease-in;
+            margin-right: 3rem;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #000;
+            left: 0;
+            bottom: -6px;
+            transition: width 0.2s ease-out;
+        }
+
+        &.active {
+            &::after {
+                width: 100%;
+                transform: scale(1.05);
+            }
+        }
+
+        &:hover {
+            &::after {
+                width: 100%;
+            }
+        }
+    }
+
+    &__link {
+        &,
+        &:link,
+        &:visited {
+            color: #000;
+        }
+
+        &:hover {
+            color: var(--light-color-2);
+        }
+    }
+}
+
+.click {
+    transition: transform 0.1s ease-in;
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+}
+
+.happen-logo {
+    width: 5.8rem;
+    margin-left: 1rem;
+    padding: 0.2rem 0;
+}
+
+.hamburger__menu {
+    display: none;
+    background-color: transparent;
+    width: 30px;
+    height: 30px;
+    border: 0;
+    cursor: pointer;
+    position: fixed;
+    right: 1.5rem;
+    top: 1.8rem;
+    z-index: 1000;
+}
+
+/////////////////////////////////////////////////
+///////// MEDIA QUERRIES
+/////////////////////////////////////////////////
+@include respond(700) {
+}

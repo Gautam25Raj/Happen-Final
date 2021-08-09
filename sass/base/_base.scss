@@ -1,0 +1,139 @@
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 100;
+  src: local(''), url('../fonts/roboto-v27-latin-100.woff2') format('woff2'),
+    url('../fonts/roboto-v27-latin-100.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local(''), url('../fonts/roboto-v27-latin-300.woff2') format('woff2'),
+    url('../fonts/roboto-v27-latin-300.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  src: local(''), url('../fonts/roboto-v27-latin-500.woff2') format('woff2'),
+    url('../fonts/roboto-v27-latin-500.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''), url('../fonts/roboto-v27-latin-regular.woff2') format('woff2'),
+    url('../fonts/roboto-v27-latin-regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local(''), url('../fonts/roboto-v27-latin-700.woff2') format('woff2'),
+    url('../fonts/roboto-v27-latin-700.woff') format('woff');
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+  scroll-behavior: smooth;
+  cursor: default;
+}
+
+main {
+  background-color: var(--light-background-2);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.section,
+.section-m {
+  transition: transform 0.3s ease-in;
+}
+
+.section--hidden-bottom {
+  opacity: 0;
+  transform: translateY(6rem) !important;
+}
+
+// .section--hidden-l {
+//   opacity: 0;
+//   transform: translateX(20rem) !important;
+// }
+
+.section--hidden-right {
+  opacity: 0;
+  transform: translateX(-20rem) !important;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/////////////////////////////////////////////////
+///////// MEDIA QUERRIES
+/////////////////////////////////////////////////
+@include respond(1600) {
+  html {
+    font-size: 68%;
+  }
+}
+
+@include respond(1900) {
+  html {
+    font-size: 72%;
+  }
+}
+
+@include respond(2200) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@include respond(1200) {
+  html {
+    font-size: 58%;
+  }
+}
+
+@include respond(950) {
+  html {
+    font-size: 52%;
+  }
+}
+
+@include respond(700) {
+  html {
+    font-size: 48%;
+  }
+}

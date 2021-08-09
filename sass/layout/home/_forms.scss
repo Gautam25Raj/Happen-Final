@@ -1,0 +1,205 @@
+.form {
+  margin-top: 18%;
+
+  &-control {
+    width: 42%;
+    // max-width: 280px;
+    margin: 0 auto;
+    position: relative;
+    transform: translateX(5.5rem);
+
+    &:not(:last-child) {
+      margin-bottom: 4rem;
+    }
+
+    & label {
+      position: absolute;
+      font-size: 1.6rem;
+      padding-bottom: 1rem;
+      top: 0.6rem;
+
+      & span {
+        font-size: 1.8rem;
+        display: inline-block;
+        min-width: 5px;
+        transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      }
+    }
+
+    & input {
+      display: block;
+      width: 100%;
+      padding: 0.6rem 0;
+      font-size: 1.6rem;
+      background-color: transparent;
+      border: 0;
+      border-bottom: 3px solid var(--light-text-color-primary);
+      transition: transform 0.3s, color 0.3s, border-bottom 0.3s;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:focus:valid {
+        border-bottom: 3px solid limegreen;
+      }
+
+      &:focus:invalid {
+        border-bottom: 3px solid rgb(238, 69, 69);
+      }
+
+      &:focus + label span,
+      &:valid + label span {
+        transform: translateY(-30px);
+      }
+
+      &:focus:invalid + label {
+        color: rgb(238, 69, 69);
+      }
+
+      &:valid + label span {
+        color: var(--light-text-color-primary);
+      }
+    }
+
+    & .form-btn {
+      width: 100%;
+      margin: 6rem 0;
+      padding: 1.6rem 0;
+      background-color: #000;
+      color: #fff;
+      border: 0;
+    }
+  }
+}
+
+/////////////////////////////////////////////////
+///////// MEDIA QUERRIES
+/////////////////////////////////////////////////
+@include respond(1600) {
+  .form {
+    &-control {
+      &:not(:last-child) {
+        margin-bottom: 4.2rem;
+      }
+
+      & label {
+        font-size: 1.7rem;
+      }
+
+      & input {
+        font-size: 1.7rem;
+      }
+
+      & .form-btn {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+@include respond(1900) {
+  .form {
+    &-control {
+      width: 48%;
+
+      &:not(:last-child) {
+        margin-bottom: 4.8rem;
+      }
+
+      & label {
+        font-size: 1.9rem;
+      }
+
+      & input {
+        font-size: 1.9rem;
+      }
+
+      & .form-btn {
+        margin-top: 8rem;
+        font-size: 1.7rem;
+      }
+    }
+  }
+}
+
+@include respond(2200) {
+  .form {
+    margin-top: 22%;
+  }
+}
+
+@include respond(1200) {
+  .form {
+    &-control {
+      min-width: 220px;
+
+      &:not(:last-child) {
+        margin-bottom: 4.2rem;
+      }
+    }
+
+    & .form-btn {
+      margin-top: 6rem;
+    }
+  }
+}
+
+@include respond(950) {
+  .form {
+    &-control {
+      width: 55%;
+      min-width: 200px;
+      margin-left: 15%;
+
+      &:not(:last-child) {
+        margin-bottom: 4rem;
+      }
+    }
+
+    & .form-btn {
+      margin: 6rem 0;
+    }
+  }
+}
+
+@include respond(700) {
+  .form {
+    &-control {
+      width: 45%;
+      margin: 0 auto;
+      transform: translateX(0);
+
+      & label {
+        span {
+          font-size: 2.2rem;
+        }
+      }
+
+      & input {
+        padding-bottom: 1rem;
+        font-size: 2rem;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 7rem;
+      }
+    }
+
+    & .form-btn {
+      margin: 8rem 0 7rem;
+    }
+  }
+}
+
+@include respond(450) {
+  .form {
+    margin-top: 20%;
+
+    &-control label {
+      span {
+        font-size: 2rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.section__header {
+  background-image: url(../images/hero.webp), linear-gradient(to bottom left, #ba908d 0%, #e5c4bf);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right top;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+
+  &__container {
+    width: 40%;
+    height: 100%;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}
+
+/////////////////////////////////////////////////
+///////// MEDIA QUERRIES
+/////////////////////////////////////////////////
+@include respond(1200) {
+  .header {
+    &__container {
+      width: 45%;
+    }
+  }
+}
+
+@include respond(950) {
+  .header {
+    &__container {
+      width: 50%;
+    }
+  }
+}
+
+@include respond(700) {
+  .section__header {
+    background-position: 60% 0;
+  }
+
+  .header {
+    &__container {
+      width: 100%;
+
+      button {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+@include respond(550) {
+  .section__header {
+    background-position: 70% 0;
+  }
+}

@@ -1,0 +1,21 @@
+.section__vision {
+    border-top: 2px solid rgb(160, 160, 160);
+    padding-top: 8rem;
+    margin-bottom: 10rem;
+    display: flex;
+    align-items: center;
+}
+
+.vision {
+    &__h2 {
+        font-size: 4rem;
+        width: 25%;
+    }
+
+    &__paragraph {
+        width: 70%;
+        font-size: 2rem;
+        line-height: 1.8;
+    }
+}
+

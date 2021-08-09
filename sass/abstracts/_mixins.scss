@@ -1,0 +1,81 @@
+/////////////////////////////////////////////////
+///////// MEDIA QUERRY MIXIN
+/////////////////////////////////////////////////
+@mixin respond($breakpoint) {
+  //FOR WIDTH OF 300
+  @if $breakpoint == 300 {
+    @media only screen and (max-width: 300px) {
+      @content;
+    }
+  }
+
+  //FOR WIDTH OF 450
+  @if $breakpoint == 450 {
+    @media only screen and (max-width: 450px) {
+      @content;
+    }
+  }
+
+  //FOR WIDTH OF 550
+  @if $breakpoint == 550 {
+    @media only screen and (max-width: 550px) {
+      @content;
+    }
+  }
+
+  //FOR WIDTH OF 700
+  @if $breakpoint == 700 {
+    @media only screen and (max-width: 700px) {
+      @content;
+    }
+  }
+
+  //FOR WIDTH OF 850
+  @if $breakpoint == 850 {
+    @media only screen and (max-width: 850px) {
+      @content;
+    }
+  }
+
+  //FOR WIDTH OF 950
+  @if $breakpoint == 950 {
+    @media only screen and (max-width: 950px) {
+      @content;
+    }
+  }
+
+  //FOR WIDTH OF 1200
+  @if $breakpoint == 1200 {
+    @media only screen and (max-width: 1200px) {
+      @content;
+    }
+  }
+
+  //FOR WIDTH OF 1400
+  @if $breakpoint == 1400 {
+    @media only screen and (max-width: 1400px) {
+      @content;
+    }
+  }
+
+  //FOR WIDTH OF 1600
+  @if $breakpoint == 1600 {
+    @media only screen and (min-width: 1600px) {
+      @content;
+    }
+  }
+
+  //FOR WIDTH OF 1900
+  @if $breakpoint == 1900 {
+    @media only screen and (min-width: 1900px) {
+      @content;
+    }
+  }
+
+  //FOR WIDTH OF 1900
+  @if $breakpoint == 2200 {
+    @media only screen and (min-width: 2200px) {
+      @content;
+    }
+  }
+}

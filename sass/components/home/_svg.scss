@@ -1,0 +1,283 @@
+.dec {
+  position: absolute;
+
+  &.familiar-circle {
+    width: 30.5rem;
+    transform: translateX(0.4rem);
+  }
+
+  &.passion-circle {
+    width: 45rem;
+    transform: translateX(-1rem);
+  }
+
+  &.arrow {
+    right: 0;
+
+    &-left {
+      left: 0;
+    }
+  }
+
+  &.arrow-t {
+    right: 28%;
+    width: 6rem;
+    height: 6rem;
+
+    img {
+      width: 3.2rem;
+    }
+
+    &.arrow-t-left {
+      left: 28%;
+    }
+  }
+
+  &.line {
+    height: 100%;
+
+    &-1 {
+      left: 12%;
+    }
+
+    &-2 {
+      left: 75%;
+    }
+
+    &-3 {
+      left: 85%;
+    }
+
+    &-4 {
+      height: 2px;
+      width: 80%;
+      left: 8%;
+      bottom: 10%;
+    }
+  }
+
+  &.circle {
+    width: 22vw;
+  }
+
+  &.half-circle {
+    right: 0;
+    width: 18vw;
+
+    &.half-circle-up {
+      top: 0;
+    }
+
+    &.half-circle-down {
+      bottom: 0;
+    }
+  }
+
+  // With Image tag HTML
+  &.triangle {
+    top: 0;
+    right: 0;
+    height: 100%;
+  }
+}
+
+/////////////////////////////////////////////////
+///////// MEDIA QUERRIES
+/////////////////////////////////////////////////
+@include respond(1900) {
+  .dec {
+    &.familiar-circle {
+      width: 34.5rem;
+      transform: translateX(0.4rem);
+    }
+
+    &.passion-circle {
+      width: 50rem;
+      transform: translateX(-1rem);
+    }
+
+    &.circle {
+      width: 24vw;
+    }
+
+    &.line {
+      &-1 {
+        left: 14%;
+      }
+
+      &-2 {
+        left: 75%;
+      }
+
+      &-3 {
+        left: 85%;
+      }
+
+      &-4 {
+        height: 2px;
+        width: 72%;
+        left: 9%;
+        bottom: 10%;
+      }
+    }
+  }
+}
+
+@include respond(1400) {
+  .dec.arrow {
+    img {
+      width: 4rem;
+    }
+  }
+}
+
+@include respond(1200) {
+  .dec {
+    &.passion-circle {
+      width: 35vw;
+    }
+
+    &.arrow {
+      img {
+        width: 3.4rem;
+      }
+    }
+
+    &.line {
+      &-1 {
+        left: 12%;
+      }
+
+      &-2 {
+        left: 75%;
+      }
+
+      &-3 {
+        left: 85%;
+      }
+
+      &-4 {
+        width: 70%;
+        left: 10%;
+        bottom: 12%;
+      }
+    }
+
+    &.circle {
+      width: 28rem;
+    }
+  }
+}
+
+@include respond(950) {
+  .dec {
+    &.passion-circle {
+      width: 38rem;
+    }
+
+    &.line {
+      &-1 {
+        left: 8%;
+      }
+
+      &-4 {
+        width: 76%;
+        left: 5%;
+        bottom: 12%;
+      }
+    }
+
+    &.triangle {
+      width: 40%;
+    }
+  }
+}
+
+@include respond(700) {
+  .dec {
+    &.familiar-circle {
+      width: 26rem;
+    }
+
+    &.passion-circle {
+      width: 30rem;
+    }
+
+    &.line {
+      &-1 {
+        left: 4%;
+      }
+
+      &-2 {
+        left: 85%;
+      }
+
+      &-3 {
+        left: 96%;
+      }
+
+      &-4 {
+        width: 90%;
+        left: 2%;
+        bottom: 11%;
+      }
+    }
+
+    &.circle {
+      width: 36rem;
+    }
+
+    &.half-circle {
+      &.half-circle-up {
+        display: none;
+      }
+
+      &.half-circle-down {
+        bottom: 0;
+      }
+    }
+
+    &.triangle {
+      display: none;
+    }
+  }
+}
+
+@include respond(550) {
+  .dec.circle {
+    width: 50vw;
+  }
+
+  .dec.line-4 {
+    bottom: 47%;
+  }
+
+  .dec.half-circle-down {
+    width: 35vw;
+  }
+}
+
+@include respond(450) {
+  .dec.circle {
+    width: 30rem;
+    width: calc(60vw + 20px);
+  }
+
+  .dec.line {
+    &-2 {
+      display: none;
+    }
+
+    &-4 {
+      width: 98%;
+      left: 1%;
+      top: 47%;
+    }
+  }
+}
+
+@include respond(300) {
+  .dec.line {
+    display: none;
+  }
+}

@@ -1,0 +1,31 @@
+@import 'abstracts/variables';
+@import 'base/loading';
+
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+
+@import 'base/base';
+@import 'base/scrollbar';
+@import 'base/typography';
+
+@import 'components/home/navigation';
+@import 'components/home/buttons';
+@import 'components/home/social';
+@import 'components/home/carousel';
+@import 'components/home/modal';
+@import 'components/home/svg';
+@import 'components/home/animation';
+@import 'components/home/extends';
+
+@import 'layout/home/contact';
+@import 'layout/home/header';
+@import 'layout/home/aboutUs';
+@import 'layout/home/services';
+@import 'layout/home/teams';
+@import 'layout/home/testimonial';
+@import 'layout/home/gallery';
+@import 'layout/home/packages';
+@import 'layout/home/location';
+@import 'layout/home/forms';
+@import 'layout/home/counter';
+@import 'layout/home/footer';
