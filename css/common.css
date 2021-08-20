@@ -384,11 +384,11 @@ footer {
     width: 20%; }
 
 .footer__about--paragraph {
-  font-size: 1.5rem; }
+  font-size: 1.6rem; }
 
 .footer__heading {
   color: #e95c6d;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   margin: 2rem 0 1.5rem;
   font-weight: 700; }
 
@@ -400,7 +400,7 @@ footer {
     margin-right: 2rem;
     width: 2rem; }
   .footer__contact--container p {
-    font-size: 1.4rem; }
+    font-size: 1.5rem; }
 
 .footer__socials {
   display: flex;
@@ -414,7 +414,7 @@ footer {
   .flink__item {
     margin: 1rem 0; }
   .flink__link {
-    font-size: 1.5rem; }
+    font-size: 1.7rem; }
 
 .subscribe {
   position: relative; }
@@ -447,12 +447,12 @@ footer {
 .fsocial {
   display: flex; }
   .fsocial__item {
-    margin: 2rem 1rem; }
+    margin: 1rem; }
   .fsocial__icon {
     width: 3.5rem; }
 
 .copyright {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 500;
   align-self: center;
   position: absolute;
