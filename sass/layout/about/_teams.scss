@@ -1,26 +1,5 @@
-body {
-  background-image: url(../../../svg/about/background.svg);
-}
-
-main {
-  background-color: transparent;
-  position: relative;
-}
-
-article {
-  width: 75%;
-  margin: 0 auto;
-}
-
-.bgBottom {
-  transform: rotate(180deg);
-  position: absolute;
-  width: 100%;
-  bottom: -60px;
-  z-index: -1;
-}
-
 .section__teams {
+  // display: none;
   border-top: 2px solid rgb(160, 160, 160);
   padding-top: 8rem;
   margin-bottom: 10rem;
@@ -32,7 +11,7 @@ article {
   }
 
   &__container {
-    width: 75%;
+    width: 70%;
     max-width: 900px;
     margin: 0 auto 10rem;
   }
@@ -63,22 +42,23 @@ article {
 
 .founder {
   width: 100%;
-  height: 450px;
+  height: 400px;
   display: flex;
   margin: 0 auto;
   margin-bottom: 10rem;
+  position: relative;
 
   &__image {
     flex-basis: 50%;
     display: flex;
-    background-image: url(../../../images/about/2.jpg);
+    background-image: url(../images/about/G.S-Prasad.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 
     &--img {
       width: 80%;
-      background-image: url(../../../images/about/2.jpg);
+      background-image: url(../images/about/G.S-Prasad.jpg);
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
@@ -119,7 +99,10 @@ article {
     }
 
     &__social {
-      margin-top: 12rem;
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
 
       &--paragraph {
         font-size: 2rem;
@@ -222,4 +205,98 @@ article {
   //         color: #b8b8b8;
   //     }
   // }
+}
+
+/////////////////////////////////////////////////
+///////// MEDIA QUERRIES
+/////////////////////////////////////////////////
+@include respond(1400) {
+  .section__teams {
+    width: 85%;
+  }
+}
+
+@include respond(1200) {
+  .section__teams {
+    width: 90%;
+  }
+
+  .founder {
+    height: 420px;
+  }
+
+  .teams {
+    &__container {
+      width: 80%;
+    }
+  }
+}
+
+@include respond(850) {
+  .teams {
+    &__container {
+      width: 95%;
+    }
+  }
+}
+
+@include respond(700) {
+  .teams__heading {
+    text-align: left;
+  }
+
+  .teams__paragraph {
+    font-size: 1.8rem;
+  }
+
+  .teams__footer {
+    font-size: 4rem;
+    letter-spacing: 0px;
+  }
+
+  .founder {
+    flex-direction: column;
+    width: 60%;
+    min-width: 320px;
+    height: 700px;
+
+    &--h3 {
+      font-size: 3rem;
+
+      span {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+      }
+    }
+
+    &__paragraph {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@include respond(450) {
+  .teams__h2 {
+    font-size: 4.6rem;
+  }
+
+  .teams__footer {
+    font-size: 2.8rem;
+  }
+
+  .teams__paragraph {
+    margin-bottom: 6rem;
+  }
+
+  .founder {
+    width: 100%;
+    min-width: 0;
+    max-width: 325px;
+
+    &__image {
+      &--img {
+        height: 320px;
+      }
+    }
+  }
 }

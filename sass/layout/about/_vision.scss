@@ -3,6 +3,7 @@
   padding-top: 8rem;
   margin-bottom: 10rem;
   display: flex;
+  // display: none;
   align-items: center;
 }
 
@@ -16,5 +17,44 @@
     width: 70%;
     font-size: 1.8rem;
     line-height: 1.8;
+  }
+}
+
+/////////////////////////////////////////////////
+///////// MEDIA QUERRIES
+/////////////////////////////////////////////////
+@include respond(1400) {
+  .section__vision {
+    width: 85%;
+  }
+}
+
+@include respond(1200) {
+  .section__vision {
+    width: 90%;
+  }
+
+  .vision {
+    &__h2 {
+      margin-right: 3rem;
+    }
+  }
+}
+
+@include respond(700) {
+  .section__vision {
+    flex-direction: column;
+    margin-bottom: 6rem;
+  }
+
+  .vision {
+    &__h2 {
+      width: 100%;
+      margin: 0 0 2rem;
+    }
+
+    &__paragraph {
+      width: 100%;
+    }
   }
 }

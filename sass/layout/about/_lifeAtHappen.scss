@@ -1,4 +1,5 @@
 .section__life {
+  // display: none;
   border-top: 2px solid rgb(160, 160, 160);
   padding-top: 8rem;
   margin-bottom: 10rem;
@@ -58,5 +59,89 @@
     font-size: 1.7rem;
     line-height: 1.8;
     letter-spacing: 0.5px;
+  }
+}
+
+/////////////////////////////////////////////////
+///////// MEDIA QUERRIES
+/////////////////////////////////////////////////
+@include respond(1400) {
+  .section__life {
+    width: 85%;
+  }
+}
+
+@include respond(1200) {
+  .section__life {
+    width: 90%;
+  }
+
+  .life__container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4rem 6rem;
+  }
+}
+
+@include respond(950) {
+  .life__container {
+    width: 75%;
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 6rem;
+    grid-template-areas:
+      '. .'
+      '. .'
+      '. .';
+  }
+}
+
+@include respond(700) {
+  .life__container {
+    width: 90%;
+  }
+
+  .life {
+    &--paragraph {
+      font-size: 2rem;
+    }
+  }
+}
+
+@include respond(550) {
+  .life__heading {
+    flex-direction: column;
+
+    &--h2 {
+      width: 100%;
+      margin-bottom: 4rem;
+    }
+
+    &--paragraph {
+      width: 100%;
+    }
+  }
+
+  .life__container {
+    width: 95%;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    gap: 1rem 0;
+    grid-template-areas:
+      '. '
+      '.'
+      '.'
+      '.'
+      '.'
+      '.';
+  }
+
+  .life {
+    width: 100%;
+    max-width: 280px;
+
+    &-right {
+      margin-left: auto;
+    }
   }
 }

@@ -1,206 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="css/common.css" />
-        <link rel="stylesheet" href="css/about.css" />
-        <title>Happen</title>
-    </head>
-    <body>
-        <header class="header">
-            <img src="svg/about/bgTop.svg" alt="" class="header__bg" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-            <!-- HEADER NAVIGATION START -->
-            <div class="navigation">
-                <a href="#home">
-                    <picture>
-                        <source
-                            srcset="images/logo-modal/HappenLogow.webp"
-                            type="image/webp"
-                        />
-                        <source
-                            srcset="images/logo-modal/HappenLogo.png"
-                            type="image/png"
-                        />
+    <meta name="author" content="Gautam Raj" />
+    <meta
+      name="description"
+      content="One of Best Wedding and Destination Planner/Organizer in India. Plan your Dream Wedding with Team Happen with perfect Banquet within your budget."
+    />
+    <meta
+      name="keywords"
+      content="Happen, Make It Happen, Banquet halls in patna, Happen Patna, wedding decorators in patna, Wedding in patna, bridal makeup in patna, Wedding, Banquet, Halls, Marriage, Organizer, Dream Wedding"
+    />
+
+    <meta property="fb:app_id" content="779067939438721" />
+    <meta property="og:url" content="https://happenwedding.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Happen: The Complete Wedding Planner" />
+    <meta
+      property="og:image"
+      content="https://happenwedding.com/images/socialContent.jpg"
+    />
+    <meta
+      property="og:image:secure_url"
+      content="https://happenwedding.com/images/socialContent.jpg"
+    />
+    <meta property="og:image:type" content="image/jpg" />
+    <meta property="og:image:alt" content="Happen Poster" />
+    <meta
+      property="og:description"
+      content="One of Best Wedding and Destination Planner/Organizer in India. Plan your Dream Wedding with Team Happen with perfect Banquet within your budget."
+    />
+    <meta property="og:site_name" content="Happen" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="article:author" content="Gautam Raj" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@ashrapappu" />
+    <meta name="twitter:creator" content="@Gautam24079739" />
+    <meta name="twitter:url" content="https://happenwedding.com/" />
+    <meta name="twitter:title" content="Happen: The Complete Wedding Planner" />
+    <meta
+      name="twitter:description"
+      content="One of Best Wedding and Destination Planner/Organizer in India. Plan your Dream Wedding with Team Happen with perfect Banquet within your budget."
+    />
+    <meta
+      name="twitter:image"
+      content="https://happenwedding.com/images/socialContent.jpg"
+    />
+    <meta name="twitter:image:alt" content="Happen Poster" />
+
+    <link rel="icon" type="image/png" href="/fav-32.png" sizes="32x32" />
+
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="./fonts/roboto-v27-latin-regular.woff2"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/about.css" />
+
+    <script defer src="js/common.js"></script>
+    <script defer src="js/about.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-201426031-2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-201426031-2');
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-F82XX4GF6Q"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'G-F82XX4GF6Q');
+    </script>
+
+    <title>Happen: The Complete Wedding Planner</title>
+  </head>
+  <body>
+    <!-- Pre Loader -->
+    <div class="preload center">
+      <div class="preload__container center">
+        <picture>
+          <source
+            srcset="images/loader/fav-96.webp"
+            media="(max-width:400px)"
+            type="image/webp"
+          />
+          <source
+            srcset="images/loader/fav-144.webp"
+            media="(max-width:800px)"
+            type="image/webp"
+          />
+          <source
+            srcset="images/loader/fav-192.webp"
+            media="(max-width:1200px)"
+            type="image/webp"
+          />
+          <source
+            srcset="images/loader/fav-384.webp"
+            media="(min-width:1920px)"
+            type="image/webp"
+          />
+          <img src="images/loader/fav-256.webp" alt="Car" class="car" />
+        </picture>
+        <h3 class="loader">Loading</h3>
+      </div>
+    </div>
+    <!-- Pre Loader -->
+
+    <div class="overlay"></div>
+    <header class="header">
+      <picture>
+        <source
+          media="(max-width:400px)"
+          srcset="svg/about/background-up-s.svg"
+        />
+        <source
+          media="(max-width:950px)"
+          srcset="svg/about/background-up-m.svg"
+        />
+        <img src="svg/about/background-up.svg" alt="" class="header__bg" />
+      </picture>
+
+      <!-- HEADER NAVIGATION START -->
+      <div class="navigation">
+        <a href="#home" class="logo">
+          <picture>
+            <source
+              srcset="images/logo-modal/HappenLogow.webp"
+              type="image/webp"
+            />
+            <source
+              srcset="images/logo-modal/HappenLogo.png"
+              type="image/png"
+            />
+            <img
+              src="images/logo-modal/HappenLogo.png"
+              alt="Happen Icon Logo"
+              class="happen-logo center"
+            />
+          </picture>
+        </a>
+
+        <nav class="navigation__nav">
+          <ul class="navigation__list">
+            <li class="navigation__item nav click">
+              <a href="home" class="navigation__link"> Home </a>
+            </li>
+
+            <li class="navigation__item nav click active">
+              <a href="#home" class="navigation__link">About</a>
+            </li>
+
+            <li class="navigation__item nav click">
+              <a href="home/service" class="navigation__link">Services</a>
+            </li>
+
+            <li class="navigation__item nav click">
+              <a href="index.html#packages" class="navigation__link"
+                >Packages</a
+              >
+            </li>
+
+            <li class="navigation__item nav click">
+              <a href="index.html#gallery" class="navigation__link">Gallery</a>
+            </li>
+
+            <li class="navigation__item nav click">
+              <a href="index.html#contact" class="navigation__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="hamburger">
+          <img src="svg/menu.svg" alt="Hamburger Menu" />
+        </button>
+      </div>
+      <!-- HEADER NAVIGATION END -->
+
+      <!-- HEADER START -->
+      <section class="header__heading" id="home">
+        <div class="header__heading--1">
+          <h1 class="header--h1">
+            How we do it, who <br />
+            does it and why.
+          </h1>
+
+          <p class="header--paragraph">
+            Scroll to find the team, <br />
+            our value and more.
+          </p>
+        </div>
+
+        <div class="header__heading--2">
+          <img
+            src="svg/about/people-in-group.svg"
+            alt="About us"
+            class="header--svg"
+          />
+        </div>
+      </section>
+
+      <section class="header__image">
+        <a href="#team" class="header__image--arrow">
+          <img src="svg/about/arrow.svg" alt="Arrow Down" />
+        </a>
+
+        <div class="header__image--container">
+          <img
+            src="images/about/happen-office.jpg"
+            alt="Team Happen Office"
+            class="header__image--image"
+            loading="lazy"
+          />
+        </div>
+      </section>
+      <!-- HEADER END -->
+    </header>
+
+    <main>
+      <picture>
+        <source
+          media="(max-width:600px)"
+          srcset="svg/about/background-up-m.svg"
+        />
+        <img src="svg/about/background-up.svg" alt="" class="bgBottom" />
+      </picture>
+
+      <!-- TEAMS START -->
+      <article class="section__teams">
+        <section class="teams__heading">
+          <h2 class="teams__h2">
+            We are a team of Experts
+            <span>TEAM HAPPEN</span>
+          </h2>
+
+          <p class="paragraph teams__paragraph">
+            We share the vision and values of our community. We’re driven by the
+            idea that the best work is born from diligence, craftsmanship and
+            fun. None of us, ever do great things, but together we can.
+          </p>
+        </section>
+
+        <section class="teams__container">
+          <section class="founder">
+            <div class="founder__image">
+              <div class="founder__image--overlay"></div>
+
+              <div class="founder__image--img">
+                <div class="founder__image--hover">
+                  <h3 class="founder__image--h3">The Boss</h3>
+
+                  <p class="founder__image--paragraph">Founder</p>
+
+                  <div class="founder__image__social">
+                    <p class="founder__image__social--paragraph">Follow on:</p>
+
+                    <div class="founder__image__social--image">
+                      <a
+                        href="https://www.facebook.com/offerinpatna"
+                        target="_blank"
+                      >
                         <img
-                            src="images/logo-modal/HappenLogo.png"
-                            alt="Happen Icon Logo"
-                            class="happen-logo center"
+                          src="svg/social/FaceBook.svg"
+                          alt="FaceBook"
+                          loading="lazy"
                         />
-                    </picture>
-                </a>
+                      </a>
 
-                <nav class="navigation__nav">
-                    <ul class="navigation__list hamburger">
-                        <li class="navigation__item nav click">
-                            <a href="index.html" class="navigation__link">
-                                Home
-                            </a>
-                        </li>
-
-                        <li class="navigation__item nav click active">
-                            <a href="#home" class="navigation__link">About</a>
-                        </li>
-
-                        <li class="navigation__item nav click">
-                            <a href="#services" class="navigation__link"
-                                >Services</a
-                            >
-                        </li>
-
-                        <li class="navigation__item nav click">
-                            <a href="#gallery" class="navigation__link"
-                                >Gallery</a
-                            >
-                        </li>
-
-                        <li class="navigation__item nav click">
-                            <a href="#packages" class="navigation__link"
-                                >Packages</a
-                            >
-                        </li>
-
-                        <li class="navigation__item nav click">
-                            <a href="#contact" class="navigation__link"
-                                >Contact</a
-                            >
-                        </li>
-                    </ul>
-                </nav>
-
-                <button class="hamburger__menu">
-                    <img
-                        src="svg/menu.svg"
-                        alt="hamburger Icon Icon"
-                        class="menu_img"
-                    />
-                </button>
+                      <a
+                        href="https://www.instagram.com/happenpatna/"
+                        target="_blank"
+                      >
+                        <img
+                          src="svg/social/Instagram.svg"
+                          alt="Instagram"
+                          loading="lazy"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="founder__image--overlay"></div>
             </div>
-            <!-- HEADER NAVIGATION END -->
 
-            <!-- HEADER START -->
-            <section class="header__heading" id="home">
-                <div class="header__heading--1">
-                    <h1 class="header--h1">
-                        How we do it, who <br />
-                        does it and why.
-                    </h1>
+            <div class="founder__heading">
+              <h3 class="founder--h3">G.S Prasad <span>(Pappu)</span></h3>
 
-                    <p class="header--paragraph">
-                        Scroll to find the team, <br />
-                        our value and more.
-                    </p>
-                </div>
+              <p class="paragraph founder__paragraph">
+                None of us, ever do great things. But we can all do small
+                things, with great love, and together we can do something
+                wonderful. We love all things weddings to such an extent that we
+                take pleasure in managing all aspects in a bid to make your
+                special day an extraordinary one that will be forever
+                remembered.
+              </p>
+            </div>
+          </section>
 
-                <div class="header__heading--2">
-                    <img
-                        src="svg/about/aboutUs.svg"
-                        alt="About us"
-                        class="header--svg"
-                    />
-                </div>
-            </section>
-
-            <section class="header__image">
-                <a href="#team" class="header__image--arrow">
-                    <img src="svg/about/arrow.svg" alt="Arrow Down" />
-                </a>
-
-                <div class="header__image--container">
-                    <img
-                        src="images/about/2.jpg"
-                        alt="Team Happen"
-                        class="header__image--image"
-                    />
-                </div>
-            </section>
-            <!-- HEADER END -->
-        </header>
-
-        <main>
-            <img src="svg/about/bgTop.svg" alt="" class="bgBottom" />
-
-            <!-- TEAMS START -->
-            <article class="section__teams">
-                <section class="teams__heading">
-                    <h2 class="teams__h2">
-                        We are a team of Experts
-                        <span>TEAM HAPPEN</span>
-                    </h2>
-
-                    <p class="paragraph teams__paragraph">
-                        We share the vision and values of our community. We’re
-                        driven by the idea that the best work is born from
-                        diligence, craftsmanship and fun. None of us, ever do
-                        great things, but together we can.
-                    </p>
-                </section>
-
-                <section class="teams__container">
-                    <section class="founder">
-                        <div class="founder__image">
-                            <div class="founder__image--overlay"></div>
-
-                            <div class="founder__image--img">
-                                <div class="founder__image--hover">
-                                    <h3 class="founder__image--h3">The Boss</h3>
-
-                                    <p class="founder__image--paragraph">
-                                        Founder
-                                    </p>
-
-                                    <div class="founder__image__social">
-                                        <p
-                                            class="
-                                                founder__image__social--paragraph
-                                            "
-                                        >
-                                            Follow on:
-                                        </p>
-
-                                        <div
-                                            class="
-                                                founder__image__social--image
-                                            "
-                                        >
-                                            <img
-                                                src="svg/social/FaceBook.svg"
-                                                alt=""
-                                            />
-
-                                            <img
-                                                src="svg/social/Instagram.svg"
-                                                alt=""
-                                            />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="founder__image--overlay"></div>
-                        </div>
-
-                        <div class="founder__heading">
-                            <h3 class="founder--h3">
-                                G.S Prasad <span>(Pappu)</span>
-                            </h3>
-
-                            <p class="paragraph founder__paragraph">
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Accusamus odio id dolorum,
-                                quas iusto recusandae magni? Officiis mollitia
-                                odit praesentium quo reprehenderit placeat quam,
-                                deserunt magnam deleniti vitae nihil cumque quos
-                                numquam in sit harum recusandae optio nam soluta
-                                ipsum a voluptatibus labore sint? Pariatur
-                                veniam repellat provident earum ratione?
-                            </p>
-                        </div>
-                    </section>
-
-                    <!-- <section class="founder__teams">
+          <!-- <section class="founder__teams">
                         <div class="founder__team">
                             <div class="founder__team--image">
                                 <img src="" alt="" />
@@ -227,433 +350,433 @@
                             </div>
                         </div>
                     </section> -->
-                </section>
-
-                <p class="teams__footer">
-                    Its our mission and passion to make every event and wedding
-                    that we do special.
-                </p>
-            </article>
-            <!-- TEAMS END -->
-
-            <!-- LIFE @ HAPPEN START -->
-            <article class="section__life">
-                <section class="life__heading">
-                    <h2 class="life__heading--h2">Life @ Happen</h2>
-                    <p class="life__heading--paragraph">
-                        We believe to provide a great service you need a
-                        fantastic team and a cool environment. We’re for never
-                        having to do it alone - because we know how bad it feels
-                        to start our lost.
-                    </p>
-                </section>
-
-                <section class="life__container">
-                    <div class="life">
-                        <div class="life--num">1</div>
-                        <h3 class="life--h3">Respect</h3>
-                        <p class="life--paragraph">
-                            We Respect each other as human beings, each others
-                            opinions and choices.
-                        </p>
-                    </div>
-
-                    <div class="life">
-                        <div class="life--num">2</div>
-                        <h3 class="life--h3">Trust</h3>
-                        <p class="life--paragraph">
-                            We trust ourselves and each other because We each
-                            other’s accomplishments and work experience
-                        </p>
-                    </div>
-
-                    <div class="life">
-                        <div class="life--num">3</div>
-                        <h3 class="life--h3">Transparency</h3>
-                        <p class="life--paragraph">
-                            We default to transparency to take best decision as
-                            a team through open, honest exchange of information.
-                        </p>
-                    </div>
-
-                    <div class="life">
-                        <div class="life--num">4</div>
-                        <h3 class="life--h3">Fair Share</h3>
-                        <p class="life--paragraph">
-                            We contributes fair share of the workload and fully
-                            understands what our responsibilities are.
-                        </p>
-                    </div>
-
-                    <div class="life">
-                        <div class="life--num">5</div>
-                        <h3 class="life--h3">Support</h3>
-                        <p class="life--paragraph">
-                            We are always happy to assist others when they need
-                            a helping hand with work.
-                        </p>
-                    </div>
-
-                    <div class="life">
-                        <div class="life--num">6</div>
-                        <h3 class="life--h3">Diversity</h3>
-                        <p class="life--paragraph">
-                            Everyone is unique and will be able to offer their
-                            own experiences and knowledge that others may not
-                            possess.
-                        </p>
-                    </div>
-                </section>
-            </article>
-            <!-- LIFE @ HAPPEN END -->
-
-            <!-- OUR VISION START -->
-            <article class="section__vision">
-                <h2 class="vision__h2">Our Vision</h2>
-
-                <p class="vision__paragraph">
-                    We transform ideas into live events for our client’s
-                    environments. We wanted to create a company with the
-                    experience, skills and knowledge to help any Event, Wedding
-                    no matter how small or large. We want to be more flexible,
-                    fast, responsive and reliable. No matter what stage of the
-                    planning you’re in, we’d welcome the opportunity to help you
-                    and make your Event and Wedding the best it can be.
-                </p>
-            </article>
-            <!-- OUR VISION END -->
-
-            <!-- VALUES START -->
-            <article class="section__values">
-                <div>
-                    <img
-                        src="svg/about/values.svg"
-                        alt=""
-                        class="values--svg"
-                    />
-                </div>
-
-                <div class="values">
-                    <div class="values--1">
-                        <h2 class="values__h2">
-                            We're driven <br />
-                            our values
-                        </h2>
-
-                        <p class="values__paragraph">
-                            Our core values give us a framework for leadership
-                            and daily decisions, and help us enjoy our time at
-                            work.
-                        </p>
-                    </div>
-
-                    <div class="values--2">
-                        <div class="value">
-                            <div class="value--circle center">
-                                <img
-                                    src="svg/about/integrity.svg"
-                                    alt=""
-                                    class="value__img"
-                                />
-                            </div>
-
-                            <p class="value__paragraph">Integrity</p>
-                        </div>
-
-                        <div class="value">
-                            <div class="value--circle center">
-                                <img
-                                    src="svg/about/creativity.svg"
-                                    alt=""
-                                    class="value__img"
-                                />
-                            </div>
-
-                            <p class="value__paragraph">Creativity</p>
-                        </div>
-
-                        <div class="value">
-                            <div class="value--circle center">
-                                <img
-                                    src="svg/about/fun.svg"
-                                    alt=""
-                                    class="value__img"
-                                />
-                            </div>
-
-                            <p class="value__paragraph">
-                                Fun effective Wrok Env.
-                            </p>
-                        </div>
-
-                        <div class="value">
-                            <div class="value--circle center">
-                                <img
-                                    src="svg/about/detailedWork.svg"
-                                    alt=""
-                                    class="value__img"
-                                />
-                            </div>
-
-                            <p class="value__paragraph">Detailed Work</p>
-                        </div>
-
-                        <div class="value">
-                            <div class="value--circle center">
-                                <img
-                                    src="svg/about/relationship.svg"
-                                    alt=""
-                                    class="value__img"
-                                />
-                            </div>
-
-                            <p class="value__paragraph">
-                                Building Relationship
-                            </p>
-                        </div>
-
-                        <div class="value">
-                            <div class="value--circle center">
-                                <img
-                                    src="svg/about/customer.svg"
-                                    alt=""
-                                    class="value__img"
-                                />
-                            </div>
-
-                            <p class="value__paragraph">
-                                Commitment to Customer service
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </article>
-            <!-- VALUES END -->
-        </main>
-
-        <section class="section__counter">
-            <div class="section counters">
-                <div class="counter section-m">
-                    <div>
-                        <img
-                            src="svg/counter/Couple.svg"
-                            alt="Wedding Couple Icon"
-                            class="counter-img"
-                            loading="lazy"
-                        />
-                    </div>
-                    <p class="counter-count" data-target="38">38</p>
-                    <p class="counter-text paragraph-light">
-                        Wedding Organised
-                    </p>
-                </div>
-                <div class="counter section-m">
-                    <div>
-                        <img
-                            src="svg/counter/HappyPeople.svg"
-                            alt="Happy Clients Icon"
-                            class="counter-img counter-img-2"
-                            loading="lazy"
-                        />
-                    </div>
-                    <p class="counter-count" data-target="2300">2300</p>
-                    <p class="counter-text paragraph-light">Happy Clients</p>
-                </div>
-                <div class="counter section-m">
-                    <div>
-                        <img
-                            src="svg/counter/People.svg"
-                            alt="People Icon"
-                            class="counter-img"
-                            loading="lazy"
-                        />
-                    </div>
-                    <p class="counter-count" data-target="6300">6300</p>
-                    <p class="counter-text paragraph-light">
-                        People talking about us
-                    </p>
-                </div>
-                <div class="counter section-m">
-                    <div>
-                        <img
-                            src="svg/counter/Briefcase.svg"
-                            alt="Briefcase Icon"
-                            class="counter-img counter-img-4"
-                            loading="lazy"
-                        />
-                    </div>
-                    <p class="counter-count" data-target="4">4</p>
-                    <p class="counter-text paragraph-light">
-                        Years Work Experience
-                    </p>
-                </div>
-            </div>
         </section>
 
-        <!-- FOOTER START -->
-        <footer>
-            <section class="footer__container">
-                <section class="footer__container--1">
-                    <img
-                        src="svg/about/happenLogo.svg"
-                        alt=""
-                        class="footer__logo"
-                    />
+        <p class="teams__footer">
+          Its our mission and passion to make every event and wedding that we do
+          special.
+        </p>
+      </article>
+      <!-- TEAMS END -->
 
-                    <div class="footer__about">
-                        <h2 class="footer__heading footer__about--h2">
-                            About Us
-                        </h2>
+      <!-- LIFE @ HAPPEN START -->
+      <article class="section__life">
+        <section class="life__heading">
+          <h2 class="life__heading--h2">Life @ Happen</h2>
+          <p class="life__heading--paragraph">
+            We believe to provide a great service you need a fantastic team and
+            a cool environment. We’re for never having to do it alone - because
+            we know how bad it feels to start our lost.
+          </p>
+        </section>
 
-                        <p class="footer__about--paragraph">
-                            Event and Wedding Planner/Organizer in India. Plan
-                            your Dream Wedding with Team Happen.
-                        </p>
-                    </div>
+        <section class="life__container">
+          <div class="life">
+            <div class="life--num">1</div>
+            <h3 class="life--h3">Respect</h3>
+            <p class="life--paragraph">
+              We Respect each other as human beings, each others opinions and
+              choices.
+            </p>
+          </div>
 
-                    <div class="footer__contact">
-                        <h2 class="footer__heading footer__contact--h2">
-                            Contact Us
-                        </h2>
+          <div class="life life-right">
+            <div class="life--num">2</div>
+            <h3 class="life--h3">Trust</h3>
+            <p class="life--paragraph">
+              We trust ourselves and each other because We each other’s
+              accomplishments and work experience.
+            </p>
+          </div>
 
-                        <div
-                            class="
-                                footer__contact--container footer__contact--call
-                            "
-                        >
-                            <img src="svg/about/call.svg" alt="" />
-                            <p>+91 9334276667</p>
-                        </div>
+          <div class="life">
+            <div class="life--num">3</div>
+            <h3 class="life--h3">Transparency</h3>
+            <p class="life--paragraph">
+              We default to transparency to take best decision as a team through
+              open, honest exchange of information.
+            </p>
+          </div>
 
-                        <div
-                            class="
-                                footer__contact--container footer__contact--mail
-                            "
-                        >
-                            <img src="svg/about/mailb.svg" alt="" />
-                            <p>contact@happenwedding.com</p>
-                        </div>
-                    </div>
-                </section>
+          <div class="life life-right">
+            <div class="life--num">4</div>
+            <h3 class="life--h3">Fair Share</h3>
+            <p class="life--paragraph">
+              We contributes fair share of the workload and fully understands
+              what our responsibilities are.
+            </p>
+          </div>
 
-                <section class="footer__container--2">
-                    <ul class="flink">
-                        <li class="footer__heading">Information</li>
-                        <li class="flink__item">
-                            <a href="" class="flink__link">Home</a>
-                        </li>
-                        <li class="flink__item">
-                            <a href="" class="flink__link">About Us</a>
-                        </li>
-                        <li class="flink__item">
-                            <a href="" class="flink__link">Contact</a>
-                        </li>
-                        <li class="flink__item">
-                            <a href="" class="flink__link">Blog</a>
-                        </li>
-                    </ul>
+          <div class="life">
+            <div class="life--num">5</div>
+            <h3 class="life--h3">Support</h3>
+            <p class="life--paragraph">
+              We are always happy to assist others when they need a helping hand
+              with work.
+            </p>
+          </div>
 
-                    <ul class="flink">
-                        <li class="footer__heading">Helpful Links</li>
-                        <li class="flink__item">
-                            <a href="" class="flink__link">Services</a>
-                        </li>
-                        <li class="flink__item">
-                            <a href="" class="flink__link">Gallery</a>
-                        </li>
-                        <li class="flink__item">
-                            <a href="" class="flink__link">Packages</a>
-                        </li>
-                        <li class="flink__item">
-                            <a href="" class="flink__link"
-                                >Terms & Conditions</a
-                            >
-                        </li>
-                    </ul>
-                </section>
+          <div class="life life-right">
+            <div class="life--num">6</div>
+            <h3 class="life--h3">Diversity</h3>
+            <p class="life--paragraph">
+              Everyone is unique and will be able to offer their own experiences
+              and knowledge that others may not possess.
+            </p>
+          </div>
+        </section>
+      </article>
+      <!-- LIFE @ HAPPEN END -->
 
-                <section class="footer__container--3 center">
-                    <form class="subscribe">
-                        <label for="email" class="subscribe__label">
-                            Let's Get Connected.
-                        </label>
+      <!-- OUR VISION START -->
+      <article class="section__vision">
+        <h2 class="vision__h2">Our Vision</h2>
 
-                        <div class="subscribe__container">
-                            <img
-                                src="svg/about/mail.svg"
-                                alt=""
-                                class="subscribe__icon"
-                            />
+        <p class="vision__paragraph">
+          We transform ideas into live events for our client’s environments. We
+          wanted to create a company with the experience, skills and knowledge
+          to help any Event, Wedding no matter how small or large. We want to be
+          more flexible, fast, responsive and reliable. No matter what stage of
+          the planning you’re in, we’d welcome the opportunity to help you and
+          make your Event and Wedding the best it can be.
+        </p>
+      </article>
+      <!-- OUR VISION END -->
 
-                            <input
-                                type="email"
-                                name="email"
-                                id="email"
-                                placeholder="Type Email"
-                                class="subscribe__input"
-                            />
-                        </div>
+      <!-- VALUES START -->
+      <article class="section__values">
+        <div>
+          <img src="svg/about/values.svg" alt="" class="values--svg" />
+        </div>
 
-                        <button type="submit" class="subscribe__btn">
-                            Subscribe
-                        </button>
-                    </form>
-                </section>
+        <div class="values">
+          <div class="values--1">
+            <h2 class="values__h2">
+              We're driven <br />
+              our values
+            </h2>
 
-                <!-- <button></button> -->
-            </section>
+            <p class="values__paragraph">
+              Our core values give us a framework for leadership and daily
+              decisions, and help us enjoy our time at work.
+            </p>
+          </div>
 
-            <section class="footer__socials center">
-                <ul class="fsocial">
-                    <li class="fsocial__item">
-                        <a href="" class="fsocial__link"
-                            ><img
-                                src="svg/social/FaceBookDark.svg"
-                                alt=""
-                                class="fsocial__icon"
-                        /></a>
-                    </li>
+          <div class="values--2">
+            <div class="value">
+              <div class="value--circle center">
+                <img
+                  src="svg/about/integrity.svg"
+                  alt="Integrity"
+                  class="value__img"
+                  loading="lazy"
+                />
+              </div>
 
-                    <li class="fsocial__item">
-                        <a href="" class="fsocial__link"
-                            ><img
-                                src="svg/social/InstagramDark.svg"
-                                alt=""
-                                class="fsocial__icon"
-                        /></a>
-                    </li>
+              <p class="value__paragraph">Integrity</p>
+            </div>
 
-                    <li class="fsocial__item">
-                        <a href="" class="fsocial__link"
-                            ><img
-                                src="svg/social/TwitterDark.svg"
-                                alt=""
-                                class="fsocial__icon"
-                        /></a>
-                    </li>
+            <div class="value">
+              <div class="value--circle center">
+                <img
+                  src="svg/about/creativity.svg"
+                  alt="Creativity"
+                  class="value__img"
+                  loading="lazy"
+                />
+              </div>
 
-                    <li class="fsocial__item">
-                        <a href="" class="fsocial__link"
-                            ><img
-                                src="svg/social/YouTubeDark.svg"
-                                alt=""
-                                class="fsocial__icon"
-                        /></a>
-                    </li>
+              <p class="value__paragraph">Creativity</p>
+            </div>
 
-                    <li class="fsocial__item">
-                        <a href="" class="fsocial__link"
-                            ><img
-                                src="svg/social/WhatsAppDark.svg"
-                                alt=""
-                                class="fsocial__icon"
-                        /></a>
-                    </li>
-                </ul>
+            <div class="value">
+              <div class="value--circle center">
+                <img src="svg/about/fun.svg" alt="Fun" class="value__img" />
+              </div>
 
-                <p class="copyright">2021 &copy; Happen Patna</p>
-            </section>
-        </footer>
-        <!-- FOOTER END -->
-    </body>
+              <p class="value__paragraph">Fun effective Wrok Env.</p>
+            </div>
+
+            <div class="value">
+              <div class="value--circle center">
+                <img
+                  src="svg/about/detailedWork.svg"
+                  alt="Detailed Work"
+                  class="value__img"
+                  loading="lazy"
+                />
+              </div>
+
+              <p class="value__paragraph">Detailed Work</p>
+            </div>
+
+            <div class="value">
+              <div class="value--circle center">
+                <img
+                  src="svg/about/relationship.svg"
+                  alt="Relationship"
+                  class="value__img"
+                  loading="lazy"
+                />
+              </div>
+
+              <p class="value__paragraph">Building Relationship</p>
+            </div>
+
+            <div class="value">
+              <div class="value--circle center">
+                <img
+                  src="svg/about/customer.svg"
+                  alt="Customer Service"
+                  class="value__img"
+                  loading="lazy"
+                />
+              </div>
+
+              <p class="value__paragraph">Commitment to Customer service</p>
+            </div>
+          </div>
+        </div>
+      </article>
+      <!-- VALUES END -->
+    </main>
+
+    <section class="section__counter">
+      <div class="section counters">
+        <div class="counter section-m">
+          <div>
+            <img
+              src="svg/counter/Couple.svg"
+              alt="Wedding Couple Icon"
+              class="counter-img"
+              loading="lazy"
+            />
+          </div>
+          <p class="counter-count" data-target="38">38</p>
+          <p class="counter-text paragraph-light">Wedding Organised</p>
+        </div>
+        <div class="counter section-m">
+          <div>
+            <img
+              src="svg/counter/HappyPeople.svg"
+              alt="Happy Clients Icon"
+              class="counter-img counter-img-2"
+              loading="lazy"
+            />
+          </div>
+          <p class="counter-count" data-target="2300">2300</p>
+          <p class="counter-text paragraph-light">Happy Clients</p>
+        </div>
+        <div class="counter section-m">
+          <div>
+            <img
+              src="svg/counter/People.svg"
+              alt="People Icon"
+              class="counter-img"
+              loading="lazy"
+            />
+          </div>
+          <p class="counter-count" data-target="6300">6300</p>
+          <p class="counter-text paragraph-light">People talking about us</p>
+        </div>
+        <div class="counter section-m">
+          <div>
+            <img
+              src="svg/counter/Briefcase.svg"
+              alt="Briefcase Icon"
+              class="counter-img counter-img-4"
+              loading="lazy"
+            />
+          </div>
+          <p class="counter-count" data-target="4">4</p>
+          <p class="counter-text paragraph-light">Years Work Experience</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER START -->
+    <footer>
+      <section class="footer__container">
+        <section class="footer__container--1">
+          <img
+            src="svg/about/happenLogo.svg"
+            alt="Happen Wedding Car Logo"
+            class="footer__logo"
+            loading="lazy"
+          />
+
+          <div class="footer__about">
+            <h2 class="footer__heading footer__about--h2">About Us</h2>
+
+            <p class="footer__about--paragraph">
+              Event and Wedding Planner/Organizer in India. Plan your Dream
+              Wedding with Team Happen.
+            </p>
+          </div>
+
+          <div class="footer__contact">
+            <h2 class="footer__heading footer__contact--h2">Contact Us</h2>
+
+            <a
+              href="tel:9334276667"
+              class="footer__contact--container footer__contact--call"
+            >
+              <img src="svg/about/call.svg" alt="Calling Icon" loading="lazy" />
+              <p>+91 9334276667</p>
+            </a>
+
+            <a
+              href="mailto:contact@happenwedding.com"
+              class="footer__contact--container footer__contact--mail"
+            >
+              <img src="svg/about/mailb.svg" alt="Mail Icon" loading="lazy" />
+              <p>contact@happenwedding.com</p>
+            </a>
+          </div>
+        </section>
+
+        <section class="footer__container--2">
+          <section class="footer__container--2-1">
+            <ul class="flink">
+              <li class="footer__heading">Information</li>
+              <li class="flink__item">
+                <a href="#home" class="flink__link">Home</a>
+              </li>
+              <li class="flink__item">
+                <a href="about" class="flink__link">About Us</a>
+              </li>
+              <li class="flink__item">
+                <a href="index.html#contact" class="flink__link">Contact</a>
+              </li>
+              <li class="flink__item">
+                <a href="" class="flink__link">Blog</a>
+              </li>
+            </ul>
+
+            <ul class="flink">
+              <li class="footer__heading">Helpful Links</li>
+              <li class="flink__item">
+                <a href="index.html#services" class="flink__link">Services</a>
+              </li>
+              <li class="flink__item">
+                <a href="index.html#packages" class="flink__link">Packages</a>
+              </li>
+              <li class="flink__item">
+                <a href="index.html#gallery" class="flink__link">Gallery</a>
+              </li>
+              <li class="flink__item">
+                <a href="" class="flink__link">Terms & Conditions</a>
+              </li>
+            </ul>
+          </section>
+
+          <section class="footer__container--2-2 center">
+            <form class="subscribe">
+              <label for="email" class="subscribe__label">
+                Let's Get Connected.
+              </label>
+
+              <div class="subscribe__container">
+                <img
+                  src="svg/about/mail.svg"
+                  alt="Mail Icon"
+                  class="subscribe__icon"
+                  loading="lazy"
+                />
+
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Type Email"
+                  class="subscribe__input"
+                />
+              </div>
+
+              <button type="submit" class="subscribe__btn">Subscribe</button>
+            </form>
+          </section>
+        </section>
+
+        <button
+          class="footer__btn center"
+          onclick="window.location.href = '#home';"
+        >
+          <img src="svg/about/footer-arrow.svg" alt="Arrow" loading="lazy" />
+        </button>
+      </section>
+
+      <section class="footer__socials center">
+        <ul class="fsocial">
+          <li class="fsocial__item">
+            <a
+              href="https://www.facebook.com/happenpatna"
+              class="fsocial__link"
+              target="_blank"
+              ><img
+                src="svg/social/FaceBookDark.svg"
+                alt="FaceBook"
+                class="fsocial__icon"
+                loading="lazy"
+            /></a>
+          </li>
+
+          <li class="fsocial__item">
+            <a
+              href="https://www.instagram.com/thebigfatindianshadi/"
+              class="fsocial__link"
+              target="_blank"
+              ><img
+                src="svg/social/InstagramDark.svg"
+                alt="Instagram"
+                class="fsocial__icon"
+                loading="lazy"
+            /></a>
+          </li>
+
+          <li class="fsocial__item">
+            <a
+              href="https://twitter.com/ashrapappu?s=09"
+              class="fsocial__link"
+              target="_blank"
+              ><img
+                src="svg/social/TwitterDark.svg"
+                alt="Twitter"
+                class="fsocial__icon"
+                loading="lazy"
+            /></a>
+          </li>
+
+          <li class="fsocial__item">
+            <a
+              href="https://www.youtube.com/channel/UCOdU8yZrphicPpi8dgM5y5A"
+              class="fsocial__link"
+              target="_blank"
+              ><img
+                src="svg/social/YouTubeDark.svg"
+                alt="Youtube"
+                class="fsocial__icon"
+                loading="lazy"
+            /></a>
+          </li>
+
+          <li class="fsocial__item">
+            <a
+              href="https://api.whatsapp.com/send?phone=+919334276667"
+              class="fsocial__link"
+              target="_blank"
+              ><img
+                src="svg/social/WhatsAppDark.svg"
+                alt="WhatsAppDark"
+                class="fsocial__icon"
+                loading="lazy"
+            /></a>
+          </li>
+        </ul>
+
+        <p class="copyright">2021 &copy; Happen Patna</p>
+      </section>
+    </footer>
+    <!-- FOOTER END -->
+  </body>
 </html>
